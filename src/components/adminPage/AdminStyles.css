@@ -1,0 +1,67 @@
+AdminPage-Container{
+    text-align: center;
+}
+
+#Center {
+    margin: auto;
+    width: 50%;
+    border: .5px solid lightgray;
+    padding: 2px;
+    text-align: center;
+}
+
+#tableHeader {
+    width: 200vw;
+    height: 5vw;
+    background-color: #c2011b;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+tr{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+td {
+    width: 25%;
+    height: 5vw;
+    border: 1px solid black;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #222222;
+    text-align: center;
+}
+
+span.glyphicon.glyphicon-trash {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+}
+
+span.glyphicon.glyphicon-download {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+}
+
+span.glyphicon.glyphicon-log-out {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+}
+
+ul.list-group {
+    padding-left: 15%;
+    alignment: center;
+    width: 80%;
+    height:100%;
+    overflow-y: auto;
+    text-align: center;
+
+}
