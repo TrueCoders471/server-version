@@ -38,6 +38,7 @@ import proctoringRequestForm from "./components/notetakerPages/proctoringRequest
 import RequestForAccommodationsForm from "./components/accomodations/RequestForAccommodationsForm";
 import AcademicAccommodationsContract from "./components/accomodations/AcademicAccommodationsContract";
 import hub from "./components/forPresentationOnly/hub";
+import regProgressBar from "./components/utilities/regProgressBar";
 
 export default (
     <Route path="/" component={App}>
@@ -47,6 +48,7 @@ export default (
         <Route path="/forgotPassword" component={ForgotPassword}/>
         <Route path="/signupForm" component={SignupForm}/>
         <Route path="/signUp" component={SignUpPage}/>
+        <Route path="/regProgressBar" component={regProgressBar}/>
         <Route path="/admin" component={AdminPage}/>
         <Route path="/studentsList" component={RegisteredStudents}/>
         <Route path="/notetakersList" component={Notetakers}/>

@@ -2,13 +2,12 @@ import React from 'react';
 import "./pprs-style.css";
 
 
-
-
 class pprs extends React.Component {
 
     goToHub() {
-        location.href ="/hub"; //eslint-disable-line
+        location.href = "/hub"; //eslint-disable-line
     }
+
     openingInformation() {
         return (
             <div>
@@ -284,58 +283,63 @@ class pprs extends React.Component {
     render() {
         return (
             <div>
-            <div className="container">
-                <div className="row">
-                    <div id="primary" className="col-md-8 col-md-offset-2">
-                        <form role="form" method="POST" action="#">
-                            <fieldset>
-                                <legend><h1 className="text-center"><b>Policies and Procedures for Receiving
-                                    Services</b></h1></legend>
-                                {this.openingInformation()}
-                            </fieldset>
-                            <fieldset>
-                                <legend align="top"><b>Policies and Responsibilities for Recording Devices</b></legend>
-                                {this.policiesAndResponsibilitiesForRecordingDevices()}
-                            </fieldset>
-                            <fieldset>
-                                <legend align="top"><b>Note Taking Coordination Agreement</b></legend>
-                                {this.noteTakingServicesCoordinationAgreement()}
-                            </fieldset>
-                            <fieldset>
-                                <legend align="top"><b>Policies and Responsibilities for Note Taking Services</b>
-                                </legend>
-                                {this.policiesAndResponsibilitiesForNoteTakingServices()}
-                            </fieldset>
-                            <fieldset>
-                                <legend align="top"><b>Policies and Responsibilities for Test/Quiz/Exam Proctoring in
-                                    the CAS</b></legend>
-                                {this.policiesAndResponsibilitiesForTQEProctoringCAS()}
-                            </fieldset>
-                            <fieldset>
-                                <legend align="top"><b>Policies and Responsibilities for Alternate Text Requests</b>
-                                </legend>
-                                {this.policiesAndResponsibilitiesForAlternateTextRequests()}
-                            </fieldset>
-                            <div className="form-group">
-                                <div className="text-center">
-                                <div id="submit-Container">
-                                    <div className="checkbox">
-                                        <label>
-                                            <input type="checkbox" id=""/>
-                                            I accept the terms & conditions of the Policies and Procedures for Receiving Services
-                                        </label>
+                <div className="container">
+                    <div className="row">
+                        <div id="primary" className="col-md-8 col-md-offset-2">
+                            <form role="form" method="POST" action="#">
+                                <fieldset>
+                                    <legend><h1 className="text-center"><b>Policies and Procedures for Receiving
+                                        Services</b></h1></legend>
+                                    {this.openingInformation()}
+                                </fieldset>
+                                <fieldset>
+                                    <legend align="top"><b>Policies and Responsibilities for Recording Devices</b>
+                                    </legend>
+                                    {this.policiesAndResponsibilitiesForRecordingDevices()}
+                                </fieldset>
+                                <fieldset>
+                                    <legend align="top"><b>Note Taking Coordination Agreement</b></legend>
+                                    {this.noteTakingServicesCoordinationAgreement()}
+                                </fieldset>
+                                <fieldset>
+                                    <legend align="top"><b>Policies and Responsibilities for Note Taking Services</b>
+                                    </legend>
+                                    {this.policiesAndResponsibilitiesForNoteTakingServices()}
+                                </fieldset>
+                                <fieldset>
+                                    <legend align="top"><b>Policies and Responsibilities for Test/Quiz/Exam Proctoring
+                                        in
+                                        the CAS</b></legend>
+                                    {this.policiesAndResponsibilitiesForTQEProctoringCAS()}
+                                </fieldset>
+                                <fieldset>
+                                    <legend align="top"><b>Policies and Responsibilities for Alternate Text Requests</b>
+                                    </legend>
+                                    {this.policiesAndResponsibilitiesForAlternateTextRequests()}
+                                </fieldset>
+                                <div className="form-group">
+                                    <div className="text-center">
+                                        <div id="submit-Container">
+                                            <div className="checkbox">
+                                                <label>
+                                                    <input type="checkbox" id=""/>
+                                                    I accept the terms & conditions of the Policies and Procedures for
+                                                    Receiving Services
+                                                </label>
+                                            </div>
+                                            <br/>
+                                            <button type="button" className="btn btn-primary"
+                                                    onClick={this.goToHub}>Submit
+                                            </button>
+                                            <br/>
+                                            <br/>
+                                        </div>
                                     </div>
-                                    <br/>
-                                    <button type="button" className="btn btn-primary" onClick={this.goToHub}>Submit</button>
-                                    <br/>
-                                    <br/>
                                 </div>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </div>
 
