@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Header from './common/Header';
+import UserHeader from './common/UserHeader';
 import Footer from './common/Footer';
 import '../styles/General-Styles.css';
 
@@ -17,10 +18,23 @@ class App extends Component {
      * @returns {XML} (Markup Language) for rendering the footer and header around
      *                  elements within every page called specifically ->(props.children)
      */
+    getTitle(){
+        switch(this.props.location.pathname){
+            case "/forgotPassword":
+                return (<Header/>);
+            case "/login":
+                return (<Header/>);
+            case "/admin":
+                return (<UserHeader/>);
+            default:
+                return (<Header/>);
+        }
+    }
+
     render() {
         return (
             <div className="App">
-                <Header/>
+                {this.getTitle()}
                 {this.props.children}
                 <Footer/>
             </div>

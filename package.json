@@ -4,15 +4,15 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.2",
-    "css-loader": "^0.28.10",
-    "express": "^4.16.2",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
     "knex": "^0.14.4",
     "mysql": "^2.15.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "react-router": "^3.2.0",
+    "react-router": "^3.2.1",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
     "redux-immutable-state-invariant": "^2.1.0"

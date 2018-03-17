@@ -36,7 +36,7 @@ html, body {
 }
 #mainHeader {
     background-color: #c2011b;
-    height: 60px;
+    min-height: 60px;
     color: aliceblue;
     padding:10px;
     margin-top: 0px;
@@ -80,3 +80,5 @@ banner-text {
 .btn.btn-primary {
     background-color: #c2011b;
 }
+
+

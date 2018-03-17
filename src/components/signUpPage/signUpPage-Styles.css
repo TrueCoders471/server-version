@@ -51,8 +51,11 @@ h2.form-signin-header {
     padding-top: 30px;
     color: white;
 }
+.form-control {
+    width: 80% !important;
+}
 
-input {
+.input {
     max-width: 200px;
 }
 .form-signin input{

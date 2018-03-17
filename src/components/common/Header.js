@@ -10,9 +10,6 @@ class Header extends React.Component {
      * @returns {XML}
      */
 
-
-
-
     render() {
         return (
             <div id="mainHeader">

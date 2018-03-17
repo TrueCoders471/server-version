@@ -12,7 +12,6 @@ class AdminPage extends React.Component {
     render() {
         return (
             <div className = "AdminPage-Container">
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
                 <ul className="nav  nav-tabs nav-justified">
                     <li className="active"><a data-toggle="tab" href="#students">View Registered Students</a></li>
                     <li><a data-toggle="tab" href="#notetakers">View Volunteers</a></li>
