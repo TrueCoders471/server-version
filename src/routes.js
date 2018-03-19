@@ -39,6 +39,7 @@ import RequestForAccommodationsForm from "./components/accomodations/RequestForA
 import AcademicAccommodationsContract from "./components/accomodations/AcademicAccommodationsContract";
 import hub from "./components/forPresentationOnly/hub";
 import regProgressBar from "./components/utilities/regProgressBar";
+import volSignUpProgress from  "./components/utilities/volSignUpProgress";
 
 export default (
     <Route path="/" component={App}>
@@ -49,6 +50,7 @@ export default (
         <Route path="/signupForm" component={SignupForm}/>
         <Route path="/signUp" component={SignUpPage}/>
         <Route path="/regProgressBar" component={regProgressBar}/>
+        <Route path="/volunteerSignUpProgress" component={volSignUpProgress}/>
         <Route path="/admin" component={AdminPage}/>
         <Route path="/studentsList" component={RegisteredStudents}/>
         <Route path="/notetakersList" component={Notetakers}/>
