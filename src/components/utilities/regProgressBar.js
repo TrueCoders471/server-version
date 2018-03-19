@@ -42,7 +42,7 @@ class regProgressBar extends React.Component {
 
                 <br/>
                 <br/>
-                {this.regCheckFunction(true,true,false,false,false,false)};
+                {this.regCheckFunction(true,true,false,false,false,false)}
                 <table className="table" id="table">
                     <tr>
                         <th>Registration Step</th>
