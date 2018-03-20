@@ -50,11 +50,7 @@ class volSignUpProgress extends React.Component {
                       <td id="stepTwo">{this.stepTwoComp}</td>
                   </tr>
                   <tr>
-                      <th> Step 3: Account password updated</th>
-                      <td id="stepThree">{this.stepThreeComp}</td>
-                  </tr>
-                  <tr>
-                      <th>Volunteer note take sign up process</th>
+                      <th>Volunteer note taker sign up process complete</th>
                       <td id="finalStep">{this.finalComp}</td>
                   </tr>
               </table>
