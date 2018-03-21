@@ -40,6 +40,7 @@ import AcademicAccommodationsContract from "./components/accomodations/AcademicA
 import hub from "./components/forPresentationOnly/hub";
 import regProgressBar from "./components/utilities/regProgressBar";
 import volSignUpProgress from  "./components/utilities/volSignUpProgress";
+import volSignUpForm from "./components/notetakerPages/volunteerSignUpForm";
 
 export default (
     <Route path="/" component={App}>
@@ -70,6 +71,7 @@ export default (
         <Route path="/notetakerClass3" component={NotetakerClass3}/>
         <Route path="/notetakerClass4" component={NotetakerClass4}/>
         <Route path="/notetakerClass5" component={NotetakerClass5}/>
+        <Route path="/volunteerSignUpForm" component={volSignUpForm}/>
         <Route path="/pprs" component={pprs}/>
         <Route path="/proctoringRequestForm" component={proctoringRequestForm}/>
         <Route path="/uploadNotes" component={NotetakerUploadNotes}/>

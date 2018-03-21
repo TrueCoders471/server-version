@@ -1,9 +1,12 @@
 .name{
     font-weight: bold;
-text-align: left;
+    text-align: left;
 }
 
-.value{
+#labels{
+    text-align:left;
+}
+#value{
     text-align:left;
 }
 submit-Container{
