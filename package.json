@@ -6,6 +6,7 @@
     "body-parser": "^1.18.2",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "formidable": "^1.2.1",
     "knex": "^0.14.4",
     "mysql": "^2.15.0",
     "npm-run-all": "^4.1.2",

@@ -20,6 +20,23 @@ AdminPage-Container{
     text-align: center;
 }
 
+.uploadButton {
+    background-color: white; /* Radford Red */
+    border: 2px solid #c2011b;
+    color: #222222;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 12px;
+    position: relative;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.uploadButton:hover{
+    color: white;
+    background-color: #c2011b;
+}
+
 tr{
     text-align: center;
 }
@@ -27,6 +44,9 @@ h1{
     text-align: center;
 }
 h3{
+    text-align: center;
+}
+h4{
     text-align: center;
 }
 td {

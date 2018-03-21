@@ -14,7 +14,13 @@ class CasForms extends React.Component {
     render() {
         return (
             <div>
-                <h3> Fillable forms</h3>
+                <h3>Fillable forms</h3>
+                <div align="middle">
+                    <h4>Upload a new form</h4>
+                    <input align="middle" type="file" id="fileUpload" name="fileUpload"/>
+                    <button className="uploadButton">Upload File</button>
+                </div>
+                <br/>
                 <ul className="list-group">
                     <li className="list-group-item justify-content-between">
                         <a href="https://drive.google.com/uc?export=download&id=1RxGscoI-tNrCSEa1EyfzpHNwcPnCvibI">
