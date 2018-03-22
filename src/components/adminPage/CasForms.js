@@ -18,6 +18,7 @@ class CasForms extends React.Component {
                 <div align="middle">
                     <h4>Upload a new form</h4>
                     <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
+                    <br/> /* Break between the button and file uploader to have space */
                     <button className="uploadButton">Upload File</button>
                 </div>
                 <br/>
