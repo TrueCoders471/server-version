@@ -32,6 +32,16 @@
     zoom: 1; /* For IE 6/7 */
 }
 
+.cardContainer {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+.centerText {
+    text-align: center;
+}
+
 /*  GRID OF FIVE  */
 
 .span_5_of_5 {
@@ -77,6 +87,7 @@
     margin: auto;
     position: relative;
     display: flex;
+    width: 50%;
 }
 
 /* On mouse-over, add a deeper shadow */

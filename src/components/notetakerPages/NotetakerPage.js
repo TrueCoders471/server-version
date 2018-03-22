@@ -15,8 +15,11 @@ class NotetakerPage extends React.Component {
             <div>
                 <h1>Notateker</h1>
                 <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>Open My Classes
-                </button>
+
+                <div align="middle">
+                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>Open My Classes
+                    </button>
+                </div>
             </div>
         );
 
