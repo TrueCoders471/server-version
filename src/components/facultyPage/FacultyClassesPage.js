@@ -16,13 +16,13 @@ export default class FacultyClassesPage extends React.Component {
 
     render() {
         return (
-            <div >
+            <div className="text-center">
                 <h1>Faculty's Classes List</h1>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass1}>View Class 1</button>
+                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass1}>View ITEC 120</button>
                 <br/><br/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass2}>View Class 2</button>
+                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass2}>View ITEC 380</button>
                 <br/><br/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass3}>View Class 3</button>
+                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass3}>View ART 101</button>
             </div>
         );
     }

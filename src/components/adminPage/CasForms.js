@@ -86,6 +86,7 @@ class CasForms extends React.Component {
                             <b>Policies and Procedures for Receiving Services</b> (Rev. Aug. 2017)</a>
                         <span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>
                     </li>
+                <br/>
                 </ul>
             </div>
         );

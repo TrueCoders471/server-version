@@ -13,11 +13,7 @@ export default class FacultyClassPage extends React.Component {
     render() {
         return (
             <div>
-                <div className="subHeader">
-                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes
-                    </button>
-                </div>
-                <h3>Class 2</h3>
+                <h3>ITEC 380</h3>
                 <ul className="nav  nav-tabs nav-justified">
                     <li className="active"><a data-toggle="tab" href="#students">View Students</a></li>
                     <li><a data-toggle="tab" href="#notetakers">View Volunteers</a></li>
@@ -31,6 +27,11 @@ export default class FacultyClassPage extends React.Component {
                         <h3>Notetakers</h3>
                         <FacultyVolunteersPage/>
                     </div>
+                </div>
+
+                <div className="text-center">
+                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes
+                    </button>
                 </div>
             </div>
         );
