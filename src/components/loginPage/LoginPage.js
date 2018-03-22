@@ -26,7 +26,7 @@ class LoginPage extends React.Component {
         const body = JSON.stringify({username: username, password: password});
         var headers = new Headers();
         headers.append("Content-Type", "application/json");
-        // alert(body);
+        //alert(body);
 
         window.fetch('http://137.45.220.128:443/login',
             {
@@ -42,17 +42,67 @@ class LoginPage extends React.Component {
             })
     }
 
+
     /**
      * renders the components associated with the Login page
      * @returns {XML} (Markup Language) for rendering the elements within this page
      */
     render() {
         return (
-            <div id="LoginView-Container" className="login-page">
+
+            <div className="LoginView-Container">
                 {this.drawLogBackground()}
-                <div id="loginFields-container">
-                    <form className="form-signin" onSubmit={this.submit}>
-                        <div id="top-div-Container">
+                <div className="loginFields-container">
+                    <div id="primary">
+                        <form onSubmit={this.submit}>
+                            <fieldset>
+                                <div>
+                                    <div className="form-group col-md-12">
+                                        <legend><h1 className="text-center"><b>Login</b></h1></legend>
+                                    </div>
+                                    <div className="form-group col-md-12">
+                                        <label htmlFor="inputUsername" className="sr-only">RU Email</label>
+                                        <input type="text" id="inputUserName" className="form-control" required
+                                               placeholder="Username" autoFocus/>
+                                    </div>
+                                    <div className="form-group col-md-12">
+                                        <label htmlFor="inputPassword" className="sr-only">Password</label>
+                                        <input type="password" id="inputPassword" className="form-control" required
+                                               placeholder="Password"/>
+                                    </div>
+                                    <div className="form-group">
+                                        <div className="text-center">
+                                            <div id="submit-Container">
+                                                <div className="checkbox">
+                                                    <div className="form-group col-md-12">
+                                                        <button type="submit" className="btn btn-primary"
+                                                                onClick={this.submit}>Log in
+                                                        </button>
+                                                    </div>
+                                                    <div className="form-group col-md-12">
+                                                        <label>
+                                                            <input type="checkbox" value="remember-me"/>
+                                                            Remember me
+                                                        </label>
+                                                        <br/>
+                                                        <p>
+                                                            <a href="/forgotPassword">Forgot your password?</a>
+                                                            <a href="/Signup">Don't Have An Account?</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+
+                    {/* <form onSubmit={this.submit}>
+                        <div className="top-div-Container">
                             <h2 className="form-signin-header">LOGIN</h2>
                         </div>
                         <br/>
@@ -65,7 +115,9 @@ class LoginPage extends React.Component {
                                placeholder="Password"/>
                         <br/>
                         <br/>
+
                         <button className="btn btn-lg btn-primary" type="submit">Sign in</button>
+
                         <div className="checkbox">
                             <label>
 
@@ -80,7 +132,7 @@ class LoginPage extends React.Component {
                             </p>
 
                         </div>
-                    </form>
+                    </form>*/}
                 </div>
             </div>
         );

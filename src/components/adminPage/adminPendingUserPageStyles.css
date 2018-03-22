@@ -1,0 +1,45 @@
+.pendingUsersTableDIV{
+    margin: auto;
+    width: 50%;
+    padding: 2px;
+    text-align: center;
+}
+
+.pendingUsersTable{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 39vw;
+    height: auto;
+    padding: auto;
+
+}
+.pendingUsersTableTH{
+    width: 200vw;
+    height: 5vw;
+    background-color: #c2011b;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.pendingUsersTableTD{
+    width: 25%;
+    height: 5vw;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #222222;
+    text-align: center;
+}
+.pendingUsersTableTR{
+    border: 1px solid black;
+}
+
+.pendingUsersImageIcons{
+    width: 30px;
+    height: 30px;
+    padding: 0px 5px 0px 0px;
+
+}
+
+

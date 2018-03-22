@@ -41,11 +41,14 @@ import hub from "./components/forPresentationOnly/hub";
 import regProgressBar from "./components/utilities/regProgressBar";
 import volSignUpProgress from  "./components/utilities/volSignUpProgress";
 import volSignUpForm from "./components/notetakerPages/volunteerSignUpForm";
+import adminPendingUserPage from "./components/adminPage/adminPendingUserPage";
+import testPage from "./components/adminPage/testPage";
 
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={HomePage}/>
         {/*indexRoute used for homepage only*/}
+        <Route path="/testForIsaac" component={testPage}/>
         <Route path="/login" component={LoginPage}/>
         <Route path="/forgotPassword" component={ForgotPassword}/>
         <Route path="/signupForm" component={SignupForm}/>
@@ -53,6 +56,7 @@ export default (
         <Route path="/regProgressBar" component={regProgressBar}/>
         <Route path="/volunteerSignUpProgress" component={volSignUpProgress}/>
         <Route path="/admin" component={AdminPage}/>
+        <Route path="/adminPendingUser" component={adminPendingUserPage}/>
         <Route path="/studentsList" component={RegisteredStudents}/>
         <Route path="/notetakersList" component={Notetakers}/>
         <Route path="/casForms" component={CasForms}/>
