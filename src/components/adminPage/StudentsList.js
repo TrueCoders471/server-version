@@ -7,17 +7,17 @@ class StudentsList extends React.Component {
         return (
             <div>
                 <br/>
-                <div id="Center">
+                <div className="Center">
                     <table>
                         <tbody>
                         <tr>
-                            <th id="tableHeader">
+                            <th className="tableHeader">
                                 Name
                             </th>
-                            <th id="tableHeader">
+                            <th className="tableHeader">
                                 Account Type
                             </th>
-                            <th id="tableHeader">
+                            <th className="tableHeader">
                                 Date Submitted
                             </th>
                         </tr>

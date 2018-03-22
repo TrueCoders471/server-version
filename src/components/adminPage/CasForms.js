@@ -17,7 +17,7 @@ class CasForms extends React.Component {
                 <h3>Fillable forms</h3>
                 <div align="middle">
                     <h4>Upload a new form</h4>
-                    <input align="middle" type="file" id="fileUpload" name="fileUpload"/>
+                    <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
                     <button className="uploadButton">Upload File</button>
                 </div>
                 <br/>

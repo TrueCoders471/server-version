@@ -2,7 +2,7 @@ AdminPage-Container{
     text-align: center;
 }
 
-#Center {
+.Center {
     margin: auto;
     width: 50%;
     border: .5px solid lightgray;
@@ -10,7 +10,7 @@ AdminPage-Container{
     text-align: center;
 }
 
-#tableHeader {
+.tableHeader {
     width: 200vw;
     height: 5vw;
     background-color: #c2011b;
@@ -21,19 +21,21 @@ AdminPage-Container{
 }
 
 .uploadButton {
-    background-color: white; /* Radford Red */
+    background-color: white; /* White at first and then after cursor hovers it turns to Radford Red. */
     border: 2px solid #c2011b;
     color: #222222;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: inline-block;
     font-size: 12px;
     position: relative;
     transition-duration: 0.4s;
     cursor: pointer;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    border-radius: 45px;
+}
+
+.fileUpload {
+    width: 180px;
+    height: 20px;
 }
 
 .uploadButton:hover{
