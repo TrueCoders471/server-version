@@ -4,7 +4,13 @@ import './signUpPage-Styles.css';
  * controls Javascript behavior of The Account Creation Page
  */
 class SignUpPage extends React.Component {
+//
 
+    drawLogBackground() {
+        return (<div id="loginBackgroundStretch" src>
+            <img className = "background-image" src = {require('./../../public/images/signupBackground.jpg')}/>
+        </div>);
+    }
     /**
      * on click validate email, and passwords are matching
      */
@@ -46,47 +52,54 @@ class SignUpPage extends React.Component {
      */
     render() {
         return (
-            <div id="SignupView-Container" className="sign-up-page">
-                <div id="loginBackgroundStretch">
-                    <img className = "background-image" src = {require('./../../public/images/signupBackground.jpg')}/>
+            <div className="SignInView-Container">
+                {this.drawLogBackground()}
+                <div className="signUpFields-container">
+                    <fieldset>
+                        <div>
+                            <div className="form-group col-md-12">
+                                <legend><h1 className="text-center"><b>Sign Up</b></h1></legend>
+                            </div>
+                            <div className="form-group col-md-12">
+                                <label htmlFor="inputUsername" className="sr-only">RU Email</label>
+                                <input type="text" id="inputUserName" className="form-control" required
+                                       placeholder="Username (RU Email)" autoFocus/>
+                            </div>
+                            <div className="form-group col-md-12">
+                                <label htmlFor="inputPassword" className="sr-only">Password</label>
+                                <input type="password" id="inputPassword" className="form-control" required
+                                       placeholder="Password"/>
+                            </div>
+                            <div className="form-group col-md-12">
+                                <label htmlFor="inputPassword" className="sr-only">Re-Enter Password</label>
+                                <input type="password" id="inputPasswordConf" className="form-control" required
+                                       placeholder="Re-Enter Password"/>
+                                <div className="form-group col-md-12" align="Center">
+                                    <br/>
+                                    <select id="acctTypeSelect" >
+                                        <option>Select Account Type</option>
+                                        <option value="Administrator">Administrator</option>
+                                        <option value="Faculty">Faculty</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Notetaker">Note taker</option>
+                                    </select>
+                                </div>
+                                <div className="form-group col-md-12" align="Center">
+                                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.submitSignupRequest}>Sign Up</button>
+                                    <p>
+                                        <a href="/login">Already Have an Account?</a>
+                                        <a href="/forgotPassword">Forgot your password?</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-            <div id="SignupFields-Container">
-                <form className="form-signin">
 
-                    <div id="top-div-Container">
-                        <h2 className="form-signin-header">Create Account</h2>
-                    </div>
-
-                    <label htmlFor="inputUsername" className="sr-only">RU Email</label>
-                    <input type="text" id="inputUserName" className="form-control" placeholder="RU Email" required
-                           autoFocus />
-                    <label htmlFor="inoutPassword" className="sr-only">Password</label>
-                    <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
-
-                    <input type="password" id="inputPassword" className="form-control" placeholder="Re-Enter Password" required/>
-                    <div className="checkbox">
-                      <select id="acctTypeSelect">
-                          <option>Select Account Type</option>
-                          <option value="Administrator">Administrator</option>
-                          <option value="Faculty">Faculty</option>
-                          <option value="Student">Student</option>
-                          <option value="Notetaker">Notetaker</option>
-                      </select>
-                        <br/>
-                        <br/>
-                        <button className="btn btn-lg btn-primary" type="submit" onClick={this.submitSignupRequest}>Sign Up</button>
-                        <p>
-                            <a href="/login">Already Have an Account?</a>
-                            <a href="/forgotPassword">Forgot your password?</a>
-                        </p>
-
-                    </div>
-                </form>
             </div>
-            </div>
+
         );
     }
 
 }
-
 export default SignUpPage;
