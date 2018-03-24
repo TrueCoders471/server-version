@@ -4,7 +4,8 @@ class NotetakerNotesPage extends React.Component {
 
     openUploadNotes() {
         //location.href = "/uploadNotes";
-        alert("File Picker opens...");
+        alert("File successfully uploaded.");
+        //This is where we will take the file that is stored in the temporary folder and send it to the database.
     }
     deleteForm() {
         alert("Deleted notes!");
@@ -17,7 +18,13 @@ class NotetakerNotesPage extends React.Component {
     render() {
         return (
             <div>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openUploadNotes}>Upload Notes
+                <div align={"middle"}>
+                    <br/>
+                    <h4>Choose a file to upload:</h4>
+                    <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
+                    <br/> {/* Break between the button and file uploader to have space */}
+                </div>
+                <button className={"uploadButton"} type="submit" onClick={this.openUploadNotes}>Upload Notes
                 </button>
                 <ul>
                     <h3> Week: Nov 12 - Nov 19</h3>

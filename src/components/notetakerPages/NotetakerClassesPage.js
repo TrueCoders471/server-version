@@ -31,10 +31,9 @@ class MyClassesNotetakerPage extends React.Component {
                 <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
                 <div className="section group">
                     <div className="cardContainer">
-                        <img src="https://www.pexels.com/search/technology/" alt="computer"/>
-                        <div className="card">
+                        <div className={"card"}>
                             <br/>
-                            <div className="container" onClick={this.openClass1}>
+                            <div className={"container"} onClick={this.openClass1}>
                                 <h4><b>ITEC 120</b></h4>
                                 <p className={"centerText"}>Principles of Computer Science I</p>
                             </div>
