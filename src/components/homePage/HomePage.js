@@ -17,7 +17,7 @@ class HomePage extends React.Component {
     // }
     render() {
         return (
-            <div id="HomePageView-Container" className="home-page">
+            <div className="HomePageView-Container">
             <div id = "jumbo-Container">
                     <img id = "Jumbo-Image"
                          src = {require ('./../../public/images/homepage.jpg')}/>

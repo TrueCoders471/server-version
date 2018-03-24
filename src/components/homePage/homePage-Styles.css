@@ -1,7 +1,7 @@
 @import "../../styles/General-Styles.css";
 
-#HomePageView-Container {
-    height: 90%;
+.HomePageView-Container {
+    height: 80%;
     width: 100%;
 }
 #jumbo-Container{
@@ -9,7 +9,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    max-height: 60%;
+    max-height: 55%;
 }
 .jumbotron{
     height: 100%;
@@ -77,5 +77,5 @@ panel-text {
 }
 
 #info-div {
-    padding-bottom: 5%;
+    padding-bottom: 0;
 }
