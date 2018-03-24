@@ -59,7 +59,7 @@ class MyClassesNotetakerPage extends React.Component {
                                 <h4><b>ART 100</b></h4>
                                 <p className={"centerText"}>Art appreciation</p>
                             </div>
-                            <div className="containerNT" onClick={this.openClass3}>
+                            <div className={"containerNT"} onClick={this.openClass3}>
                                 <h4><b>GEOG 101</b></h4>
                                 <p className={"centerText"}>World Geography</p>
                             </div>
