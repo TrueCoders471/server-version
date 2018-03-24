@@ -42,4 +42,25 @@
 
 }
 
+.approveDenyBTN{
+    top: 10%;
+    right:20px;
 
+    width: 100px;
+    border-radius: 5px;
+    background-color: #c2011b;
+    font-family: Arial;
+    color: white;
+    font-size: 18px;
+}
+.approveDenyBTN:hover{
+    top: 10%;
+    right:20px;
+  
+    width: 100px;
+    border-radius: 5px;
+    background-color: #427dc2;
+    font-family: Arial;
+    color: white;
+    font-size: 18px;
+}

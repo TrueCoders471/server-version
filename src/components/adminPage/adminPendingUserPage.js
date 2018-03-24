@@ -60,6 +60,27 @@ class adminNoteTakerApprovePage extends React.Component {
                         className="-striped -highlight"
                     />
                 </div>
+                <div className="container" align="Center">
+                    <div className="form-group col-md-12" align="Center">
+                        <p>To approve or deny a user look at the table above and copy the persons student ID
+                            into the field.</p>
+                    </div>
+                    <div className="form-group col-md-3">
+                        {/*Supposed to be empty*/}
+                    </div>
+                    <div className="form-group col-md-6" align="Center">
+                        <label>Student ID</label>
+                        <input type="password" id="inputStudentID" className="form-control" required
+                               placeholder="Student ID"/>
+                        <br />
+                        <button type="button" className="approveDenyBTN">Approve</button>
+                        <button type="button" className="approveDenyBTN">Deny</button>
+                    </div>
+                    <div className="form-group col-md-3">
+                        {/*Supposed to be empty*/}
+
+                    </div>
+                </div>
             </div>
         );
     };
