@@ -21,7 +21,7 @@ class UserHeader extends React.Component {
                 <div className="row-outer">
                     <div className="col-lg-8">
                         <div className='custom-banner'>
-                            <banner-text>Radford University CAS Student</banner-text>
+                            <banner-text>Radford University CAS Account</banner-text>
                         </div>
                     </div>
 
