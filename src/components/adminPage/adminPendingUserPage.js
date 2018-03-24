@@ -2,14 +2,15 @@ import React from 'react';
 import './adminPendingUserPageStyles.css';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { makeData} from "./Utils";
+import { makeListOfAdmins} from "./Utils";
 
 
 class adminNoteTakerApprovePage extends React.Component {
+
     constructor() {
         super();
         this.state = {
-            data: makeData()
+            data: makeListOfAdmins()
         };
     }
 

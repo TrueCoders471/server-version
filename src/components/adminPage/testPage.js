@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import ReactTable from "react-table";
-import { makeData} from "./Utils";
+import { makeListOfAdmins} from "./Utils";
 
 import "react-table/react-table.css";
 
@@ -10,7 +10,7 @@ class testPage extends React.Component{
     constructor(){
         super();
         this.state = {
-            data: makeData()
+            data: makeListOfAdmins()
         };
     }
 

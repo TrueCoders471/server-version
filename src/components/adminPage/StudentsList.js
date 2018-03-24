@@ -1,61 +1,59 @@
 import React from 'react';
 import './AdminStyles.css';
-
+import ReactTable from "react-table";
+import "react-table/react-table.css";
+import { makeListOfStudents} from "./Utils";
 
 class StudentsList extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            data: makeListOfStudents()
+        };
+    }
+
     render() {
+        const { data } = this.state;
         return (
             <div>
                 <br/>
                 <div className="Center">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <th className="tableHeader">
-                                Name
-                            </th>
-                            <th className="tableHeader">
-                                Account Type
-                            </th>
-                            <th className="tableHeader">
-                                Date Submitted
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Ruby Jones
-                            </td>
-                            <td>
-                                Note Viewer
-                            </td>
-                            <td>
-                                01/21/2016
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                John Snow
-                            </td>
-                            <td>
-                                Note Viewer
-                            </td>
-                            <td>
-                                09/02/2017
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Jack Black
-                            </td>
-                            <td>
-                                Note Viewer
-                            </td>
-                            <td>
-                                03/11/2017
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <ReactTable
+                        data={data}
+                        columns={[
+                            {
+                                Header: "Name",
+                                columns: [
+                                    {
+                                        Header: "First Name",
+                                        accessor: "firstName"
+                                    },
+                                    {
+                                        Header: "Last Name",
+                                        id: "lastName",
+                                        accessor: d => d.lastName
+                                    }
+                                ]
+                            },
+                            {
+                                Header: "Info",
+                                columns: [
+                                    {
+                                        Header: "Account Type",
+                                        accessor: "accountType"
+                                    },
+                                    {
+                                        Header: "Student ID",
+                                        accessor: "studentID"
+                                    }
+
+                                ]
+                            }
+                        ]}
+                        defaultPageSize={10}
+                        className="-striped -highlight"
+                    />
                 </div>
                 <br/>
             </div>
