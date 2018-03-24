@@ -114,14 +114,16 @@
     width: 50%;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+/* Add some padding inside the card container */
+.containerNT {
+    padding: 2% 16%;
 }
 
-/* Add some padding inside the card container */
-.container {
-    padding: 2% 16%;
+/*Adds a deeper shadow to the box and changes the color*/
+.containerNT:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: #c2011b;
+    color: antiquewhite;
 }
 
 .griditem {
