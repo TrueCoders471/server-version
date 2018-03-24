@@ -43,7 +43,7 @@ class MyClassesNotetakerPage extends React.Component {
                             </div>
                         </div>
                         <br/>
-                        <div className="card">
+                        <div className={"card"}>
                             <div className={"containerNT"} onClick={this.openClass4}>
                                 <h4><b>ITEC 110</b></h4>
                                 <p className={"centerText"}>Information Technology</p>
@@ -64,7 +64,6 @@ class MyClassesNotetakerPage extends React.Component {
                                 <p className={"centerText"}>World Geography</p>
                             </div>
                         </div>
-                        <br/>
                     </div>
                 </div>
                 {/*<p>My Classes Notetaker: A grid of classes her with a button for each</p> */}
