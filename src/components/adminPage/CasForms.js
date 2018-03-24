@@ -19,7 +19,7 @@ class CasForms extends React.Component {
             <div>
                 <h3>Fillable forms</h3>
                 <div align="middle">
-                    <h4>Upload a new form</h4>
+                    <h4>Choose a file to upload:</h4>
                     <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
                     <br/> {/* Break between the button and file uploader to have space */}
                     {/*This is where we have to grab the file that is in the temporary folder and send it in a
