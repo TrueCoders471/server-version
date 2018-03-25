@@ -20,7 +20,7 @@ class NotetakerClass2Page extends React.Component {
                 <h3>ART 100</h3>
                 <NotetakerNotesPage/>
 
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes</button>
+                <button className="uploadButton" type="submit" onClick={this.openClasses}>View All Classes</button>
             </div>
 
         );

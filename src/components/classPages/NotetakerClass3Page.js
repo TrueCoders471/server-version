@@ -18,7 +18,7 @@ class NotetakerClass3Page extends React.Component {
                 <h3>GEOG 101</h3>
                 <NotetakerNotesPage/>
 
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes</button>
+                <button className="uploadButton" type="submit" onClick={this.openClasses}>View All Classes</button>
 
             </div>
         );

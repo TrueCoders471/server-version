@@ -123,7 +123,7 @@ class AcademicAccommodationsContract extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container" align="left">
                 <div className="row">
                     <div id = "primary" className="col-md-8 col-md-offset-2">
                         <form role="form" method="POST" action="#">
@@ -138,7 +138,7 @@ class AcademicAccommodationsContract extends React.Component {
                                 {this.legalAgreementInfo()}
                             </fieldset>
                             <div className="text-center">
-                            <button type="button" className="btn btn-primary" onClick={this.goToHub}>Submit</button>
+                            <button type="button" className="uploadButton" onClick={this.goToHub}>Submit</button>
                             </div>
                         </form>
                     </div>

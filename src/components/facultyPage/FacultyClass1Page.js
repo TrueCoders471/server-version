@@ -29,7 +29,7 @@ export default class FacultyClassPage extends React.Component {
                     </div>
                 </div>
                 <div align="middle">
-                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes
+                    <button className="uploadButton" type="submit" onClick={this.openClasses}>View All Classes
                     </button>
                 </div>
             </div>

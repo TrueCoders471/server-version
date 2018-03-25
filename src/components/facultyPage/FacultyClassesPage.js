@@ -18,11 +18,11 @@ export default class FacultyClassesPage extends React.Component {
         return (
             <div className="text-center">
                 <h1>Faculty's Classes List</h1>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass1}>View ITEC 120</button>
+                <button className="uploadButton" type="submit" onClick={this.openClass1}>View ITEC 120</button>
                 <br/><br/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass2}>View ITEC 380</button>
+                <button className="uploadButton" type="submit" onClick={this.openClass2}>View ITEC 380</button>
                 <br/><br/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClass3}>View ART 101</button>
+                <button className="uploadButton" type="submit" onClick={this.openClass3}>View ART 101</button>
             </div>
         );
     }

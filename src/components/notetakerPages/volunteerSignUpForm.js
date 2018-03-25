@@ -115,7 +115,7 @@ class volunteerSignUpForm extends React.Component {
                                                 </label>
                                             </div>
                                             <br/>
-                                            <button type="button" className="btn btn-primary">Submit
+                                            <button type="button" className="uploadButton">Submit
                                             </button>
                                             {/* function that submits information to the database */}
                                             <br/>
