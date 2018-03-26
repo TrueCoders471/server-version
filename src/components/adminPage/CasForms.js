@@ -24,7 +24,7 @@ class CasForms extends React.Component {
                     <br/> {/* Break between the button and file uploader to have space */}
                     {/*This is where we have to grab the file that is in the temporary folder and send it in a
                        blob to the database*/}
-                    <button className="uploadButton" onClick={this.uploadFile}>Upload File</button>
+                    <button className="commonButton" onClick={this.uploadFile}>Upload File</button>
 
                 </div>
                 <br/>

@@ -37,7 +37,7 @@ class ForgotPassword extends React.Component {
                                                    placeholder="RU-Email" autoFocus/>
                                         </div>
                                         <div className="form-group col-md-12" align="middle">
-                                            <button className="uploadButton" type="submit" onClick={this.resetPassword}>Submit</button>
+                                            <button className="commonButton" type="submit" onClick={this.resetPassword}>Submit</button>
                                         </div>
                                     </div>
                                 </fieldset>

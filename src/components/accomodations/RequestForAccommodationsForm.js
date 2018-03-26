@@ -122,7 +122,7 @@ class RequestForAccommodationsForm extends React.Component {
                             {this.requestInfo()}
                         </fieldset>
                         <div className="text-center">
-                            <button type="button" className="uploadButton" onClick={this.goToHub}>Submit</button>
+                            <button type="button" className="commonButton" onClick={this.goToHub}>Submit</button>
                             <br />
                             <br />
                             <br />

@@ -17,7 +17,7 @@ class NotetakerPage extends React.Component {
 
 
                 <div align="middle">
-                    <button className="uploadButton" type="submit" onClick={this.openClasses}>Open My Classes
+                    <button className="commonButton" type="submit" onClick={this.openClasses}>Open My Classes
                     </button>
                 </div>
             </div>

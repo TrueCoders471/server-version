@@ -285,7 +285,7 @@ class proctoringRequestForm extends React.Component {
                     <div className="form-group">
                         <div id="submit-Container">
                             <br/>
-                            <button type="button" className="uploadButton" onClick={this.goToHub}>Submit</button>
+                            <button type="button" className="commonButton" onClick={this.goToHub}>Submit</button>
                             <br/>
                             <br/>
 

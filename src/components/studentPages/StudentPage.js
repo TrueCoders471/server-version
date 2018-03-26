@@ -11,7 +11,7 @@ class StudentPage extends React.Component {
         return (
             <div>
                 <h3>Student</h3>
-                <button className="uploadButton" type="submit" onClick={this.openClasses}>Open Classes</button>
+                <button className="commonButton" type="submit" onClick={this.openClasses}>Open Classes</button>
                 <br /><br />
             </div>
         );

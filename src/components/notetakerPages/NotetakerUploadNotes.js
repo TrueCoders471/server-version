@@ -9,7 +9,7 @@ class NotetakerUploadNotes extends React.Component {
         return(
             <div>
                 <p>Notetaker Upload Notes view here</p>
-                <button className="uploadButton" type="submit" onClick={this.uploadNotes}>Download Notes!</button>
+                <button className="commonButton" type="submit" onClick={this.uploadNotes}>Download Notes!</button>
             </div>
 
         );

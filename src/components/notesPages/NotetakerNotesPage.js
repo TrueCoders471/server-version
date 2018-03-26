@@ -24,7 +24,7 @@ class NotetakerNotesPage extends React.Component {
                     <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
                     <br/> {/* Break between the button and file uploader to have space */}
                 </div>
-                <button className={"uploadButton"} type="submit" onClick={this.openUploadNotes}>Upload Notes
+                <button className={"commonButton"} type="submit" onClick={this.openUploadNotes}>Upload Notes
                 </button>
                 <ul>
                     <h3> Week: Nov 12 - Nov 19</h3>

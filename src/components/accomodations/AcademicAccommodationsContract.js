@@ -138,7 +138,7 @@ class AcademicAccommodationsContract extends React.Component {
                                 {this.legalAgreementInfo()}
                             </fieldset>
                             <div className="text-center">
-                            <button type="button" className="uploadButton" onClick={this.goToHub}>Submit</button>
+                            <button type="button" className="commonButton" onClick={this.goToHub}>Submit</button>
                             </div>
                         </form>
                     </div>

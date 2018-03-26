@@ -306,7 +306,7 @@ class pprs extends React.Component {
                                                 </label>
                                             </div>
                                             <br/>
-                                            <button type="button" className="uploadButton"
+                                            <button type="button" className="commonButton"
                                                     onClick={this.goToHub}>Submit
                                             </button>
                                             <br/>

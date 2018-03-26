@@ -347,7 +347,7 @@ class SignUpForm extends React.Component {
                                         </label>
                                     </div>
                                     <br/>
-                                    <button type="submit" className="uploadButton">Register</button>
+                                    <button type="submit" className="commonButton">Register</button>
                                     <br/>
                                     <br/>
                                     <a href="#">Already have an account?</a>

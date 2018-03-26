@@ -44,7 +44,7 @@
     display: inline-block;
 }
 
-.uploadButton {
+.commonButton {
     background-color: #c2011b; /* White at first and then after cursor hovers it turns to Radford Red. */
     border: 2px solid #c2011b;
     color: white;
@@ -57,7 +57,7 @@
     border-radius: 5px;
 }
 
-.uploadButton:hover {
+.commonButton:hover {
     color: black;
     background-color: white;
 }
