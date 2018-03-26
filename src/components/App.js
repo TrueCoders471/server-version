@@ -24,10 +24,16 @@ class App extends Component {
                 return (<Header/>);
             case "/login":
                 return (<Header/>);
+            case "/":
+                return (<Header/>);
+            case "/signup":
+                return (<Header/>);
             case "/admin":
                 return (<UserHeader/>);
+            case "/faculty":
+                return (<UserHeader/>);
             default:
-                return (<Header/>);
+                return (<UserHeader/>);
         }
     }
 

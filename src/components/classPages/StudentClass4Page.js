@@ -12,8 +12,6 @@ class StudentClass4Page extends React.Component {
 
         return (
             <div>
-
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
                 <h4>ITEC 110</h4>
             <button className="uploadButton" type="submit" onClick={this.openNotes}>Open Notes for this class</button>
             </div>

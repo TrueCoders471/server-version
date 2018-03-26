@@ -13,7 +13,7 @@ class NotetakerClass5Page extends React.Component {
     render() {
         return (
             <div>
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
+
 
                 <h3>CORE 102</h3>
                 <NotetakerNotesPage/>

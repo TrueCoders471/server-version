@@ -24,7 +24,6 @@ class MyClassesStudentPage extends React.Component {
     render() {
         return (
             <div>
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
                 <div className="section group">
                     <div className="col span_1_of_5">
                         <div className="card">

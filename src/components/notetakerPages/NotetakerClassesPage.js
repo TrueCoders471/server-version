@@ -28,7 +28,7 @@ class MyClassesNotetakerPage extends React.Component {
     render() {
         return (
             <div>
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
+
                 <div className="section group">
                     <div className="cardContainer">
                         <div className={"card"}>

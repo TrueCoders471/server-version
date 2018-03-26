@@ -13,7 +13,7 @@ class NotetakerClass3Page extends React.Component {
         return (
             <div>
 
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
+
 
                 <h3>GEOG 101</h3>
                 <NotetakerNotesPage/>
