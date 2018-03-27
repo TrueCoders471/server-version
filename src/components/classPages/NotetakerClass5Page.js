@@ -17,8 +17,9 @@ class NotetakerClass5Page extends React.Component {
 
                 <h3>CORE 102</h3>
                 <NotetakerNotesPage/>
-
                 <button className="commonButton" type="submit" onClick={this.openClasses}>View All Classes</button>
+                <br/><br/><br/> {/*This is the only way I could keep the button on the page, no clue why....
+                                   any fixes are welcome :) */}
             </div>
 
         );
