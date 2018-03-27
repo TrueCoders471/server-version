@@ -28,7 +28,6 @@ class MyClassesNotetakerPage extends React.Component {
     render() {
         return (
             <div>
-
                 <div className="section group">
                     <div className="cardContainer">
                         <div className={"card"}>
@@ -54,14 +53,14 @@ class MyClassesNotetakerPage extends React.Component {
                             </div>
                         </div>
                         <br/>
-                        <div className="card">
+                        <div className={"card"}>
                             <div className={"containerNT"} onClick={this.openClass2}>
                                 <h4><b>ART 100</b></h4>
-                                <p className={"centerText"}>Art appreciation</p>
+                                <p className={"centerText"}>Information Technology</p>
                             </div>
                             <div className={"containerNT"} onClick={this.openClass3}>
                                 <h4><b>GEOG 101</b></h4>
-                                <p className={"centerText"}>World Geography</p>
+                                <p className={"centerText"}>Core Curriculum</p>
                             </div>
                         </div>
                     </div>
