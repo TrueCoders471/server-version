@@ -77,12 +77,8 @@
     text-align: center;
 
 }
-a{
-    color: white /*!important; We have to watch using this attribute it will still be inherited by other pages*/
-
-}
-a.dropdown-toggle {
-    color: black;
+.ihateCSS{
+    color: white;
 }
 li.active{
     color:black !important;

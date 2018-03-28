@@ -33,8 +33,8 @@ class UserHeader extends React.Component {
                         </div>
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Account
-                                    <b className="caret"/>
+                                <a href="#" data-toggle="dropdown"><p className="ihateCSS">Account <b className="caret"/></p>
+
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li className="divider"/>
