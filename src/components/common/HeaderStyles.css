@@ -59,3 +59,43 @@
     height: 100%;
     width: 100%;
 }
+#signedInHeader{
+    background-color: #c2011b;
+    color: white !important;
+}
+.navbar-header{
+    text-align: center !important;
+    color: white !important;
+    margin: 0 auto;
+}
+.navbar-default {
+    color: white !important;
+
+}
+.navbar-brand {
+    color: white !important;
+    text-align: center;
+
+}
+a{
+    color: white !important;
+
+}
+a.dropdown-toggle {
+    color: black;
+}
+li.active{
+    color:black !important;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: white !important;
+}
+.dropdown-menu {
+    background-color: #c2011b;
+}
+.headerWrapper{
+    text-align: center important!;
+}
+#custom-toggle {
+    color: black !important;
+}

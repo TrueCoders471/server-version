@@ -26,6 +26,8 @@ class App extends Component {
                 return (<Header/>);
             case "/admin":
                 return (<UserHeader/>);
+            case "/adminPendingUser":
+                return (<UserHeader/>);
             default:
                 return (<Header/>);
         }
