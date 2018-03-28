@@ -30,11 +30,8 @@ class App extends Component {
                 return (<Header/>);
             case "/admin":
                 return (<UserHeader/>);
-<<<<<<< HEAD
             case "/adminPendingUser":
-=======
             case "/faculty":
->>>>>>> 13542cf7c75c8b8e5a1a48d6a774f34ea9df7ed3
                 return (<UserHeader/>);
             default:
                 return (<UserHeader/>);

@@ -94,7 +94,7 @@ li.active{
     background-color: #c2011b;
 }
 .headerWrapper{
-    text-align: center important!;
+    text-align: center !important;
 }
 #custom-toggle {
     color: black !important;
