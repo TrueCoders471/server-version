@@ -1,4 +1,4 @@
-@import "../../styles/General-Styles.css";
+
 
 #loginBackgroundStretch{
     width : 100%;
@@ -46,21 +46,7 @@
 
 }
 
-p a {
-    font-size: 11px;
-    color: #aaa;
-    padding-left: 15px;
-    left: 50%;
-    margin-top: -13px;
 
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
-}
-
-p a:hover {
-    color: #555;
-}
 
 .form-signin-header{
     margin-top: 20px;
@@ -87,6 +73,18 @@ p a:hover {
     margin: auto;
 }
 
-.buttonSub{
+.loginLinks{
+    font-size: 11px;
+    color: #aaa;
+    padding-left: 15px;
+    left: 50%;
+    margin-top: -13px;
 
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+    text-decoration: none;
+}
+.loginLinks:hover{
+    color: #555;
 }

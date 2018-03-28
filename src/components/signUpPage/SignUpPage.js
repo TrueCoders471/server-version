@@ -87,8 +87,8 @@ class SignUpPage extends React.Component {
                                 <div className="form-group col-md-12" align="Center">
                                     <button className="commonButton" type="submit" onClick={this.submitSignupRequest}>Sign Up</button>
                                     <p>
-                                        <a href="/login">Already Have an Account?</a>
-                                        <a href="/forgotPassword">Forgot your password?</a>
+                                        <a className="loginLinks" href="/login">Already Have an Account?</a>
+                                        <a className="loginLinks" href="/forgotPassword">Forgot your password?</a>
                                     </p>
                                 </div>
                             </div>

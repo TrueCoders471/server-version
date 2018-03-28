@@ -20,7 +20,8 @@ class HomePage extends React.Component {
             <div className="HomePageView-Container">
             <div id = "jumbo-Container">
                     <img id = "Jumbo-Image"
-                         src = {require ('./../../public/images/homepage.jpg')}/>
+                         src = {require ('./../../public/images/homepage.jpg')}
+                         alt="View of the College of Humanities and Behavioral Sciences with students walking around"/>
                     <div id= "jumbo-caption-container">
                         <jumbo-text>Welcome To The CAS Student Notes Hub</jumbo-text>
                     </div>
@@ -30,7 +31,8 @@ class HomePage extends React.Component {
                     <a href="signup">
                     <div id = "homepage-panel">
                         <img id = "panel-image"
-                             src = {require ('./../../public/images/signupPanelImage.jpg')}/>
+                             src = {require ('./../../public/images/signupPanelImage.jpg')}
+                             alt="Ariel view of the center of Radford University"/>
                         <div id= "panel-shroud">
                             <panel-text>Sign Up To Access The
                                 <br></br>Services CAS Has To Offer</panel-text>
@@ -40,7 +42,8 @@ class HomePage extends React.Component {
                     <a href="login">
                     <div id = "homepage-panel">
                         <img id = "panel-image"
-                             src = {require ('./../../public/images/loginPanelImage.jpg')}/>
+                             src = {require ('./../../public/images/loginPanelImage.jpg')}
+                             alt="View of Heath Hall with students playing a game on the lawn"/>
                         <div id= "panel-shroud">
                             <panel-text>Already Have An Account?
                                 <br></br>Sign In Here.</panel-text>

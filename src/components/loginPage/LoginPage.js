@@ -11,7 +11,8 @@ class LoginPage extends React.Component {
 
     drawLogBackground() {
         return (<div id="loginBackgroundStretch" src>
-            <img className="background-image" src={require('./../../public/images/loginBackground.jpg')}/>
+            <img className="background-image" src={require('./../../public/images/loginBackground.jpg')}
+                 alt="View of the Radford University clocks art with quote of the Radford Honor Pledge"/>
         </div>);
     }
 
@@ -84,11 +85,10 @@ class LoginPage extends React.Component {
                                                             <input type="checkbox" value="remember-me"/>
                                                             Remember me
                                                         </label>
-                                                        <br/>
-                                                        <p>
-                                                            <a href="/forgotPassword">Forgot your password?</a>
-                                                            <a href="/Signup">Don't Have An Account?</a>
-                                                        </p>
+                                                    </div>
+                                                    <div className="form-group col-md-12">
+                                                            <a className="loginLinks" href="/forgotPassword">Forgot your password?</a>
+                                                            <a className="loginLinks" href="/Signup">Don't Have An Account?</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -99,40 +99,6 @@ class LoginPage extends React.Component {
                             </fieldset>
                         </form>
                     </div>
-
-
-                    {/* <form onSubmit={this.submit}>
-                        <div className="top-div-Container">
-                            <h2 className="form-signin-header">LOGIN</h2>
-                        </div>
-                        <br/>
-                        <label htmlFor="inputUsername" className="sr-only">RU Email</label>
-                        <input type="text" id="inputUserName" className="form-control" required
-                               placeholder="Username" autoFocus/>
-                        <br/>
-                        <label htmlFor="inputPassword" className="sr-only">Password</label>
-                        <input type="password" id="inputPassword" className="form-control" required
-                               placeholder="Password"/>
-                        <br/>
-                        <br/>
-
-                        <button className="btn btn-lg btn-primary" type="submit">Sign in</button>
-
-                        <div className="checkbox">
-                            <label>
-
-                                <input type="checkbox" value="remember-me"/>
-                                Remember me
-                            </label>
-                            <br/>
-                            <p>
-                                <a href="/forgotPassword">Forgot your password?</a>
-
-                                <a href="/Signup">Don't Have An Account?</a>
-                            </p>
-
-                        </div>
-                    </form>*/}
                 </div>
             </div>
         );
