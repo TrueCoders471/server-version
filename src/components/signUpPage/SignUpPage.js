@@ -8,7 +8,8 @@ class SignUpPage extends React.Component {
 
     drawLogBackground() {
         return (<div id="loginBackgroundStretch" src>
-            <img className = "background-image" src = {require('./../../public/images/signupBackground.jpg')}/>
+            <img className = "background-image" src = {require('./../../public/images/signupBackground.jpg')}
+            alt="View of muse looking up at the clock tower."/>
         </div>);
     }
     /**
