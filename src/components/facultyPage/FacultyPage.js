@@ -10,7 +10,6 @@ class FacultyPage extends React.Component {
     render() {
         return (
             <div>
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
                 <FacultyClassesPage/>
             </div>
         );

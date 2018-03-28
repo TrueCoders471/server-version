@@ -14,11 +14,13 @@ class NotetakerClassPage extends React.Component {
         return (
             <div>
 
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
-                <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes</button>
 
-                <h4>ITEC 120</h4>
+
+                <h3>ITEC 120</h3>
                 <NotetakerNotesPage/>
+                <button className="commonButton" type="submit" onClick={this.openClasses}>View All Classes</button>
+                <br/><br/><br/> {/*This is the only way I could keep the button on the page, no clue why....
+                                   any fixes are welcome :) */}
             </div>
         );
     }

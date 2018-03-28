@@ -75,7 +75,7 @@ class LoginPage extends React.Component {
                                             <div id="submit-Container">
                                                 <div className="checkbox">
                                                     <div className="form-group col-md-12">
-                                                        <button type="submit" className="btn btn-primary"
+                                                        <button type="submit" className="commonButton"
                                                                 onClick={this.submit}>Log in
                                                         </button>
                                                     </div>

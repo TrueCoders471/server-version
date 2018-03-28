@@ -8,9 +8,9 @@ class RequestForAccommodationsForm extends React.Component {
     }
     requestInfo(){
         return(
-            <div className="form-group col-md-12">
-                <div id="RegStudent-border">
-                    <p>
+            <div className="form-group col-md-12" >
+                <div id="RegStudent-border" align="left">
+                    <p align="center">
                         To request academic accommodations, complete <b>ALL</b> sections below.
                     </p>
                     <br/>
@@ -122,7 +122,10 @@ class RequestForAccommodationsForm extends React.Component {
                             {this.requestInfo()}
                         </fieldset>
                         <div className="text-center">
-                            <button type="button" className="btn btn-primary" onClick={this.goToHub}>Submit</button>
+                            <button type="button" className="commonButton" onClick={this.goToHub}>Submit</button>
+                            <br />
+                            <br />
+                            <br />
                         </div>
                     </form>
                 </div>

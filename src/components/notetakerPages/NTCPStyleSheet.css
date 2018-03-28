@@ -35,7 +35,31 @@
 .cardContainer {
     padding: 10px;
     width: 100%;
+    display: block;
+}
+
+.fileUpload {
+    width: 175px;
+    height: 20px;
     display: inline-block;
+}
+
+.commonButton {
+    background-color: #c2011b; /* White at first and then after cursor hovers it turns to Radford Red. */
+    border: 2px solid #c2011b;
+    color: white;
+    padding: 5px 20px;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.commonButton:hover {
+    color: black;
+    background-color: white;
 }
 
 .centerText {
@@ -90,14 +114,16 @@
     width: 50%;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+/* Add some padding inside the card container */
+.containerNT {
+    padding: 2% 16%;
 }
 
-/* Add some padding inside the card container */
-.container {
-    padding: 2% 16%;
+/*Adds a deeper shadow to the box and changes the color*/
+.containerNT:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: #c2011b;
+    color: antiquewhite;
 }
 
 .griditem {

@@ -10,18 +10,18 @@ class pprs extends React.Component {
 
     openingInformation() {
         return (
-            <div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="name-field">Name:</label>
+            <div align="left">
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="name-field" align="left">Name:</label>
                     <input type="text" name="nameField" className="form-control" id="name-field"
                            placeholder="First Last"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label htmlFor="student_id">Student ID:</label>
                     <input type="text" className="form-control" name="studentId" id="student_id"
                            placeholder="000000000"/>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>1. Students are qualified for accommodations based on best practices, a student interview and
                         supporting documentation. CAS accepts <b>COPIES</b> of documentation only (no originals).
                         Documentation is processed in the order it is received.</p>
@@ -48,11 +48,11 @@ class pprs extends React.Component {
                         copies of documentation (medical records, IEPs, etc.) should be made to the original
                         provider.</p>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label htmlFor="initial">(initial) <b>I understand and agree to the CAS policies and
                         responsibilities listed above.</b></label>
                 </div>
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-2" align="left">
                     <input type="text" className="form-control" name="studentId" id="initial"
                            placeholder="FL"/>
                 </div>
@@ -61,18 +61,18 @@ class pprs extends React.Component {
 
     policiesAndResponsibilitiesForRecordingDevices() {
         return (
-            <div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="recordingDevices">Are you eligible for the use of a Recording
+            <div align="left">
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="recordingDevices">Are you eligible for the use of a Recording
                         Devices?</label>
                 </div>
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-3" align="left">
                     <label className="radio-inline"><input type="radio" name="yesRecordingDevice" value="Y"/>
                         YES</label>
                     <label className="radio-inline"><input type="radio" name="noRecordingDevice" value="N"/>
                         NO</label>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>1. Prior to using the recording device, I will notify my instructor of what recording device(s)
                         I will use and discuss the plan of use with my professor.</p>
                     <p>2. Information recorded during class lectures and discussions will be used to support my
@@ -80,11 +80,11 @@ class pprs extends React.Component {
                         I will maintain private and exclusive use of all recorded lectures and/or discussions.
                         I will destroy recorded material at the end of the semester.</p>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label htmlFor="initialRD">(initial) <b>I understand and agree to the policies and
                         responsibilities listed above related to recording devices.</b></label>
                 </div>
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-2" align="left">
                     <input type="text" className="form-control" name="initialRD" id="initialRD"
                            placeholder="FL"/>
                 </div>
@@ -95,29 +95,29 @@ class pprs extends React.Component {
     noteTakingServicesCoordinationAgreement() {
         return (
             <div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="noteTakingServices">Are you eligible for Note Taking
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="noteTakingServices">Are you eligible for Note Taking
                         Services?</label>
                 </div>
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-3" align="left">
                     <label className="radio-inline"><input type="radio" name="yesNoteTakingServices" value="Y"/>
                         YES</label>
                     <label className="radio-inline"><input type="radio" name="noNoteTakingServices" value="N"/>
                         NO</label>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     {/*Supposed to be empty*/}
                 </div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="anonymous">Do you want to be Known or Anonymous?</label>
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="anonymous">Do you want to be Known or Anonymous?</label>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="radio-inline"><input type="radio" name="yesAnonymous" value="Y"/>
                         Known</label>
                     <label className="radio-inline"><input type="radio" name="noAnonymous" value="N"/>
                         Anonymous</label>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p><b>** Coordinating with your note taker will greatly improve the quality of this service and will
                         allow
                         you to communicate directly with your note taker when questions arise.</b></p>
@@ -130,16 +130,16 @@ class pprs extends React.Component {
     policiesAndResponsibilitiesForNoteTakingServices() {
         return (
             <div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>I will contact the CAS immediately if I am not receiving notes in a timely manner or
                         if I withdraw from a class.</p>
                 </div>
 
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="responsibilitiesForNTS">(initial) <b>I understand and agree to
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="responsibilitiesForNTS" align="left">(initial) <b>I understand and agree to
                         the policy/responsibility listed above related to note taking services.</b></label>
                 </div>
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-2" align="left">
                     <input type="text" className="form-control" name="initialNTS" id="initialNTS"
                            placeholder="FL"/>
                 </div>
@@ -150,17 +150,17 @@ class pprs extends React.Component {
     policiesAndResponsibilitiesForTQEProctoringCAS() {
         return (
             <div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="testAccommodation">Are you eligible for Test
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="testAccommodation">Are you eligible for Test
                         Accommodation?</label>
                 </div>
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-3" align="left">
                     <label className="radio-inline"><input type="radio" name="yesTestAccommodation" value="Y"/>
                         YES</label>
                     <label className="radio-inline"><input type="radio" name="noTestAccommodation" value="N"/>
                         NO</label>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>1. To secure test/quiz/exam accommodations, I will complete the Proctoring Request Form with my
                         professor and submit it at least<b> seven (7) business days prior to the test/quiz/exam.</b>
                         Tests/quizzes/exams scheduled in the CAS will begin between the hours of<b>8am and 2:30pm,
@@ -177,12 +177,12 @@ class pprs extends React.Component {
                         course
                         of action.</p>
                 </div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="responsibilitiesTQE">(initial) <b>I understand and agree to all
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="responsibilitiesTQE">(initial) <b>I understand and agree to all
                         policies and responsibilities listed above related to test/quiz/exam
                         proctoring in the CAS.</b></label>
                 </div>
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-2" align="left">
                     <input type="text" className="form-control" name="initialTQE" id="initialTQE"
                            placeholder="FL"/>
                 </div>
@@ -193,17 +193,17 @@ class pprs extends React.Component {
     policiesAndResponsibilitiesForAlternateTextRequests() {
         return (
             <div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="altTextRequests">Are you eligible for Alternate Text
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="altTextRequests">Are you eligible for Alternate Text
                         Requests?</label>
                 </div>
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-3" align="left">
                     <label className="radio-inline"><input type="radio" name="yesAltTextRequests" value="Y"/>
                         YES</label>
                     <label className="radio-inline"><input type="radio" name="noAltTextRequests" value="N"/>
                         NO</label>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>1. I will submit an alternate text request form and copies of receipts for my alternate text
                         needs.
                         Allow<b> ten (10) business days from the time both the request form and the receipts have been
@@ -217,15 +217,15 @@ class pprs extends React.Component {
                         possession
                         of the original textbook (i.e., if the original is sold, traded or returned after rental).</p>
                 </div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="responsibilitiesATR">(initial) <b> I understand and agree to all
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="responsibilitiesATR">(initial) <b> I understand and agree to all
                         of the policies and responsibilities listed above related to alternate text.</b></label>
                 </div>
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-2" align="left">
                     <input type="text" className="form-control" name="initialATR" id="initialATR"
                            placeholder="FL"/>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="left">
                     <p>I have read the Policies and Procedures for Receiving Services and will adhere to them.</p>
                     <p>I understand that if I do not adhere to the above, there will be a delay in receiving
                         accommodations.</p>
@@ -235,18 +235,18 @@ class pprs extends React.Component {
                         violate the technical standards of the course or program.
                     </p>
                 </div>
-                <div className="form-group col-md-6">
-                    <label className=".value" htmlFor="student-signature">Student Signature:</label>
+                <div className="form-group col-md-6" align="left">
+                    <label className="value" htmlFor="student-signature">Student Signature:</label>
                     <input type="text" name="studentSignature" className="form-control" id="student-signature"
                            placeholder="Signature"/>
                 </div>
-                <div className="form-group col-md-3">
-                    <label className=".value" htmlFor="student-signature-date">Date:</label>
+                <div className="form-group col-md-3" align="left">
+                    <label className="value" htmlFor="student-signature-date">Date:</label>
                     <input type="text" name="studentSignatureDate" className="form-control" id="student-signature-date"
                            placeholder="MM-DD-YYYY"/>
                 </div>
-                <div className="form-group col-md-3">
-                    <label className=".value" htmlFor="student-signature-AY">Academic Year:</label>
+                <div className="form-group col-md-3" align="left">
+                    <label className="value" htmlFor="student-signature-AY">Academic Year:</label>
                     <input type="text" name="studentSignatureAY" className="form-control" id="student-signature-AY"
                            placeholder="YYYY"/>
                 </div>
@@ -256,29 +256,7 @@ class pprs extends React.Component {
             </div>
         );
     }
-
-    submitBox() {
-        return (
-            <div>
-                <div className="form-group col-md-12">
-                    <div className="form-group">
-                        <div id="submit-Container">
-                            <div className="checkbox">
-                                <label>
-                                    <input type="checkbox" id=""/>
-                                    I accept the terms & conditions of Policies and Procedures for Receiving
-                                    Services.
-                                </label>
-                            </div>
-                            <br/>
-                            <button type="submit" className="btn btn-primary">Register</button>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    
 
     render() {
         return (
@@ -328,7 +306,7 @@ class pprs extends React.Component {
                                                 </label>
                                             </div>
                                             <br/>
-                                            <button type="button" className="btn btn-primary"
+                                            <button type="button" className="commonButton"
                                                     onClick={this.goToHub}>Submit
                                             </button>
                                             <br/>

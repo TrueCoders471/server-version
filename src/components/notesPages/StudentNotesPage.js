@@ -6,6 +6,10 @@ class StudentNotesPage extends React.Component {
         alert("Download Notes");
     }
 
+
+    openClasses() {
+        location.href = "/studentClasses"; //eslint-disable-line
+    }
     // openClasses() {
     //     location.href = "/studentClasses";
     // }
@@ -46,6 +50,8 @@ class StudentNotesPage extends React.Component {
                             </li>
                         </ul>
                     </ul>
+                    <button className="commonButton" type="submit" onClick={this.openClasses}>View all Classes
+                    </button>
                 </div>
             </div>
         );

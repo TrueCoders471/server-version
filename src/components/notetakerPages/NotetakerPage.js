@@ -13,11 +13,11 @@ class NotetakerPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Notateker</h1>
-                <span className="glyphicon glyphicon-log-out" onClick={this.logOut}/>
+                <h1>Note Taker</h1>
+
 
                 <div align="middle">
-                    <button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>Open My Classes
+                    <button className="commonButton" type="submit" onClick={this.openClasses}>Open My Classes
                     </button>
                 </div>
             </div>

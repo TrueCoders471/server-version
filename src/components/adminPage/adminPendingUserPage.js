@@ -74,8 +74,9 @@ class adminNoteTakerApprovePage extends React.Component {
                         <input type="password" id="inputStudentID" className="form-control" required
                                placeholder="Student ID"/>
                         <br />
-                        <button type="button" className="approveDenyBTN">Approve</button>
-                        <button type="button" className="approveDenyBTN">Deny</button>
+                        <button type="button" className="commonButton">Approve</button>
+                        <div className="divider"/>
+                        <button type="button" className="commonButton">Deny</button>
                     </div>
                     <div className="form-group col-md-3">
                         {/*Supposed to be empty*/}
