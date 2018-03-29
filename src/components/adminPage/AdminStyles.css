@@ -39,6 +39,12 @@ AdminPage-Container{
     display: inline-block;
 }
 
+.boxUpload {
+    width: 100%;
+    border: 5px #c2011b;
+    margin: 10px;
+    padding: 5px;
+}
 .commonButton:hover {
     color: black;
     background-color: white;

@@ -67,6 +67,15 @@ const newNoteTakerStruct = (notetaker) => {
     };
 };
 
+const newDocumentStruct = (document) => {
+    return {
+        title: document.title,
+        version: document.version,
+        file: document.file
+
+    };
+};
+
 //Amount of data to make
 export function makeListOfAdmins(len = 1000) {
     return range(len).map(d => {
@@ -99,12 +108,35 @@ export function loadUsers(role) {
     )
 }
 
+export function loadDocuments(is_fillable) {
+    var headers = new Headers();
+    const body = JSON.stringify({is_fillable: is_fillable});
+    console.log(body);
+    headers.append("Content-Type", "application/json");
+    //return (window.fetch('http://137.45.220.128:443/loadFiles',
+    return (window.fetch('http://localhost:7555/loadDocuments',
+            {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then((res) => {
+                    return (
+                        res.text().then(function (result) {
+                            console.log(JSON.parse(result));
+                            return JSON.parse(result);
+                        })
+                    )
+                }
+            )
+    )
+}
+
 export async function makeListOfStudents() {
     return loadUsers("student").then((students) => {
             const studentsTotal = students.length;
             var array = [studentsTotal];
-            for(var i=0; i<studentsTotal; i++)
-            {
+            for (var i = 0; i < studentsTotal; i++) {
                 array[i] = newStudentStruct(students[i]);
             }
             return array;
@@ -116,8 +148,7 @@ export async function makeListOfNoteTakers() {
     return loadUsers("notetaker").then((notetakers) => {
             const notetakersTotal = notetakers.length;
             var array = [notetakersTotal];
-            for(var i=0; i<notetakersTotal; i++)
-            {
+            for (var i = 0; i < notetakersTotal; i++) {
                 array[i] = newNoteTakerStruct(notetakers[i]);
             }
             return array;
@@ -129,9 +160,20 @@ export async function makeListOfFaculty() {
     return loadUsers("faculty").then((faculty) => {
             const facultyTotal = faculty.length;
             var array = [facultyTotal];
-            for(var i=0; i<facultyTotal; i++)
-            {
+            for (var i = 0; i < facultyTotal; i++) {
                 array[i] = newFacultyStruct(faculty[i]);
+            }
+            return array;
+        }
+    )
+}
+
+export async function makeListOfDocuments(is_fillable) {
+    return loadDocuments(is_fillable).then((documents) => {
+            const documentsTotal = documents.length;
+            var array = [documentsTotal];
+            for (var i = 0; i < documentsTotal; i++) {
+                array[i] = newDocumentStruct(documents[i]);
             }
             return array;
         }
