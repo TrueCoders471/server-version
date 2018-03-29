@@ -2,16 +2,16 @@ import React from 'react';
 import './AdminStyles.css';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import {makeListOfStudents} from "./Utils";
+import {makeListOfFaculty} from "./Utils";
 
-class StudentsList extends React.Component {
+class FacultyList extends React.Component {
 
     constructor() {
         super();
         this.state = {
             data: []
         };
-        makeListOfStudents().then((students) => this.setState({data: students}));
+        makeListOfFaculty().then((faculty) => this.setState({data: faculty}));
     }
 
     render() {
@@ -51,4 +51,4 @@ class StudentsList extends React.Component {
     }
 }
 
-export default StudentsList;
+export default FacultyList;

@@ -27,7 +27,6 @@ class LoginPage extends React.Component {
         const body = JSON.stringify({username: username, password: password});
         var headers = new Headers();
         headers.append("Content-Type", "application/json");
-        //alert(body);
 
         window.fetch('http://137.45.220.128:443/login',
             {
@@ -38,7 +37,7 @@ class LoginPage extends React.Component {
             .then((res) => {
                 if (res.status === 200) res.text().then(function (text) {
                     location.href = "/" + text; //eslint-disable-line
-                })
+                });
                 else alert('login failed')
             })
     }

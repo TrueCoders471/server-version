@@ -15,12 +15,11 @@ const range = len => {
 
 //Maybe add information from database here
 /**
- * creates a data structure representation of an Admin Account with 4 attributes:
- * firstName, lastName, accountType, and studentID
- * @returns {{firstName: string, lastName: string, accountType: string, studentID: string}}
+ * creates a data structure representation of an Admin Account with  with 5 attributes:
+ * firstName, lastName, accountType, and studentID, email
+ * @returns {{firstName: string, lastName: string, accountType: string, studentID: string, email: string}}
  */
-const newAdminStruct = () => {
-    const statusChance = Math.random();
+function newAdminStruct() {
     return {
         firstName: "Isaac",
         lastName: "Hutchinson",
@@ -29,29 +28,42 @@ const newAdminStruct = () => {
     };
 };
 
-//Maybe add information from database here
 /**
- * creates a data structure representation of a Student Accounts with 4 attributes:
- * firstName, lastName, accountType, and studentID
- * @returns {{firstName: string, lastName: string, accountType: string, studentID: string}}
+ * creates a data structure representation of a Faculty Accounts with 5 attributes:
+ * firstName, lastName, accountType, and studentID, email
+ * @returns {{firstName: string, lastName: string, accountType: string, studentID: string, email: string}}
  */
-const newStudentStruct = () => {
-    const statusChance = Math.random();
+const newFacultyStruct = (faculty) => {
     return {
-        firstName: "Tevin",
-        lastName: "Scott",
-        accountType: "Note Viewer",
-        studentID: "000000000"
+        firstName: faculty.first_name,
+        lastName: faculty.last_name,
+        accountType: faculty.role,
+        studentID: faculty.ru_id,
+        email: faculty.email
     };
 };
-//Maybe add information from database here
-const newNoteTakerStruct = () => {
-    const statusChance = Math.random();
+/**
+ * creates a data structure representation of a Student Accounts  with 5 attributes:
+ * firstName, lastName, accountType, and studentID, email
+ * @returns {{firstName: string, lastName: string, accountType: string, studentID: string, email: string}}
+ */
+const newStudentStruct = (student) => {
     return {
-        firstName: "Brandon",
-        lastName: "Phillips",
-        accountType: "Note Taker",
-        studentID: "000000000"
+        firstName: student.first_name,
+        lastName: student.last_name,
+        accountType: student.role,
+        studentID: student.ru_id,
+        email: student.email
+    };
+};
+
+const newNoteTakerStruct = (notetaker) => {
+    return {
+        firstName: notetaker.first_name,
+        lastName: notetaker.last_name,
+        accountType: notetaker.role,
+        studentID: notetaker.ru_id,
+        email: notetaker.email
     };
 };
 
@@ -64,19 +76,64 @@ export function makeListOfAdmins(len = 1000) {
         };
     });
 }
-export function makeListOfStudents(len = 1000) {
-    return range(len).map(d => {
-        return {
-            ...newStudentStruct(),
-            children: range(10).map(newStudentStruct)
-        };
-    });
+
+export function loadUsers(role) {
+    var headers = new Headers();
+    const body = JSON.stringify({role: role});
+    headers.append("Content-Type", "application/json");
+    //return (window.fetch('http://137.45.220.128:443/loadUsers',
+    return (window.fetch('http://localhost:7555/loadUsers',
+            {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then((res) => {
+                    return (
+                        res.text().then(function (result) {
+                            return JSON.parse(result);
+                        })
+                    )
+                }
+            )
+    )
 }
-export function makeListOfNoteTakers(len = 1000) {
-    return range(len).map(d => {
-        return {
-            ...newNoteTakerStruct(),
-            children: range(10).map(newNoteTakerStruct)
-        };
-    });
+
+export async function makeListOfStudents() {
+    return loadUsers("student").then((students) => {
+            const studentsTotal = students.length;
+            var array = [studentsTotal];
+            for(var i=0; i<studentsTotal; i++)
+            {
+                array[i] = newStudentStruct(students[i]);
+            }
+            return array;
+        }
+    )
+}
+
+export async function makeListOfNoteTakers() {
+    return loadUsers("notetaker").then((notetakers) => {
+            const notetakersTotal = notetakers.length;
+            var array = [notetakersTotal];
+            for(var i=0; i<notetakersTotal; i++)
+            {
+                array[i] = newNoteTakerStruct(notetakers[i]);
+            }
+            return array;
+        }
+    )
+}
+
+export async function makeListOfFaculty() {
+    return loadUsers("faculty").then((faculty) => {
+            const facultyTotal = faculty.length;
+            var array = [facultyTotal];
+            for(var i=0; i<facultyTotal; i++)
+            {
+                array[i] = newFacultyStruct(faculty[i]);
+            }
+            return array;
+        }
+    )
 }
