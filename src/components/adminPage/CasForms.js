@@ -37,9 +37,8 @@ class CasForms extends React.Component {
         data.append('fileDate', file.lastModifiedDate.toDateString());
         data.append('isFillable', isFillable);
 
-        console.log();
         //return (window.fetch('http://137.45.220.128:443', {
-        return (window.fetch('http://localhost:7555/uploadFile', {
+        return (window.fetch('http://localhost:7555/uploadDocument', {
                 method: 'POST',
                 body: data,
             }).then((response) => {

@@ -76,6 +76,16 @@ const newDocumentStruct = (document) => {
     };
 };
 
+const newNoteStruct = (note) => {
+    return {
+        course_number: note.course_number,
+        date_submitted: note.date_submitted,
+        title: note.title,
+        file: document.file
+
+    };
+};
+
 //Amount of data to make
 export function makeListOfAdmins(len = 1000) {
     return range(len).map(d => {
@@ -115,6 +125,30 @@ export function loadDocuments(is_fillable) {
     headers.append("Content-Type", "application/json");
     //return (window.fetch('http://137.45.220.128:443/loadFiles',
     return (window.fetch('http://localhost:7555/loadDocuments',
+            {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then((res) => {
+                    return (
+                        res.text().then(function (result) {
+                            console.log(JSON.parse(result));
+                            return JSON.parse(result);
+                        })
+                    )
+                }
+            )
+    )
+}
+
+export function loadNotes(courseNumber) {
+    var headers = new Headers();
+    const body = JSON.stringify({course_number: courseNumber});
+    console.log(body);
+    headers.append("Content-Type", "application/json");
+    //return (window.fetch('http://137.45.220.128:443/loadFiles',
+    return (window.fetch('http://localhost:7555/loadNotes',
             {
                 method: 'POST',
                 headers: headers,
@@ -174,6 +208,18 @@ export async function makeListOfDocuments(is_fillable) {
             var array = [documentsTotal];
             for (var i = 0; i < documentsTotal; i++) {
                 array[i] = newDocumentStruct(documents[i]);
+            }
+            return array;
+        }
+    )
+}
+
+export async function makeListOfNotes(courseNumber) {
+    return loadNotes(courseNumber).then((notes) => {
+            const total = notes.length;
+            var array = [total];
+            for (var i = 0; i < total; i++) {
+                array[i] = newNoteStruct(notes[i]);
             }
             return array;
         }
