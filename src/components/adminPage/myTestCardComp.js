@@ -8,11 +8,11 @@ const CardExampleWithAvatar = () => (
 
         />
         <CardMedia>
-            <img className="image-class-header" src = {require ('./../../public/images/testClassImage.jpeg')} alt="" />
+            <img className={"image-class-header"} src = {require ('./../../public/images/testClassImage.jpeg')} alt="" />
         </CardMedia>
         <CardTitle title="ITEC 472" subtitle="Software Engineering III" />
         <CardActions>
-            <button className="commonButton">ENTER</button>
+            <button className={"commonButton"}>ENTER</button>
         </CardActions>
     </Card>
 );

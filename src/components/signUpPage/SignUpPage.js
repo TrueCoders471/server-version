@@ -64,7 +64,7 @@ class SignUpPage extends React.Component {
                             <div className="form-group col-md-12">
                                 <label htmlFor="inputUsername" className="sr-only">RU Email</label>
                                 <input type="text" id="inputUserName" className="form-control" required
-                                       placeholder="Username (RU Email)" autoFocus/>
+                                       placeholder="Email Address" autoFocus/>
                             </div>
                             <div className="form-group col-md-12">
                                 <label htmlFor="inputPassword" className="sr-only">Password</label>

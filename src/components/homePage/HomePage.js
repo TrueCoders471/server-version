@@ -57,7 +57,7 @@ class HomePage extends React.Component {
                         opportunities for individuals living with disabilities. The CAS serves and supports students,
                         parents, and visitors seeking reasonable accommodations under the Americans with Disabilities
                         Act. The office is dedicated to the ongoing goal of access and inclusion so that an individual
-                        may fully participate in the university experience.</p>
+                        may fully participate in the university experience.<br/><br/></p>
                 </div>
             </div>
         );
