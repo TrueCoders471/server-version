@@ -34,7 +34,7 @@ class ForgotPassword extends React.Component {
                                         </div>
                                         <div className="form-group col-md-12" align="middle">
                                             <input type="text" id="inputUserName" className="form-control" required
-                                                   placeholder="RU-Email" autoFocus/>
+                                                   placeholder="Username" autoFocus/>
                                         </div>
                                         <div className="form-group col-md-12" align="middle">
                                             <button className="commonButton" type="submit" onClick={this.resetPassword}>Submit</button>
