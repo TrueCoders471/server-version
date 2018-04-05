@@ -1,68 +1,60 @@
 import React from "react";
-import { render } from "react-dom";
-import ReactTable from "react-table";
-import { makeListOfAdmins} from "./Utils";
-
-import "react-table/react-table.css";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import CardExampleWithAvatar from './myTestCardComp';
+import "./testPageStyles.css";
 
 //!!!!!!!! Still in Development !!!!!!!!!!
 class testPage extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            data: makeListOfAdmins()
-        };
-    }
+
 
     render() {
-        const { data } = this.state;
-        return (
-            <div>
-                <ReactTable
-                    data={data}
-                    columns={[
-                        {
-                            Header: "Name",
-                            columns: [
-                                {
-                                    Header: "First Name",
-                                    accessor: "firstName"
-                                },
-                                {
-                                    Header: "Last Name",
-                                    id: "lastName",
-                                    accessor: d => d.lastName
-                                }
-                            ]
-                        },
-                        {
-                            Header: "Info",
-                            columns: [
-                                {
-                                    Header: "Age",
-                                    accessor: "age"
-                                },
-                                {
-                                    Header: "Status",
-                                    accessor: "status"
-                                }
-                            ]
-                        },
-                        {
-                            Header: 'Stats',
-                            columns: [
-                                {
-                                    Header: "Visits",
-                                    accessor: "visits"
-                                }
-                            ]
-                        }
-                    ]}
-                    defaultPageSize={10}
-                    className="-striped -highlight"
-                />
-                <br />
 
+        return (
+            <div className="container">
+                <div className="class-row">
+                    <div className="class-column">
+            <MuiThemeProvider>
+                <CardExampleWithAvatar/>
+            </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="class-column">
+                        <MuiThemeProvider>
+                            <CardExampleWithAvatar/>
+                        </MuiThemeProvider>
+                    </div>
+                </div>
+                <div className="class-row"></div>
+                <br />
             </div>
         );
     }
