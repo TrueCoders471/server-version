@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 /**
  * controls Javascript behavior of this Header Component
  */
@@ -13,7 +14,7 @@ class Header extends React.Component {
     render() {
         return (
             <div id="mainHeader">
-                <banner-text>Radford University CAS</banner-text>
+                <banner-text>Radford University: Center for Accessibility Services</banner-text>
             </div>
 
 

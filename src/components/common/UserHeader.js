@@ -26,14 +26,14 @@ class UserHeader extends React.Component {
                             <span className="icon-bar"/>
                             <span className="icon-bar"/>
                         </button>
-                        <a className="navbar-brand" href="#">CAS Account</a>
+                        <a className="navbar-brand text-center" href="#">CAS Account</a>
                     </div>
                     <div className="collapse navbar-collapse" id="navbar-collapse-1">
                         <div className="col-sm-3 col-md-3">
                         </div>
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown">
-                                <a href="#" data-toggle="dropdown"><p className="ihateCSS">Account <b className="caret"/></p>
+                                <a href="#" data-toggle="dropdown"><p className="ihateCSS">Account <b className="glyphicon glyphicon-collapse-down"/></p>
 
                                 </a>
                                 <ul className="dropdown-menu">

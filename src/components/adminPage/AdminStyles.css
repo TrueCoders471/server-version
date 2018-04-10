@@ -98,3 +98,10 @@ ul.list-group {
     text-align: center;
 
 }
+.default_tab{
+    background-color: #c2011b !important;
+}
+
+.adminMainCont{
+    padding: 0px 0px 0px 0px !important;
+}
