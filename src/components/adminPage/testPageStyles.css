@@ -1,8 +1,53 @@
 /* Create two equal columns that floats next to each other */
 .class-column {
     float: left;
-    width: 50%;
+    width: 570px;
+    height: 365px;
+    text-align: center;
     padding: 10px;
+    display: block;
+}
+
+.classCard-container{
+    height: 1470px;
+    width: 1170px;
+    padding: 15px;
+    display: block;
+    text-align: center;
+
+}
+
+.image-header{
+    height: 150px;
+    width: 550px;
+    display: inline;
+}
+
+.courseName-style{
+    height: 36px;
+    width: 518px;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+}
+
+.courseDesc-style{
+    height: 20px;
+    width: 518px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.classInfo-container{
+    height: 88px;
+    width: 550px;
+    padding: 16px;
+    position: relative;
+}
+
+.button-container{
+    height: 55px;
+    width: 550px;
+    padding: 8px;
 }
 
 /* Clear floats after the columns */
@@ -11,3 +56,4 @@
     display: table;
     clear: both;
 }
+
