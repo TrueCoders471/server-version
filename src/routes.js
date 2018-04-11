@@ -43,6 +43,7 @@ import volSignUpProgress from  "./components/utilities/volSignUpProgress";
 import volSignUpForm from "./components/notetakerPages/volunteerSignUpForm";
 import adminPendingUserPage from "./components/adminPage/adminPendingUserPage";
 import testPage from "./components/adminPage/testPage";
+import nonAdminClassPage from "./components/classPages/studentClassPage";
 
 export default (
     <Route path="/" component={App}>
@@ -89,5 +90,7 @@ export default (
         <Route path="/requestForAccommodationsForm" component={RequestForAccommodationsForm}/>
         <Route path="/academicAccommodationsContract" component={AcademicAccommodationsContract}/>
         <Route path="/hub" component={hub}/>
+        <Route path="/classPageStudent" component={nonAdminClassPage}/>
+
     </Route>
 );

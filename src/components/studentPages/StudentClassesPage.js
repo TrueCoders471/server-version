@@ -3,20 +3,20 @@ import React from 'react';
 class MyClassesStudentPage extends React.Component {
 
     openClass1() {
-        location.href = "/studentClass1"; //eslint-disable-line
+        location.href = "/classPageStudent"; //eslint-disable-line
     }
     openClass2() {
-        location.href = "/studentClass2"; //eslint-disable-line
+        location.href = "/classPageStudent"; //eslint-disable-line
     }
     openClass3() {
-        location.href = "/studentClass3"; //eslint-disable-line
+        location.href = "/classPageStudent"; //eslint-disable-line
     }
     openClass4() {
-        location.href = "/studentClass4"; //eslint-disable-line
+        location.href = "/classPageStudent"; //eslint-disable-line
     }
 
     openClass5() {
-        location.href = "/studentClass5"; //eslint-disable-line
+        location.href = "/classPageStudent"; //eslint-disable-line
     }
 
 

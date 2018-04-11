@@ -19,7 +19,7 @@ class NotetakersList extends React.Component {
         return (
             <div>
                 <br/>
-                <div className="Center">
+                <div className="container">
                     <ReactTable
                         data={data}
                         columns={[

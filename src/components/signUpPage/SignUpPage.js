@@ -82,7 +82,7 @@ class SignUpPage extends React.Component {
                                         <option value="Administrator">Administrator</option>
                                         <option value="Faculty">Faculty</option>
                                         <option value="Student">Student</option>
-                                        <option value="Notetaker">Note taker</option>
+                                        <option value="Notetaker">Volunteer</option>
                                     </select>
                                 </div>
                                 <div className="form-group col-md-12" align="Center">

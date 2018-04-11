@@ -6,7 +6,6 @@ import NotetakersList from "./NotetakersList";
 import FacultyList from "./FacultyList";
 
 import {Tabs, Tab} from 'material-ui/Tabs';
-import Slider from 'material-ui/Slider';
 import {MuiThemeProvider} from "material-ui/styles/index";
 
 
