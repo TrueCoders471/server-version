@@ -18,6 +18,7 @@ import StudentClass3 from './components/classPages/StudentClass3Page';
 import StudentClass4 from './components/classPages/StudentClass4Page';
 import StudentClass5 from './components/classPages/StudentClass5Page';
 import StudentNotes from './components/notesPages/StudentNotesPage';
+import AdminNotes from './components/notesPages/AdminNotesPage';
 import NotetakerPage from "./components/notetakerPages/NotetakerPage";
 import NotetakerClasses from "./components/notetakerPages/NotetakerClassesPage";
 import NotetakerClass1 from "./components/classPages/NotetakerClass1Page";
@@ -44,6 +45,7 @@ import volSignUpForm from "./components/notetakerPages/volunteerSignUpForm";
 import adminPendingUserPage from "./components/adminPage/adminPendingUserPage";
 import testPage from "./components/adminPage/testPage";
 import nonAdminClassPage from "./components/classPages/studentClassPage";
+import adminClassPage from "./components/classPages/adminClassPage";
 
 export default (
     <Route path="/" component={App}>
@@ -69,6 +71,7 @@ export default (
         <Route path="/studentClass4" component={StudentClass4}/>
         <Route path="/studentClass5" component={StudentClass5}/>
         <Route path="/studentNotes" component={StudentNotes}/>
+        <Route path="/adminNotes" component={AdminNotes}/>
         <Route path="/notetaker" component={NotetakerPage}/>
         <Route path="/notetakerClasses" component={NotetakerClasses}/>
         <Route path="/notetakerClass1" component={NotetakerClass1}/>
@@ -91,6 +94,7 @@ export default (
         <Route path="/academicAccommodationsContract" component={AcademicAccommodationsContract}/>
         <Route path="/hub" component={hub}/>
         <Route path="/classPageStudent" component={nonAdminClassPage}/>
+        <Route path="/adminClassPage"   component={adminClassPage}/>
 
     </Route>
 );

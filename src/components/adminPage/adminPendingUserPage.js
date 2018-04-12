@@ -5,7 +5,7 @@ import "react-table/react-table.css";
 import { makeListOfAdmins} from "./Utils";
 
 
-class adminNoteTakerApprovePage extends React.Component {
+class AdminNoteTakerApprovePage extends React.Component {
 
     constructor() {
         super();
@@ -24,12 +24,11 @@ class adminNoteTakerApprovePage extends React.Component {
         return (
             <div>
                 <div className="container">
-                    <legend><h1 className="text-center"><b>Pending Users Panel</b></h1></legend>
                     <ReactTable
                         data={data}
                         columns={[
                             {
-                                Header: "Name",
+
                                 columns: [
                                     {
                                         Header: "First Name",
@@ -43,7 +42,7 @@ class adminNoteTakerApprovePage extends React.Component {
                                 ]
                             },
                             {
-                                Header: "Info",
+
                                 columns: [
                                     {
                                         Header: "Account Type",
@@ -63,6 +62,7 @@ class adminNoteTakerApprovePage extends React.Component {
                 </div>
                 <div className="container" align="Center">
                     <div className="form-group col-md-12" align="Center">
+                        <br />
                         <p>To approve or deny a user look at the table above and copy the persons student ID
                             into the field.</p>
                     </div>
@@ -77,6 +77,8 @@ class adminNoteTakerApprovePage extends React.Component {
                         <button type="button" className="commonButton">Approve</button>
                         <div className="divider"/>
                         <button type="button" className="commonButton">Deny</button>
+                        <br />
+                        <br />
                     </div>
                     <div className="form-group col-md-3">
                         {/*Supposed to be empty*/}
@@ -89,4 +91,4 @@ class adminNoteTakerApprovePage extends React.Component {
 
 }
 
-export default adminNoteTakerApprovePage;
+export default AdminNoteTakerApprovePage;
