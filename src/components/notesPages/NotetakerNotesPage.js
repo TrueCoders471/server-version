@@ -50,15 +50,7 @@ class NotetakerNotesPage extends React.Component {
         console.log(notesData);
         return (
             <div>
-                <div align={"middle"}>
-                    <br/>
-                    <form onSubmit={this.handleUploadFile}>
-                        <h4>Choose a file to upload:</h4>
-                        <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
-                        <br/> {/* Break between the button and file uploader to have space */}
-                        <button className={"commonButton"}>Upload Notes</button>
-                    </form>
-                </div>
+
                 <br/>
                 {/*<ul>*/}
                     {/*<h3> Week: Nov 12 - Nov 19</h3>*/}
@@ -96,7 +88,7 @@ class NotetakerNotesPage extends React.Component {
                         {/*</li>*/}
                     {/*</ul>*/}
                 {/*</ul>*/}
-                <div className="Center">
+                <div className="container">
                 <ReactTable
                     data={notesData}
                     columns={[
@@ -116,6 +108,35 @@ class NotetakerNotesPage extends React.Component {
                     defaultPageSize={10}
                     className="-striped -highlight"
                 />
+                    <div align={"middle"}>
+                        <div className="form-group col-md-12">
+                            <br />
+                            <br />
+                            <p>To download or delete a file please copy the file id from the table and input it into the field below and click download.</p>
+                            <label>File ID</label>
+                            <input type="password" id="inputStudentID" className="form-control" required
+                                   placeholder="File ID"/>
+                            <br />
+                            <button type="button" className="commonButton">Download</button>
+                            <div className="divider"/>
+                            <button type="button" className="commonButton">Delete</button>
+                            <br />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br/>
+                        <form onSubmit={this.handleUploadFile}>
+                            <h4>Choose a file to upload:</h4>
+                            <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
+                            <br/> {/* Break between the button and file uploader to have space */}
+                            <button className={"commonButton"}>Upload Notes</button>
+                        </form>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
                 </div>
             </div>
         );

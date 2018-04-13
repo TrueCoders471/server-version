@@ -46,6 +46,7 @@ import adminPendingUserPage from "./components/adminPage/adminPendingUserPage";
 import testPage from "./components/adminPage/testPage";
 import nonAdminClassPage from "./components/classPages/studentClassPage";
 import adminClassPage from "./components/classPages/adminClassPage";
+import volFacClassPage from "./components/classPages/volFacClassPage";
 
 export default (
     <Route path="/" component={App}>
@@ -95,6 +96,7 @@ export default (
         <Route path="/hub" component={hub}/>
         <Route path="/classPageStudent" component={nonAdminClassPage}/>
         <Route path="/adminClassPage"   component={adminClassPage}/>
+        <Route path="/volFacClassPage" component={volFacClassPage}/>
 
     </Route>
 );
