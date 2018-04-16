@@ -30,7 +30,7 @@ class SignUpPage extends React.Component {
         // of non-selected choice
         switch(selectedAcct){
             case "Administrator":
-                location.href = "/adminClasses"; //eslint-disable-line
+                location.href = "/admin"; //eslint-disable-line
                 break;
             case "Faculty":
                 location.href = "/faculty"; //eslint-disable-line

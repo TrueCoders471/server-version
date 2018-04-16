@@ -4,6 +4,7 @@ import StudentsList from "./StudentsList";
 import CasForms from "./CasForms";
 import NotetakersList from "./NotetakersList";
 import FacultyList from "./FacultyList";
+import AdminClassesPage from "./AdminClassesPage";
 
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
@@ -41,6 +42,10 @@ class AdminPage extends React.Component {
                 <Tab label="CAS Forms" className="default_tab">
                     <h3>CAS Forms</h3>
                     <CasForms/>
+                </Tab>
+                <Tab label="Classes" className="default_tab">
+                    <h3>Classes</h3>
+                    <AdminClassesPage/>
                 </Tab>
             </Tabs>
         </MuiThemeProvider>

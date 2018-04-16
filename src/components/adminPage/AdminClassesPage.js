@@ -2,7 +2,7 @@ import React from 'react';
 
 class AdminClassesPage extends React.Component {
     openClass() {
-        location.href = "/admin"; //eslint-disable-line
+        location.href = "/adminClassPage"; //eslint-disable-line
     }
 
     logOut() {
