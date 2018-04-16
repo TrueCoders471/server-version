@@ -47,6 +47,7 @@ import testPage from "./components/adminPage/testPage";
 import nonAdminClassPage from "./components/classPages/studentClassPage";
 import adminClassPage from "./components/classPages/adminClassPage";
 import volFacClassPage from "./components/classPages/volFacClassPage";
+import AdminClassesPage from "./components/adminPage/AdminClassesPage";
 
 export default (
     <Route path="/" component={App}>
@@ -75,6 +76,7 @@ export default (
         <Route path="/adminNotes" component={AdminNotes}/>
         <Route path="/notetaker" component={NotetakerPage}/>
         <Route path="/notetakerClasses" component={NotetakerClasses}/>
+            <Route path="/adminClasses" component={AdminClassesPage}/>
         <Route path="/notetakerClass1" component={NotetakerClass1}/>
         <Route path="/notetakerClass2" component={NotetakerClass2}/>
         <Route path="/notetakerClass3" component={NotetakerClass3}/>
