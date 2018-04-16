@@ -94,7 +94,7 @@ export default (
         <Route path="/requestForAccommodationsForm" component={RequestForAccommodationsForm}/>
         <Route path="/academicAccommodationsContract" component={AcademicAccommodationsContract}/>
         <Route path="/hub" component={hub}/>
-        <Route path="/classPageStudent" component={nonAdminClassPage}/>
+        <Route path="/studentClassPage" component={nonAdminClassPage}/>
         <Route path="/adminClassPage"   component={adminClassPage}/>
         <Route path="/volFacClassPage" component={volFacClassPage}/>
 
