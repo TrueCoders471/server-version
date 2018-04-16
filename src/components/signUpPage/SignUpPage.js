@@ -36,10 +36,10 @@ class SignUpPage extends React.Component {
                 location.href = "/faculty"; //eslint-disable-line
                 break;
             case "Student":
-                location.href = "/student"; //eslint-disable-line
+                location.href = "/studentClasses"; //eslint-disable-line
                 break;
             case "Notetaker":
-                location.href = "/notetaker"; //eslint-disable-line
+                location.href = "/notetakerClasses"; //eslint-disable-line
                 break;
             default:
                 alert("Account type selection required!");
