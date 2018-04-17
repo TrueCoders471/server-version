@@ -14,12 +14,11 @@
     padding: 15px;
     display: block;
     text-align: center;
-
 }
 
 .image-header{
-    height: 150px;
-    width: 550px;
+    height: 175px;
+    width: 300px;
     display: inline;
 }
 

@@ -24,7 +24,7 @@ class AdminClassesPage extends React.Component {
                     <span className={"courseDesc-style"}>{courseDesc}</span>
                 </div>
                 <div className={"button-container"}>
-                    <button className={"commonButton"} onClick={this.openClass}>ENTER</button>
+                    <button className={"commonButton"} onClick={this.openClass}>VIEW</button>
                 </div>
             </div>
         );
