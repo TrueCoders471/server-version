@@ -25,8 +25,8 @@ class NotetakerNotesPage extends React.Component {
 
         console.log(file.name);
         console.log(file.lastModifiedDate.toDateString());
-        return (window.fetch('http://137.45.220.128:443/uploadNote', {
-        //return (window.fetch('http://localhost:7555/uploadNote', {
+        //return (window.fetch('http://137.45.220.128:443/uploadNote', {
+        return (window.fetch('http://localhost:7555/uploadNote', {
                 method: 'POST',
                 body: data,
             }).then((response) => {

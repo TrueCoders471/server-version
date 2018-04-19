@@ -86,6 +86,19 @@ const newNoteStruct = (note) => {
     };
 };
 
+const newCourseStruct = (course) => {
+    return {
+        course_id: course.course,
+        title: course.long_title,
+    };
+};
+
+const newSubjectStruct = (subject) => {
+    return {
+        subject_name: subject.subject_name
+    };
+};
+
 //Amount of data to make
 export function makeListOfAdmins(len = 1000) {
     return range(len).map(d => {
@@ -100,8 +113,8 @@ export function loadUsers(role) {
     var headers = new Headers();
     const body = JSON.stringify({role: role});
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadUsers',
-    //return (window.fetch('http://localhost:7555/loadUsers',
+    //return (window.fetch('http://137.45.220.128:443/loadUsers',
+    return (window.fetch('http://localhost:7555/loadUsers',
             {
                 method: 'POST',
                 headers: headers,
@@ -123,8 +136,8 @@ export function loadDocuments(is_fillable) {
     const body = JSON.stringify({is_fillable: is_fillable});
     console.log(body);
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadDocuments',
-    //return (window.fetch('http://localhost:7555/loadDocuments',
+    //return (window.fetch('http://137.45.220.128:443/loadDocuments',
+    return (window.fetch('http://localhost:7555/loadDocuments',
             {
                 method: 'POST',
                 headers: headers,
@@ -147,8 +160,8 @@ export function loadNotes(courseNumber) {
     const body = JSON.stringify({course_number: courseNumber});
     console.log(body);
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadNotes',
-    //return (window.fetch('http://localhost:7555/loadNotes',
+    //return (window.fetch('http://137.45.220.128:443/loadNotes',
+    return (window.fetch('http://localhost:7555/loadNotes',
             {
                 method: 'POST',
                 headers: headers,
@@ -163,6 +176,47 @@ export function loadNotes(courseNumber) {
                     )
                 }
             )
+    )
+}
+
+export function loadCourses(subject_name) {
+    let headers = new Headers();
+    const body = JSON.stringify({subject_name: subject_name});
+    console.log(body);
+    headers.append("Context-Type", "application/json");
+    return (window.fetch('http://localhost:7555/loadCourses',
+            {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then((res) => {
+                return (
+                    res.text().then(function (result) {
+                        console.log(JSON.parse(result));
+                        return JSON.parse(result);
+                    })
+                )
+            })
+    )
+}
+
+export function loadSubjects() {
+    let headers = new Headers();
+    headers.append("Context-Type", "application/json");
+    return (window.fetch('http://localhost:7555/loadSubjects',
+            {
+                method: 'POST',
+                headers: headers
+            })
+            .then((res) => {
+                return(
+                    res.text().then(function (result) {
+                        console.log(JSON.parse(result));
+                        return JSON.parse(result);
+                    })
+                )
+            })
     )
 }
 
@@ -224,4 +278,28 @@ export async function makeListOfNotes(courseNumber) {
             return array;
         }
     )
+}
+
+export async function makeListOfCourses(subject) {
+    console.log(`Making list of courses for ${subject}`);
+    return loadCourses(subject).then((courses) => {
+        const total = courses.length;
+        console.log(total);
+        var array = [total];
+        for (var i = 0; i < total; i++) {
+            array[i] = newCourseStruct(courses[i]);
+        }
+        return array;
+    })
+}
+
+export async function makeListOfSubjects() {
+    return loadSubjects().then((subjects) => {
+        const total = subjects.length;
+        var array = [total];
+        for (var i = 0; i < total; i++) {
+            array[i] = newSubjectStruct(subjects[i]);
+        }
+        return array;
+    })
 }
