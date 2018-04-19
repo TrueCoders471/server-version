@@ -12,6 +12,7 @@ class AdminClassesPage extends React.Component {
     courses = ["ITEC 120", "ITEC 110", "ART 100", "CORE 102"];
     descs = ["Principles of Computer Science I", "Information Technology", "Introduction to Art", "Core Curriculum"];
 
+
     classCard(courseName, courseDesc){
         return (
             <div className={"class-column"}>

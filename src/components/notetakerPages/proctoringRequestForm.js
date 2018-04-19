@@ -24,12 +24,12 @@ class proctoringRequestForm extends React.Component {
                 <div className="form-group col-md-12">
                     <label htmlFor="course-name-number">Course Name and Number:</label>
                     <input type="text" className="form-control" name="courseNameNumber" id="course-name-number"
-                           placeholder="Basket Weaving 101"/>
+                           placeholder="Course Name and Course Number"/>
                 </div>
                 <div className="form-group col-md-6">
                     <label className=".value" htmlFor="student-sig-field">Student Signature:</label>
                     <input type="text" name="sigField" className="form-control" id="student-sig-field"
-                           placeholder="First Last"/>
+                           placeholder="Your Name"/>
                 </div>
                 <div className="form-group col-md-6">
                     <label htmlFor="date-student">Date:</label>

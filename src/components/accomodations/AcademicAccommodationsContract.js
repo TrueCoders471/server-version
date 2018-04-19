@@ -13,17 +13,17 @@ class AcademicAccommodationsContract extends React.Component {
                 <div className="form-group col-md-12">
                     <label htmlFor="facName">Faculty Name</label>
                     <input type="text" name = "facNameField" className="form-control" id="facName"
-                           placeholder="John Doe"/>
+                           placeholder="Faculty Name"/>
                 </div>
                 <div className="form-group col-md-6">
                     <label htmlFor="courseName">Course Name/Section</label>
                     <input type="text" name = "courseName" className="form-control" id="courseName"
-                           placeholder="ITEC 471"/>
+                           placeholder="Course Name"/>
                 </div>
                 <div className="form-group col-md-6">
                     <label htmlFor="courseName">Term and Year</label>
                     <input type="text" name = "term" className="form-control" id="term"
-                           placeholder="Spring 2018"/>
+                           placeholder="Term and Year"/>
                 </div>
                 <p>
                     <b><u>Faculty Member:</u></b> A Disability Services Specialist has qualified this student for the
@@ -98,24 +98,24 @@ class AcademicAccommodationsContract extends React.Component {
                 <div className="form-group col-md-7">
                     <label htmlFor="studentSig">Student Signature</label>
                     <input type="text" name = "studentSig" className="form-control" id="studentSig"
-                           placeholder="Jane Doe"/>
+                           placeholder="Your E-Signature"/>
                 </div>
 
                 <div className="form-group col-md-5">
-                    <label htmlFor="studentDate">Document those absences here</label>
+                    <label htmlFor="studentDate">Date Completed</label>
                     <input type="text" name = "studentDate" className="form-control" id="studentDate"
-                           placeholder="01/01/2018"/>
+                           placeholder="MM-DD-YYYY"/>
                 </div>
 
                 <div className="form-group col-md-7">
                     <label htmlFor="facultySig">Faculty Signature</label>
                     <input type="text" name = "facultySig" className="form-control" id="facultySig"
-                           placeholder="Bob Ross"/>
+                           placeholder="Faculty E-Signature"/>
                 </div>
                 <div className="form-group col-md-5">
-                    <label htmlFor="facultyDate">Document those absences here</label>
+                    <label htmlFor="facultyDate">Date Completed</label>
                     <input type="text" name = "facultyDate" className="form-control" id="facultyDate"
-                           placeholder="01/01/2018"/>
+                           placeholder="MM-DD-YYYY"/>
                 </div>
             </div>
         );
@@ -139,6 +139,7 @@ class AcademicAccommodationsContract extends React.Component {
                             </fieldset>
                             <div className="text-center">
                             <button type="button" className="commonButton" onClick={this.goToHub}>Submit</button>
+                                <br/><br/><br/> {/* Breaks are for a spacing issue at the bottom */}
                             </div>
                         </form>
                     </div>
