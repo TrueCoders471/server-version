@@ -27,8 +27,8 @@ class LoginPage extends React.Component {
         const body = JSON.stringify({username: username, password: password});
         var headers = new Headers();
         headers.append("Content-Type", "application/json");
-
-        window.fetch('http://137.45.220.128:443/login',
+        window.fetch('http://localhost:7555/login',
+        //window.fetch('http://137.45.220.128:443/login',
             {
                 method: 'POST',
                 headers: headers,

@@ -40,7 +40,7 @@ import RequestForAccommodationsForm from "./components/accomodations/RequestForA
 import AcademicAccommodationsContract from "./components/accomodations/AcademicAccommodationsContract";
 import hub from "./components/forPresentationOnly/hub";
 import regProgressBar from "./components/utilities/regProgressBar";
-import volSignUpProgress from  "./components/utilities/volSignUpProgress";
+import volSignUpProgress from "./components/utilities/volSignUpProgress";
 import volSignUpForm from "./components/notetakerPages/volunteerSignUpForm";
 import adminPendingUserPage from "./components/adminPage/adminPendingUserPage";
 import testPage from "./components/adminPage/testPage";
@@ -48,6 +48,7 @@ import nonAdminClassPage from "./components/classPages/studentClassPage";
 import adminClassPage from "./components/classPages/adminClassPage";
 import volFacClassPage from "./components/classPages/volFacClassPage";
 import AdminClassesPage from "./components/adminPage/AdminClassesPage";
+import CoursesPage from "./components/coursesPage/CoursesPage";
 
 export default (
     <Route path="/" component={App}>
@@ -99,6 +100,6 @@ export default (
         <Route path="/studentClassPage" component={nonAdminClassPage}/>
         <Route path="/adminClassPage"   component={adminClassPage}/>
         <Route path="/volFacClassPage" component={volFacClassPage}/>
-
+        <Route path="/courses" component={CoursesPage}/>
     </Route>
 );
