@@ -52,30 +52,30 @@ export default class FacultySignUpForm extends React.Component {
     informationInputSection() {
         return (
             <div>
-                <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="generalInformation"><h4>General Information:</h4></label>
+                <div className="form-group col-md-12" >
+                    <label className=".value" htmlFor="generalInformation" ><h4>General Information:</h4></label>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label htmlFor="name-field" id="labels">First Name:</label>
                     <input type="text" name="fName" className="form-control" id="fName-field"
                            placeholder="Bob"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="name-field">Last Name:</label>
                     <input type="text" name="lName" className="form-control" id="lName-field"
                            placeholder="Ross"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="email-field">Email:</label>
                     <input type="text" name="email" className="form-control" id="email-field"
                            placeholder="bross@radford.edu"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="student-id-field">Radford ID:</label>
                     <input type="text" name="sid" className="form-control" id="radford-id-field"
                            placeholder="000000000"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="cell-phone-field">Cell Phone:</label>
                     <input type="text" name="cellPone" className="form-control" id="cell-phone-field"
                            placeholder="000-000-0000"/>
@@ -83,17 +83,17 @@ export default class FacultySignUpForm extends React.Component {
                 <div className="form-group col-md-12">
                     <label className=".value" htmlFor="accountInformation"><h4>Account Information:</h4></label>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="username">Username:</label>
                     <input type="text" name="username" className="form-control" id="userName-field"
                            placeholder="bross@radford.edu"/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="password">Password:</label>
                     <input type="password" name="password" className="form-control" id="password-field"
                            placeholder=""/>
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="confirmPassword">Confirm Password:</label>
                     <input type="password" name="password" className="form-control" id="confirm-password-field"
                            placeholder=""/>

@@ -170,8 +170,8 @@ export default class StudentSignUpForm extends React.Component {
         return (
             <div>
                 <legend align="top">Basic Details</legend>
-                <div className="form-group col-md-6">
-                    <label htmlFor="first_name" required>First name</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="first_name" required>First name:</label>
                     <input type="text"
                            className={errors.first_name ? "error" : "form-control"}
                            id="first-name-field"
@@ -180,8 +180,8 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handleFirstNameChange}
                     />
                 </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="last_name">Last name</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="last_name">Last name:</label>
                     <input type="text"
                            className={errors.last_name ? "error" : "form-control"}
                            id="last-name-field"
@@ -190,8 +190,8 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handleLastNameChange}
                     />
                 </div>
-                <div className="form-group col-md-4">
-                    <label htmlFor="RUID">RU ID#</label>
+                <div className="form-group col-md-4" align="left">
+                    <label htmlFor="RUID">RU ID#:</label>
                     <input type="text"
                            className={errors.ru_id ? "error" : "form-control"}
                            id="ru-id-field"
@@ -200,7 +200,7 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handleRuIdChange}
                     />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-4" align="left">
                     <label htmlFor="DOB">Birth Date: </label>
                     <input type="text"
                            className={errors.birth_date ? "error" : "form-control"}
@@ -210,7 +210,7 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handleDOBChange}
                     />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-4" align="left">
                     <label htmlFor="gender">Gender: </label>
                     <select className={errors.gender ? "error" : "form-control"}
                             name="genderField"
@@ -223,8 +223,8 @@ export default class StudentSignUpForm extends React.Component {
                         <option>Other</option>
                     </select>
                 </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="">Email</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="">Email:</label>
                     <input type="email"
                            className={errors.email ? "error" : "form-control"}
                            id="email-field"
@@ -233,8 +233,8 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handleEmailChange}
                     />
                 </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="">Phone #</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="">Phone #:</label>
                     <input type="text"
                            className={errors.phone ? "error" : "form-control"}
                            id="phone-field"
@@ -243,8 +243,8 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handlePhoneChange}
                     />
                 </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="username">Username</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="username">Username:</label>
                     <input type="text"
                            className={errors.username ? "error" : "form-control"}
                            id="userName-field"
@@ -254,8 +254,8 @@ export default class StudentSignUpForm extends React.Component {
                     />
                 </div>
                 <br/><br/>
-                <div className="form-group col-md-6">
-                    <label htmlFor="password">Password</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="password">Password:</label>
                     <input type="password"
                            className={errors.password ? "error" : "form-control"}
                            id="password-field"
@@ -264,8 +264,8 @@ export default class StudentSignUpForm extends React.Component {
                            onChange={this.handlePasswordChange}
                     />
                 </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="confirm_password">Confirm Password</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="confirm_password">Confirm Password:</label>
                     <input type="password"
                            className={errors.confirm_password ? "error" : "form-control"}
                            id="confirm-password-field"
@@ -285,26 +285,26 @@ export default class StudentSignUpForm extends React.Component {
     addressField() {
         return (
             <div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="inputAddress">Street</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="inputAddress">Street:</label>
                     <input type="text" className="form-control" id="street-field"
                            placeholder="1234 Main St"/>
                 </div>
-                <div className="form-group col-md-4">
-                    <label htmlFor="Hall">Residential Hall</label>
+                <div className="form-group col-md-4" align="left">
+                    <label htmlFor="Hall">Residential Hall:</label>
                     <input type="text" className="form-control" id="res-hall-field" placeholder="Tyler Hall"/>
                 </div>
-                <div className="form-group col-md-2">
-                    <label htmlFor="inputZip">Room #</label>
+                <div className="form-group col-md-2" align="left">
+                    <label htmlFor="inputZip">Room #:</label>
                     <input type="text" className="form-control" id="room-field"/>
                 </div>
                 <div className="form-row">
-                    <div className="form-group col-md-6">
-                        <label htmlFor="inputCity">City</label>
+                    <div className="form-group col-md-6" align="left">
+                        <label htmlFor="inputCity" >City:</label>
                         <input type="text" className="form-control" id="city-field"/>
                     </div>
-                    <div className="form-group col-md-4">
-                        <label htmlFor="inputState">State</label>
+                    <div className="form-group col-md-4" align="left">
+                        <label htmlFor="inputState">State:</label>
                         <select id="state" name="stateLetterField" className="form-control">
                             <option defaultValue>Choose...</option>
                             <option value="AL">Alabama</option>
@@ -360,9 +360,9 @@ export default class StudentSignUpForm extends React.Component {
                             <option value="WY">Wyoming</option>
                         </select>
                     </div>
-                    <div className="form-group col-md-2">
+                    <div className="form-group col-md-2" align="left">
                         <label htmlFor="inputZip">Zip
-                            code</label>
+                            code:</label>
                         <input type="text" className="form-control" id="zip-field"/>
                     </div>
                 </div>
@@ -373,8 +373,8 @@ export default class StudentSignUpForm extends React.Component {
     studentStatusFields() {
         return (
             <div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="country">Class Standing</label>
+                <div className="form-group col-md-6" align="left">
+                    <label htmlFor="country">Class Standing:</label>
                     <select className="form-control"
                             name="classStandingField"
                             id="standing"
@@ -389,16 +389,16 @@ export default class StudentSignUpForm extends React.Component {
                     </select>
                 </div>
 
-                <div className="form-group col-md-6" id="time">
-                    <label htmlFor="classStandings">Time Status </label>
+                <div className="form-group col-md-6" id="time" align="left">
+                    <label htmlFor="classStandings">Time Status: </label>
                     <br/>
                     <label className="radio-inline"><input type="radio" name="classStandingField" value="Full Time" id="fullTime"/>
                         Full Time</label>
                     <label className="radio-inline"><input type="radio" name="classStandingField" value="Part Time" id="partTime"/>
                         Part Time</label>
                 </div>
-                <div className="form-group col-md-8">
-                    <label htmlFor="Select Major">Major</label>
+                <div className="form-group col-md-8" align="left">
+                    <label htmlFor="Select Major">Major:</label>
                     <select className="form-control"
                             name="majorField"
                             id="major">
@@ -439,7 +439,7 @@ export default class StudentSignUpForm extends React.Component {
                         <option disabled>Waldron College of Health and Human Services</option>
                     </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-4" align="left">
                     <label htmlFor="GraduationDate">Graduation Date: </label>
                     <input type="text" className="form-control" name="GraduationDateField" id="graduation"
                            placeholder="Spring 2021"/>
@@ -454,7 +454,7 @@ export default class StudentSignUpForm extends React.Component {
      */
     regstudentInfo() {
         return (
-            <div className="form-group col-md-12">
+            <div className="form-group col-md-12" align="left">
                 <div id="RegStudent-border">
                     <p>To become a registered student with the Center for Accessibility Services (CAS), follow these
                         steps:
@@ -546,7 +546,7 @@ export default class StudentSignUpForm extends React.Component {
                             </fieldset>
                             <fieldset>
                                 <legend align="top"> Emergency Info</legend>
-                                <div className="checkbox">
+                                <div className="checkbox" >
                                     <label>
 
                                         <input type="checkbox" name="hasMobilityConcernField" id="mobilityCheckbox"/>
