@@ -4,7 +4,7 @@ import NotetakerNotesPage from "../notesPages/NotetakerNotesPage";
 
 class NotetakerClass3Page extends React.Component {
     openClasses() {
-        location.href = "/notetakerClasses"; //eslint-disable-line
+        location.href = "/volunteerClasses"; //eslint-disable-line
     }
     logOut() {
         location.href = "/"; //eslint-disable-line

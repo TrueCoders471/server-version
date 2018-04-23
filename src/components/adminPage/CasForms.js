@@ -130,7 +130,7 @@ class CasForms extends React.Component {
                 {/*<a href="https://drive.google.com/uc?export=download&id=1gdx9-pCmJJN4BRtgAcNKY6bL3o8upfZI"*/}
                 {/*download>*/}
                 {/*<span className="glyphicon glyphicon-download"/>*/}
-                {/*<b>Volunteer Notetaker Form</b> (Rev. July 2015)</a>*/}
+                {/*<b>volunteer Notetaker Form</b> (Rev. July 2015)</a>*/}
                 {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
                 {/*</li>*/}
                 {/*</ul>*/}

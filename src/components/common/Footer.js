@@ -25,7 +25,7 @@ class Footer extends React.Component {
                 {/*{" | "}*/}
                 {/*<Link to="/student" activeClassName="active">Student Page</Link>*/}
                 {/*{" | "}*/}
-                {/*<IndexLink to="/notetaker" activeClassName="active">Notetaker Page</IndexLink>*/}
+                {/*<IndexLink to="/Volunteer" activeClassName="active">Notetaker Page</IndexLink>*/}
                 {/*{" | "}*/}
                 {/*<Link to="/faculty" activeClassName="active">Faculty Page</Link>*/}
                 {/*{" | "}*/}

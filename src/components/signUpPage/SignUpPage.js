@@ -39,7 +39,7 @@ class SignUpPage extends React.Component {
             case "Student":
                 location.href = "/studentSignUpForm"; //eslint-disable-line
                 break;
-            case "Notetaker":
+            case "Volunteer":
                 location.href = "/volunteerSignUpForm"; //eslint-disable-line
                 break;
             default:
@@ -72,7 +72,7 @@ class SignUpPage extends React.Component {
                                         <option value="Administrator">Administrator</option>
                                         <option value="Faculty">Faculty</option>
                                         <option value="Student">Student</option>
-                                        <option value="Notetaker">Volunteer</option>
+                                        <option value="Volunteer">Volunteer</option>
                                     </select>
                                 </div>
                                 <div className="form-group col-md-12" align="Center">

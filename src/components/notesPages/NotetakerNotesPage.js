@@ -2,7 +2,7 @@ import React from 'react';
 import ReactTable from 'react-table';
 import {makeListOfNotes} from "../adminPage/Utils";
 
-class NotetakerNotesPage extends React.Component {
+class VolunteerNotesPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -143,4 +143,4 @@ class NotetakerNotesPage extends React.Component {
     }
 }
 
-export default NotetakerNotesPage;
+export default VolunteerNotesPage;

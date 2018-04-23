@@ -3,7 +3,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
 import AdminNotesPage from "../notesPages/AdminNotesPage";
 import AdminNoteTakerApprovePage from "../adminPage/adminPendingUserPage";
-import NotetakersList from "../adminPage/NotetakersList";
+import NotetakersList from "../adminPage/VolunteersList";
 
 class adminClassPage extends React.Component {
 
@@ -18,7 +18,7 @@ class adminClassPage extends React.Component {
                             <h3>Class Notes</h3>
                             <AdminNotesPage/>
                         </Tab>
-                        <Tab label="Volunteers" className="default_tab">
+                        <Tab label="volunteers" className="default_tab">
                             <h3>Volunteers</h3>
                             <NotetakersList/>
                         </Tab>

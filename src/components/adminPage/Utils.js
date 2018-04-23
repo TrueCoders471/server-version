@@ -57,13 +57,13 @@ const newStudentStruct = (student) => {
     };
 };
 
-const newNoteTakerStruct = (notetaker) => {
+const newVolunteerStruct = (volunteer) => {
     return {
-        firstName: notetaker.first_name,
-        lastName: notetaker.last_name,
-        accountType: notetaker.role,
-        studentID: notetaker.ru_id,
-        email: notetaker.email
+        firstName: volunteer.first_name,
+        lastName: volunteer.last_name,
+        accountType: volunteer.role,
+        studentID: volunteer.ru_id,
+        email: volunteer.email
     };
 };
 
@@ -233,11 +233,11 @@ export async function makeListOfStudents() {
 }
 
 export async function makeListOfNoteTakers() {
-    return loadUsers("notetaker").then((notetakers) => {
-            const notetakersTotal = notetakers.length;
-            var array = [notetakersTotal];
-            for (var i = 0; i < notetakersTotal; i++) {
-                array[i] = newNoteTakerStruct(notetakers[i]);
+    return loadUsers("volunteer").then((volunteers) => {
+            const volunteersTotal = volunteers.length;
+            var array = [volunteersTotal];
+            for (var i = 0; i < volunteersTotal; i++) {
+                array[i] = newVolunteerStruct(volunteers[i]);
             }
             return array;
         }

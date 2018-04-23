@@ -3,7 +3,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
 import StudentNotesPage from "../notesPages/StudentNotesPage";
 
-import NotetakersList from "../adminPage/NotetakersList";
+import NotetakersList from "../adminPage/VolunteersList";
 
 class studentClassPage extends React.Component {
 

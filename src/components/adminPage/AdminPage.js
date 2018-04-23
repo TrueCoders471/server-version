@@ -2,7 +2,7 @@ import React from 'react';
 import './AdminStyles.css';
 import StudentsList from "./StudentsList";
 import CasForms from "./CasForms";
-import NotetakersList from "./NotetakersList";
+import NotetakersList from "./VolunteersList";
 import FacultyList from "./FacultyList";
 import AdminClassesPage from "./AdminClassesPage";
 
@@ -31,8 +31,8 @@ class AdminPage extends React.Component {
                         <h3>Students</h3>
                         <StudentsList/>
                 </Tab>
-                <Tab label="View Volunteers" className="default_tab">
-                        <h3>Volunteers</h3>
+                <Tab label="View volunteers" className="default_tab">
+                        <h3>volunteers</h3>
                         <NotetakersList/>
                 </Tab>
                 <Tab label="View Faculty" className="default_tab">

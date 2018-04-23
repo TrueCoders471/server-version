@@ -28,10 +28,7 @@ class CoursesPage extends React.Component {
         event.preventDefault();
         let subject = event.target.value;
         console.log(subject);
-
         this.setState({subject: subject});
-
-
         //makeListOfCourses(subject).then((courses) => this.setState({courses: courses}));
     };
 
@@ -41,15 +38,14 @@ class CoursesPage extends React.Component {
 
         return (
             <div>
-                <div className="Center">
-                    <select onChange={this.change}>
-                        {subjectItems}
-                    </select>
+                {/*<div className="Center">*/}
+                <select onChange={this.change}>
+                    {subjectItems}
+                </select>
 
-                    <br/><br/>
-
-                   <Courses subject={this.state.subject}/>
-                </div>
+                <br/><br/>
+                <Courses subject={this.state.subject}/>
+                {/*</div>*/}
             </div>
         );
     }

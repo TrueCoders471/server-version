@@ -4,14 +4,14 @@ import ReactTable from "react-table";
 import "react-table/react-table.css";
 import {makeListOfNoteTakers} from "./Utils";
 
-class NotetakersList extends React.Component {
+export default class VolunteersList extends React.Component {
 
     constructor() {
         super();
         this.state = {
             data: []
         };
-        makeListOfNoteTakers().then((notetakers) => this.setState({data: notetakers}));
+        makeListOfNoteTakers().then((volunteers) => this.setState({data: volunteers}));
     }
 
     render() {
@@ -49,5 +49,3 @@ class NotetakersList extends React.Component {
         );
     }
 }
-
-export default NotetakersList;

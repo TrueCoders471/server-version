@@ -5,7 +5,7 @@ class Courses extends React.Component {
         super(props);
         this.state = {
             subject: props.subject,
-            courses: []
+            courses: [],
         };
     }
 
@@ -42,6 +42,8 @@ class Courses extends React.Component {
                 <select>
                     {coursesItems}
                 </select>
+                <br/>
+                <label>TITLE</label>
 
 
             </div>
