@@ -31,8 +31,8 @@ export default class FacultySignUpForm extends React.Component {
             role: 'faculty'
         });
         console.log(body);
-        window.fetch('http://localhost:7555/registerUser',
-            //window.fetch('http://137.45.220.128:443/registerUser',
+        window.fetch('http://localhost:7555/registerFaculty',
+            //window.fetch('http://137.45.220.128:443/registerFaculty',
             {
                 method: 'POST',
                 headers: headers,

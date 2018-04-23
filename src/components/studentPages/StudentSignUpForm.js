@@ -105,8 +105,8 @@ export default class StudentSignUpForm extends React.Component {
 
         console.log(bodyBasic);
 
-        window.fetch('http://localhost:7555/registerUser',
-            //window.fetch('http://137.45.220.128:443/registerUser',
+        window.fetch('http://localhost:7555/registerStudent',
+            //window.fetch('http://137.45.220.128:443/registerStudent',
             {
                 method: 'POST',
                 headers: headers,
@@ -574,7 +574,7 @@ export default class StudentSignUpForm extends React.Component {
                                     <br/>
                                     <button type="submit"
                                             className={isDisabled ? "disabledCommonButton" : "commonButton"}
-                                        //disabled={isDisabled}
+                                        disabled={isDisabled}
                                             onClick={this.registerStudent}>
                                         Register
                                     </button>

@@ -3,6 +3,42 @@ import "./volunteerSignUpFormStyles.css"
 
 
 export default class VolunteerSignUpForm extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            username: '',
+            password: '',
+            confirm_password: '',
+            first_name: '',
+            last_name: '',
+            email: '',
+            phone: '',
+            ru_id: '',
+        }
+    }
+
+    validate(username, password, confirm_password, first_name, last_name, email, phone, ru_id) {
+        return {
+            username: username.length === 0,
+            password: password.length === 0,
+            confirm_password: confirm_password.length === 0,
+            first_name: first_name.length === 0,
+            last_name: last_name.length === 0,
+            email: email.length === 0,
+            phone: phone.length === 0,
+            ru_id: ru_id.length === 0,
+        }
+    };
+
+    canBeSubmitted() {
+        console.log("enter can be submitted");
+        const errors = this.validate(this.state.username, this.state.password, this.state.confirm_password,
+            this.state.first_name, this.state.last_name, this.state.email, this.state.phone, this.state.ru_id);
+        const isDisabled = Object.keys(errors).some(x => errors[x]) && (this.state.password !== this.state.confirm_password !== '');
+        console.log(!isDisabled);
+        return !isDisabled;
+    };
+
 
     registerVolunteer(e) {
         e.preventDefault();
@@ -32,8 +68,8 @@ export default class VolunteerSignUpForm extends React.Component {
             role: 'volunteer'
         });
         console.log(body);
-        window.fetch('http://localhost:7555/registerUser',
-            //window.fetch('http://137.45.220.128:443/registerUser',
+        window.fetch('http://localhost:7555/registerVolunteer',
+            //window.fetch('http://137.45.220.128:443/registerVolunteer',
             {
                 method: 'POST',
                 headers: headers,
@@ -50,7 +86,38 @@ export default class VolunteerSignUpForm extends React.Component {
             })
     }
 
+    //region change handlers
+    handleFirstNameChange = (evt) => {
+        this.setState({first_name: evt.target.value});
+    };
+    handleLastNameChange = (evt) => {
+        this.setState({last_name: evt.target.value});
+    };
+    handleRuIdChange = (evt) => {
+        this.setState({ru_id: evt.target.value});
+    };
+    handleEmailChange = (evt) => {
+        this.setState({email: evt.target.value});
+    };
+    handlePhoneChange = (evt) => {
+        this.setState({phone: evt.target.value});
+    };
+    handleUsernameChange = (evt) => {
+        this.setState({username: evt.target.value});
+    };
+    handlePasswordChange = (evt) => {
+        this.setState({password: evt.target.value});
+    };
+    handleConfirmPasswordChange = (evt) => {
+        this.setState({confirm_password: evt.target.value});
+    };
+
+    //endregion
+
     informationInputSection() {
+        const errors = this.validate(this.state.username, this.state.password, this.state.confirm_password,
+            this.state.first_name, this.state.last_name, this.state.email, this.state.phone, this.state.ru_id);
+
         return (
             <div>
                 <div className="form-group col-md-12">
@@ -58,27 +125,52 @@ export default class VolunteerSignUpForm extends React.Component {
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label htmlFor="name-field" id="labels">First Name:</label>
-                    <input type="text" name="fName" className="form-control" id="fName-field"
+                    <input type="text"
+                           name="fName"
+                           className={errors.first_name ? "error" : "form-control"}
+                           value={this.state.first_name}
+                           id="fName-field"
+                           onChange={this.handleFirstNameChange}
                            placeholder="Bob"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="name-field">Last Name:</label>
-                    <input type="text" name="lName" className="form-control" id="lName-field"
+                    <input type="text"
+                           name="lName"
+                           className={errors.last_name ? "error" : "form-control"}
+                           value={this.state.last_name}
+                           id="lName-field"
+                           onChange={this.handleLastNameChange}
                            placeholder="Ross"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="email-field">Email:</label>
-                    <input type="text" name="email" className="form-control" id="email-field"
+                    <input type="text"
+                           name="email"
+                           className={errors.email ? "error" : "form-control"}
+                           value={this.state.email}
+                           id="email-field"
+                           onChange={this.handleEmailChange}
                            placeholder="bross@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="student-id-field">Student ID:</label>
-                    <input type="text" name="sid" className="form-control" id="student-id-field"
+                    <input type="text"
+                           name="sid"
+                           className={errors.ru_id ? "error" : "form-control"}
+                           value={this.state.ru_id}
+                           id="student-id-field"
+                           onChange={this.handleRuIdChange}
                            placeholder="000000000"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="cell-phone-field">Cell Phone:</label>
-                    <input type="text" name="cellPone" className="form-control" id="cell-phone-field"
+                    <input type="text"
+                           name="cellPone"
+                           className={errors.phone ? "error" : "form-control"}
+                           value={this.state.phone}
+                           id="cell-phone-field"
+                           onChange={this.handlePhoneChange}
                            placeholder="000-000-0000"/>
                 </div>
                 <div className="form-group col-md-12">
@@ -86,7 +178,12 @@ export default class VolunteerSignUpForm extends React.Component {
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="username">Username:</label>
-                    <input type="text" name="username" className="form-control" id="userName-field"
+                    <input type="text"
+                           name="username"
+                           className={errors.username ? "error" : "form-control"}
+                           value={this.state.username}
+                           id="userName-field"
+                           onChange={this.handleUsernameChange}
                            placeholder="bross@radford.edu"/>
                 </div>
                 <div className="form-group col-md-12">
@@ -94,12 +191,22 @@ export default class VolunteerSignUpForm extends React.Component {
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="password">Password:</label>
-                    <input type="password" name="password" className="form-control" id="password-field"
+                    <input type="password"
+                           name="password"
+                           className={errors.password ? "error" : "form-control"}
+                           value={this.state.password}
+                           id="password-field"
+                           onChange={this.handlePasswordChange}
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="confirmPassword">Confirm Password:</label>
-                    <input type="password" name="password" className="form-control" id="confirm-password-field"
+                    <input type="password"
+                           name="password"
+                           className={errors.confirm_password ? "error" : "form-control"}
+                           value={this.state.confirm_password}
+                           id="confirm-password-field"
+                           onChange={this.handleConfirmPasswordChange}
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-12">
@@ -144,6 +251,7 @@ export default class VolunteerSignUpForm extends React.Component {
 
 
     render() {
+        const isDisabled = !this.canBeSubmitted();
         return (
             <div>
                 <div className="container">
@@ -167,7 +275,8 @@ export default class VolunteerSignUpForm extends React.Component {
                                             </div>
                                             <br/>
                                             <button type="submit"
-                                                    className="commonButton"
+                                                    className={isDisabled ? "disabledCommonButton" : "commonButton"}
+                                                    disabled={isDisabled}
                                                     onClick={this.registerVolunteer}
                                             >Register
                                             </button>
