@@ -29,17 +29,18 @@ class SignUpPage extends React.Component {
         // Based on selection navigate to appropriate page or display a alert because
         // of non-selected choice
         switch(selectedAcct){
+            //TODO: move this registration to admin - add another admin!
             case "Administrator":
                 location.href = "/admin"; //eslint-disable-line
                 break;
             case "Faculty":
-                location.href = "/faculty"; //eslint-disable-line
+                location.href = "/facultySignUpForm"; //eslint-disable-line
                 break;
             case "Student":
-                location.href = "/studentClasses"; //eslint-disable-line
+                location.href = "/studentSignUpForm"; //eslint-disable-line
                 break;
             case "Notetaker":
-                location.href = "/notetakerClasses"; //eslint-disable-line
+                location.href = "/volunteerSignUpForm"; //eslint-disable-line
                 break;
             default:
                 alert("Account type selection required!");
@@ -62,20 +63,9 @@ class SignUpPage extends React.Component {
                                 <legend><h1 className="text-center"><b>Sign Up</b></h1></legend>
                             </div>
                             <div className="form-group col-md-12">
-                                <label htmlFor="inputUsername" className="sr-only">RU Email</label>
-                                <input type="text" id="inputUserName" className="form-control" required
-                                       placeholder="Username" autoFocus/>
-                            </div>
-                            <div className="form-group col-md-12">
-                                <label htmlFor="inputPassword" className="sr-only">Password</label>
-                                <input type="password" id="inputPassword" className="form-control" required
-                                       placeholder="Password"/>
-                            </div>
-                            <div className="form-group col-md-12">
-                                <label htmlFor="inputPassword" className="sr-only">Re-Enter Password</label>
-                                <input type="password" id="inputPasswordConf" className="form-control" required
-                                       placeholder="Re-Enter Password"/>
                                 <div className="form-group col-md-12" align="Center">
+                                    <label><h3 className="text-center"><b>Who are you?</b></h3></label>
+                                    <br/>
                                     <br/>
                                     <select id="acctTypeSelect" >
                                         <option>Select Account Type</option>
@@ -87,6 +77,8 @@ class SignUpPage extends React.Component {
                                 </div>
                                 <div className="form-group col-md-12" align="Center">
                                     <button className="commonButton" type="submit" onClick={this.submitSignupRequest}>Sign Up</button>
+                                    <br/>
+                                    <br/>
                                     <p>
                                         <a className="loginLinks" href="/login">Already Have an Account?</a>
                                         <a className="loginLinks" href="/forgotPassword">Forgot your password?</a>
