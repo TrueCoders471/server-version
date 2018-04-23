@@ -91,7 +91,7 @@ class AcademicAccommodationsContract extends React.Component {
                     <li>agree to the academic accommodation(s), as listed on the student's Accommodation Letter, and/or
                     the Alternative Strategies (if any), as listed above.</li>
                     <li>acknowledge that accommodations are effective the date both the signatures are obtained.</li>
-                    <li>understand that the <u>faculty member</u> agrees to return the <u>Volunteer Note Taker Sign-Up
+                    <li>understand that the <u>faculty member</u> agrees to return the <u>Volunteer Sign-Up
                         Sheet,</u> if applicable, to the CAS within 5 business days to allow ample lead time for
                         coordination of services.</li>
                 </ul>

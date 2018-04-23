@@ -103,7 +103,7 @@ class volunteerSignUpForm extends React.Component {
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="volNoteTakerExpectations"><h4>Volunteer Note Taker
+                    <label className=".value" htmlFor="volNoteTakerExpectations"><h4>Volunteer
                         Expectations:</h4>
                     </label>
                 </div>
@@ -111,7 +111,7 @@ class volunteerSignUpForm extends React.Component {
                     <ul>
                         <li>Attend classes regularly</li>
                         <li>Write legibly</li>
-                        <li>Complete mandatory Note Taker Training Program provided by the Center for Accessibility
+                        <li>Complete mandatory volunteer Training Program provided by the Center for Accessibility
                             Services
                         </li>
                         <li>Maintain confidentiality</li>
@@ -125,7 +125,7 @@ class volunteerSignUpForm extends React.Component {
                     </ul>
                 </div>
                 <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="volNoteTakerPerks"><h4>Volunteer Note Taker Perks:</h4></label>
+                    <label className=".value" htmlFor="volNoteTakerPerks"><h4>Volunteer Perks:</h4></label>
                 </div>
                 <div className="form-group col-md-6">
                     <ul>
@@ -135,7 +135,7 @@ class volunteerSignUpForm extends React.Component {
                     </ul>
                 </div>
                 <div className="form-group col-md-12">
-                    <p>By submitting this form you understand the responsibilites of a Note Taker and if
+                    <p>By submitting this form you understand the responsibilities of a volunteer and if
                         selected will uphold the above expectations.</p>
                 </div>
             </div>
@@ -151,7 +151,7 @@ class volunteerSignUpForm extends React.Component {
                         <div id="primary" className="col-md-8 col-md-offset-2">
                             <form role="form" method="POST" action="#">
                                 <fieldset>
-                                    <legend><h1 className="text-center"><b>Volunteer Note Taker Sign-Up Form</b></h1>
+                                    <legend><h1 className="text-center"><b>Volunteer Sign-Up Form</b></h1>
                                     </legend>
                                     {this.informationInputSection()}
                                 </fieldset>
@@ -161,7 +161,7 @@ class volunteerSignUpForm extends React.Component {
                                             <div className="checkbox">
                                                 <label>
                                                     <input type="checkbox" id=""/>
-                                                    I accept the terms & conditions of becoming a note taker for the
+                                                    I accept the terms & conditions of becoming a volunteer for the
                                                     CAS Department.
                                                 </label>
                                             </div>

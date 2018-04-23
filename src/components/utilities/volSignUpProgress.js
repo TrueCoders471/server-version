@@ -32,7 +32,7 @@ class volSignUpProgress extends React.Component {
         this.volSignUpcheck(false,false,false,false);
       return(
           <div className="container">
-              <h1>Volunteer Note Taker {this.currentViewedVolunteer}'s  Progress</h1>
+              <h1>Volunteer {this.currentViewedVolunteer}'s  Progress</h1>
 
               <br/>
               <br/>
@@ -42,7 +42,7 @@ class volSignUpProgress extends React.Component {
                       <th>Completion Status</th>
                   </tr>
                   <tr>
-                      <th> Step 1: Volunteer note taker form filled out</th>
+                      <th> Step 1: Volunteer form filled out</th>
                       <td id="stepOne">{this.stepOneComp}</td>
                   </tr>
                   <tr>
@@ -50,7 +50,7 @@ class volSignUpProgress extends React.Component {
                       <td id="stepTwo">{this.stepTwoComp}</td>
                   </tr>
                   <tr>
-                      <th>Volunteer note taker sign up process complete</th>
+                      <th>Volunteer sign up process complete</th>
                       <td id="finalStep">{this.finalComp}</td>
                   </tr>
               </table>

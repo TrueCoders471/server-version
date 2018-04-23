@@ -13,7 +13,7 @@ class NotetakerPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Note Taker</h1>
+                <h1>Volunteer</h1>
 
 
                 <div align="middle">

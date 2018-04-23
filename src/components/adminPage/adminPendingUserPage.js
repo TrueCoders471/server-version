@@ -14,9 +14,6 @@ class AdminNoteTakerApprovePage extends React.Component {
         };
     }
 
-    checkImage = <img className="pendingUsersImageIcons" src={require('./../../public/images/greencheck.png')}/>;
-    xImage = <img className="pendingUsersImageIcons" src={require('./../../public/images/redx.png')}/>;
-
 
 
     render() {

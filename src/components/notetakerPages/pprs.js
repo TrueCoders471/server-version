@@ -118,9 +118,9 @@ class pprs extends React.Component {
                         Anonymous</label>
                 </div>
                 <div className="form-group col-md-12" align="left">
-                    <p><b>** Coordinating with your note taker will greatly improve the quality of this service and will
+                    <p><b>** Coordinating with your volunteer will greatly improve the quality of this service and will
                         allow
-                        you to communicate directly with your note taker when questions arise.</b></p>
+                        you to communicate directly with your volunteer when questions arise.</b></p>
                 </div>
             </div>
         );

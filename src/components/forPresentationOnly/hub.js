@@ -22,7 +22,7 @@ class hub extends React.Component {
                 <div className="form-group col-md-12">
                     <label className=".value" htmlFor="">1. Student Registration:</label>
                     <p>Seen after clicking student sign up.</p>
-                    <label className=".value" htmlFor="">2. Volunteer Note Taker Sign-Up Sheet</label>
+                    <label className=".value" htmlFor="">2. Volunteer Sign-Up Sheet</label>
                     <p><a href="https://drive.google.com/uc?export=download&id=1gdx9-pCmJJN4BRtgAcNKY6bL3o8upfZI"download>
                         <b>Volunteer Notetaker Form</b> (Rev. July 2015)</a></p>
                     <label className=".value" htmlFor="">3. Request for Accommodations Form</label>

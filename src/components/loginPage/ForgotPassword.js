@@ -6,7 +6,7 @@ class ForgotPassword extends React.Component {
 
     drawLogBackground() {
         return (<div id="loginBackgroundStretch" src>
-            <img className="background-image" src={require('./../../public/images/loginBackground.jpg')}/>
+            <img alt="View of radford clocks and radford honer pledge" className="background-image" src={require('./../../public/images/loginBackground.jpg')}/>
         </div>);
     }
 
