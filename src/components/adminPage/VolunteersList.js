@@ -19,7 +19,7 @@ export default class VolunteersList extends React.Component {
         return (
             <div>
                 <br/>
-                <div className="container">
+                <div className="Center">
                     <ReactTable
                         data={data}
                         columns={[

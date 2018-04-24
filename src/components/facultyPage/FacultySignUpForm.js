@@ -16,6 +16,7 @@ export default class FacultySignUpForm extends React.Component {
             canBeSubmitted: false,
         }
     };
+
     validate(username, password, confirm_password, first_name, last_name, email, phone, ru_id) {
         return {
             username: username.length === 0,
@@ -37,6 +38,7 @@ export default class FacultySignUpForm extends React.Component {
         console.log(!isDisabled);
         return !isDisabled;
     };
+
     registerFaculty(e) {
         e.preventDefault();
         const firstName = document.getElementById("fName-field").value;
@@ -48,10 +50,7 @@ export default class FacultySignUpForm extends React.Component {
         const password = document.getElementById("password-field").value;
         const password2 = document.getElementById("confirm-password-field").value;
 
-        console.log(firstName);
-        if (password !== password2) {
-            alert("Passwords don't match")
-        }
+
         var headers = new Headers();
         headers.append("Content-Type", "application/json");
         const body = JSON.stringify({
@@ -64,25 +63,31 @@ export default class FacultySignUpForm extends React.Component {
             ru_id: ruId,
             role: 'faculty'
         });
+
         console.log(body);
-        window.fetch('http://localhost:7555/registerFaculty',
-            //window.fetch('http://137.45.220.128:443/registerFaculty',
-            {
-                method: 'POST',
-                headers: headers,
-                body: body
-            })
-            .then((res) => {
-                if (res.status === 200) res.text().then(function (text) {
-                    if (text === "OK") {
-                        alert(`User ${username} has been registered`);
-                        location.href = "/faculty"; //eslint-disable-line
-                    } else {
-                        alert("Something went wrong");
-                    }
-                });
-            })
+        if (password === password2) {
+            window.fetch('http://localhost:7555/registerFaculty',
+                //window.fetch('http://137.45.220.128:443/registerFaculty',
+                {
+                    method: 'POST',
+                    headers: headers,
+                    body: body
+                })
+                .then((res) => {
+                    if (res.status === 200) res.text().then(function (text) {
+                        if (text === "OK") {
+                            alert(`User ${username} has been registered`);
+                            location.href = "/faculty"; //eslint-disable-line
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    });
+                })
+        } else {
+            alert("Passwords don't match");
+        }
     }
+
     //region change handlers
     handleFirstNameChange = (evt) => {
         this.setState({first_name: evt.target.value});
@@ -117,8 +122,8 @@ export default class FacultySignUpForm extends React.Component {
 
         return (
             <div>
-                <div className="form-group col-md-12" >
-                    <label className=".value" htmlFor="generalInformation" ><h4>General Information:</h4></label>
+                <div className="form-group col-md-12">
+                    <label className=".value" htmlFor="generalInformation"><h4>General Information:</h4></label>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label htmlFor="name-field" id="labels">First Name:</label>
@@ -204,17 +209,17 @@ export default class FacultySignUpForm extends React.Component {
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="facultyCourses"><h4>Courses Taught This Semester:</h4></label>
-                    <CoursesPage/>
+                    {/*<label className=".value" htmlFor="facultyCourses"><h4>Courses Taught This Semester:</h4></label>*/}
+                    <CoursesPage ru_id={this.state.ru_id}/>
                     <br/>
-                    <div>
-                        <button type="submit"
-                                className="commonButton"
-                                onClick={this.addCourse}
-                        >Add course
-                        </button>
-                        <br/>
-                    </div>
+                    {/*<div>*/}
+                    {/*<button type="submit"*/}
+                    {/*className="commonButton"*/}
+                    {/*onClick={this.addCourse}*/}
+                    {/*>Add course*/}
+                    {/*</button>*/}
+                    {/*<br/>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         );

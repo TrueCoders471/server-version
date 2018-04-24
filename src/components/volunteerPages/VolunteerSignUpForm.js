@@ -68,23 +68,28 @@ export default class VolunteerSignUpForm extends React.Component {
             role: 'volunteer'
         });
         console.log(body);
-        window.fetch('http://localhost:7555/registerVolunteer',
-            //window.fetch('http://137.45.220.128:443/registerVolunteer',
-            {
-                method: 'POST',
-                headers: headers,
-                body: body
-            })
-            .then((res) => {
-                if (res.status === 200) res.text().then(function (text) {
-                    if (text === "OK") {
-                        alert(`User ${username} has been registered`);
-                        location.href = "/volunteer"; //eslint-disable-line
-                    } else {
-                        alert("Something went wrong");
-                    }
-                });
-            })
+        if (password === password2) {
+            window.fetch('http://localhost:7555/registerVolunteer',
+                //window.fetch('http://137.45.220.128:443/registerVolunteer',
+                {
+                    method: 'POST',
+                    headers: headers,
+                    body: body
+                })
+                .then((res) => {
+                    if (res.status === 200) res.text().then(function (text) {
+                        if (text === "OK") {
+                            alert(`User ${username} has been registered`);
+                            location.href = "/volunteer"; //eslint-disable-line
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    });
+                })
+        } else {
+            alert("Passwords don't match");
+        }
+
     }
 
     //region change handlers
