@@ -18,7 +18,8 @@ class Courses extends React.Component {
         console.log("courses comp");
         console.log(body);
         headers.append("Content-Type", "application/json");
-        window.fetch('http://localhost:7555/loadCourses',
+        //window.fetch('http://localhost:7555/loadCourses',
+        window.fetch('http://137.45.220.128:443/loadCourses',
             {
                 method: 'POST',
                 headers: headers,

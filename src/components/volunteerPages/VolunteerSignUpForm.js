@@ -69,8 +69,8 @@ export default class VolunteerSignUpForm extends React.Component {
         });
         console.log(body);
         if (password === password2) {
-            window.fetch('http://localhost:7555/registerVolunteer',
-                //window.fetch('http://137.45.220.128:443/registerVolunteer',
+            //window.fetch('http://localhost:7555/registerVolunteer',
+                window.fetch('http://137.45.220.128:443/registerVolunteer',
                 {
                     method: 'POST',
                     headers: headers,

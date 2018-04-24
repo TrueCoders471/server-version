@@ -66,8 +66,8 @@ export default class FacultySignUpForm extends React.Component {
 
         console.log(body);
         if (password === password2) {
-            window.fetch('http://localhost:7555/registerFaculty',
-                //window.fetch('http://137.45.220.128:443/registerFaculty',
+            //window.fetch('http://localhost:7555/registerFaculty',
+                window.fetch('http://137.45.220.128:443/registerFaculty',
                 {
                     method: 'POST',
                     headers: headers,
