@@ -20,7 +20,7 @@ class VolunteerNotesPage extends React.Component {
         const file = document.getElementById("fileUpload").files[0];
         data.append('file', file);
         data.append('title', file.name);
-        data.append('course_number', file.name);
+        data.append('course_number', this.state.course);
         data.append('date_submitted', file.lastModifiedDate.toDateString());
 
         console.log(file.name);
@@ -50,44 +50,7 @@ class VolunteerNotesPage extends React.Component {
         console.log(notesData);
         return (
             <div>
-
                 <br/>
-                {/*<ul>*/}
-                    {/*<h3> Week: Nov 12 - Nov 19</h3>*/}
-                    {/*<ul className="list-group">*/}
-                        {/*<li className="list-group-item justify-content-between">*/}
-                            {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                            {/*<b>Notes from the lecture</b>(11/13/2017)*/}
-                            {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
-                        {/*</li>*/}
-                    {/*</ul>*/}
-                    {/*<h3> Week: Nov 5 - Nov 12</h3>*/}
-                    {/*<ul className="list-group">*/}
-                        {/*<li className="list-group-item justify-content-between">*/}
-                            {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                            {/*<b>Notes from the lecture</b> (11/8/2017)*/}
-                            {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
-                        {/*</li>*/}
-                        {/*<li className="list-group-item justify-content-between">*/}
-                            {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                            {/*<b>Notes from the lecture </b>(11/6/2017)*/}
-                            {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
-                        {/*</li>*/}
-                    {/*</ul>*/}
-                    {/*<h3> Week: Oct 29 - Nov 5</h3>*/}
-                    {/*<ul className="list-group">*/}
-                        {/*<li className="list-group-item justify-content-between">*/}
-                            {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                            {/*<b>Notes from the lecture</b> (11/03/2017)*/}
-                            {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
-                        {/*</li>*/}
-                        {/*<li className="list-group-item justify-content-between">*/}
-                            {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                            {/*<b>Notes from the lecture </b>(10/31/2017)*/}
-                            {/*<span className="glyphicon glyphicon-trash" onClick={this.deleteForm}/>*/}
-                        {/*</li>*/}
-                    {/*</ul>*/}
-                {/*</ul>*/}
                 <div className="container">
                 <ReactTable
                     data={notesData}
