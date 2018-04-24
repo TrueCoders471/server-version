@@ -545,6 +545,1121 @@ export default class StudentSignUpForm extends React.Component {
                                 {this.regstudentInfo()}
                             </fieldset>
                             <fieldset>
+                                <legend align="top"> Disability Information</legend>
+                                <div align={"left"}>
+                                    <p>
+                                        State disability/medical condition:
+                                        <textarea name={"disability-medicalCondition"}
+                                                  id={"disabilityField"}
+                                                  value={this.state.disability}
+                                                  rows={"4"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}>
+                                        </textarea>
+                                    </p>
+                                    <p>
+                                        Describe how the disability/medical condition impacts the educational environment:
+                                        <textarea name={"descDisability-medicalCondition"}
+                                                  id={"descDisabilityField"}
+                                                  value={this.state.descDisability}
+                                                  rows={"4"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}>
+                                        </textarea>
+                                    </p>
+                                </div>
+                                <legend align="top">Types of Support/Accomodations</legend>
+
+                                <div align={"left"}>
+                                    <p>
+                                        Please describe what services you have had in the past in detail and what services
+                                        you wish to have at Radford Uiniversity in detail for each of the fileds below:
+                                    </p><br/>
+                                    <p>
+                                        <b>Assistive Technology (e.g. assistive listening device, recording device, laptop)</b>
+                                        <textarea name={"previousTech"}
+                                                  id={"previousTech"}
+                                                  value={this.state.assistiveTech}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                    placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredTech"}
+                                                  id={"desiredTech"}
+                                                  value={this.state.desiredTech}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Alternate Texts ( e.g. books on CD, braille, enlarged text)</b>
+                                        <textarea name={"previousAlternateText"}
+                                                  id={"previousAlternateText"}
+                                                  value={this.state.previousAlternateText}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredAlternateText"}
+                                                  id={"desiredAlternateText"}
+                                                  value={this.state.desiredAlternateText}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Note Taking Services</b>
+                                        <textarea name={"previousNoteTakingServices"}
+                                                  id={"previousNoteTakingServices"}
+                                                  value={this.state.previousNoteTakingServices}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredNoteTakingServices"}
+                                                  id={"desiredNoteTakingServices"}
+                                                  value={this.state.desiredNoteTakingServices}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Exam Accomodations (e.g. extended time, reduced distractions, use a reader
+                                                                dictation software)</b>
+                                        <textarea name={"previousExamAccomodations"}
+                                                  id={"previousExamAccomodations"}
+                                                  value={this.state.previousExamAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredExamAccomodations"}
+                                                  id={"desiredExamAccomodations"}
+                                                  value={this.state.desiredExamAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Housing Accomodations (MUST comlete Request for Housing Accomodations form)</b>
+                                        <textarea name={"previousHousingAccomodations"}
+                                                  id={"previousHousingAccomodations"}
+                                                  value={this.state.previousHousingAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredHousingAccomodations"}
+                                                  id={"desiredHousingAccomodations"}
+                                                  value={this.state.desiredHousingAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Sign Language Interpreting Services/Computer Aided Realtime Translations (CART)</b>
+                                        <textarea name={"previousSignLanguageAccomodations"}
+                                                  id={"previousSignLanguageAccomodations"}
+                                                  value={this.state.previousSignLanguageAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredSignLanguageAccomodations"}
+                                                  id={"desiredSignLanguageAccomodations"}
+                                                  value={this.state.desiredSignLanguageAccomodations}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Closed Captioning/English Subtitles</b>
+                                        <textarea name={"previousEnglishSubtitles"}
+                                                  id={"previousEnglishSubtitles"}
+                                                  value={this.state.previousEnglishSubtitles}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredEnglishSubtitles"}
+                                                  id={"desiredEnglishSubtitles"}
+                                                  value={this.state.desiredEnglishSubtitles}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <p>
+                                        <b>Reduced Course Load (e.g. less than full time)</b>
+                                        <textarea name={"previousCourseLoad"}
+                                                  id={"previousCourseLoad"}
+                                                  value={this.state.previousCourseLoad}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Previously Received (please describe)"}>
+                                        </textarea>
+                                        <textarea name={"desiredCourseLoad"}
+                                                  id={"desiredCourseLoad"}
+                                                  value={this.state.desiredCourseLoad}
+                                                  rows={"2"}
+                                                  cols={"100"}
+                                                  disabled={isDisabled}
+                                                  placeholder={"Desired at Radford University (please describe)"}>
+                                        </textarea>
+                                    </p><br/>
+                                    <div align={"left"}>
+                                        <p>
+                                            <b>Any other information you would like to share:</b>
+                                            <textarea name={"additionalInfo"}
+                                                      id={"additionalInfoField"}
+                                                      value={this.state.disability}
+                                                      rows={"4"}
+                                                      cols={"100"}
+                                                      disabled={isDisabled}>
+                                        </textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <legend align="top">Functional Limitations</legend>
+                                <div align={"left"}>
+                                    Indicate the level of impact on applicable major life activities due to the diagnosis(es):
+                                    <p>
+                                        <b>Attending Class</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"attendingClass"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"attendingClass"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"attendingClass"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"attendingClass"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Breathing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"breathing"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"breathing"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"breathing"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled} ></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"breathing"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Calculating</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"calculating"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"calculating"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"calculating"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"calculating"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Caring for Oneself</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"caring"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"caring"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"caring"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"caring"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Concentrating</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Concentrating</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"concentrating"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Eating</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"eating"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"eating"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"eating"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"eating"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Hearing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"hearing"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"hearing"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"hearing"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"hearing"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Interacting with Others</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"interaction"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"interaction"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"interaction"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"interaction"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Learning</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"learning"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"learning"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"learning"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"learning"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Lifting/Carrying</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"lifting"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"lifting"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"lifting"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"lifting"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Making/Keeping Appointments</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"appointments"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"appointments"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"appointments"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"appointments"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Managing Distractions</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"distractions"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"distractions"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"distractions"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"distractions"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Meeting Deadlines</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"deadlines"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"deadlines"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"deadlines"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"deadlines"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Memorizing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"memorizing"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"memorizing"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"memorizing"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"memorizing"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Organization</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"organization"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"organization"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"organization"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"organization"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Perfoeming a Manual Task</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"manualTask"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"manualTask"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"manualTask"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"manualTask"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Reaching</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reaching"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reaching"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reaching"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reaching"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Reading</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reading"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reading"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reading"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"reading"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Seeing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"seeing"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"seeing"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"seeing"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"seeing"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Sitting</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sitting"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sitting"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sitting"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sitting"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Sleeping</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sleeping"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sleeping"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sleeping"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"sleeping"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Spelling</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"spelling"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"spelling"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"spelling"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"spelling"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Stree Management</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"stressManagement"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"stressManagement"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"stressManagement"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"stressManagement"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Taking Exams</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"takingExams"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"takingExams"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"takingExams"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"takingExams"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Talking</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"talking"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"talking"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"talking"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"talking"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Thinking</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"thinking"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"thinking"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"thinking"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"thinking"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Walking/Standing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"walkingStanding"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"walkingStanding"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"walkingStanding"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"walkingStanding"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Working</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"working"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"working"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"working"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"working"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <p>
+                                        <b>Writing</b>
+                                        <blockquote>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"writing"}
+                                                       value={"noImpact"}
+                                                       disabled={isDisabled}></input>   No Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"writing"}
+                                                       value={"modImpact"}
+                                                       disabled={isDisabled}></input>   Moderate Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"writing"}
+                                                       value={"subImpact"}
+                                                       disabled={isDisabled}></input>   Substantial Impact
+                                            </label>
+                                            <label className={"radio-inline"}>
+                                                <input type={"radio"}
+                                                       name={"writing"}
+                                                       value={"dontKnow"}
+                                                       disabled={isDisabled}></input>   Don't Know
+                                            </label>
+                                        </blockquote>
+                                    </p>
+                                    <div align={"left"}>
+                                        <p>
+                                            <b>Additional Information:</b>
+                                            <textarea name={"additionalInfo"}
+                                                      id={"additionalInfoField"}
+                                                      value={this.state.disability}
+                                                      rows={"4"}
+                                                      cols={"100"}
+                                                      disabled={isDisabled}>
+                                        </textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div align={"left"}>
+                                    <p>
+                                        <b>
+                                            Center for Accessability Services (CAS) Records Policy:
+                                        </b>
+                                        <p>
+                                            Files for Registered Students will be stored for five (5) years from the last
+                                            date of service, after which the information will be purged, without further
+                                            notification. It is the student's responsibility to obtain a copy of the CAS
+                                            file departure from Radford University.
+                                        </p>
+                                    </p>
+                                    <p><br/>
+                                        <b>
+                                            Ackowledgement
+                                        </b>
+                                        <p>
+                                            I have access to the Center for Accessability Services Student Handbook at
+                                            www.radford.edu/cas and I will adhere to the CAS policies and procedures.
+                                        </p>
+                                        <p>
+                                            I understand to complete the registration process I must provide documentation
+                                            from a treating professional and conduct an interview with a Disability Services
+                                            Specialist.
+                                        </p>
+                                    </p><br/><br/>
+                                        <label htmlFor="inputZip">Student Signature</label>
+                                        <input type="text" className="form-control" id="studentSig" placeholder="Signature"/>
+                                        <br/>
+                                        <label htmlFor="inputZip">Date</label>
+                                        <input type="text" className="form-control" id="studentDate" placeholder="00-00-0000"/>
+                                </div>
+
                                 <legend align="top"> Emergency Info</legend>
                                 <div className="checkbox" >
                                     <label>
