@@ -43,9 +43,6 @@ class Courses extends React.Component {
                     {coursesItems}
                 </select>
                 <br/>
-                <label>TITLE</label>
-
-
             </div>
         );
     }

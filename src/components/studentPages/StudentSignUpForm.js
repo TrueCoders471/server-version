@@ -55,6 +55,7 @@ export default class StudentSignUpForm extends React.Component {
         const phone = document.getElementById("phone-field").value;
         const username = document.getElementById("userName-field").value;
         const password = document.getElementById("password-field").value;
+        const password2 = document.getElementById("confirm-password-field").value;
         const gender = document.getElementById("gender").value;
         const dob = document.getElementById("dob-field").value;
         const street = document.getElementById("street-field").value;
@@ -104,24 +105,28 @@ export default class StudentSignUpForm extends React.Component {
         });
 
         console.log(bodyBasic);
-
-        window.fetch('http://localhost:7555/registerStudent',
-            //window.fetch('http://137.45.220.128:443/registerStudent',
-            {
-                method: 'POST',
-                headers: headers,
-                body: bodyBasic
-            })
-            .then((res) => {
-                if (res.status === 200) res.text().then(function (text) {
-                    if (text === "OK") {
-                        alert(`User ${username} has been registered`);
-                        location.href = "/student"; //eslint-disable-line
-                    } else {
-                        alert("Something went wrong");
-                    }
+        if (password === password2) {
+            window.fetch('http://localhost:7555/registerStudent',
+                //window.fetch('http://137.45.220.128:443/registerStudent',
+                {
+                    method: 'POST',
+                    headers: headers,
+                    body: bodyBasic
+                })
+                .then((res) => {
+                    if (res.status === 200) res.text().then(function (text) {
+                        if (text === "OK") {
+                            alert(`User ${username} has been registered`);
+                            location.href = "/student"; //eslint-disable-line
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    });
                 });
-            });
+        } else {
+            alert("Passwords don't match");
+        }
+
     };
 
     //region change handlers
@@ -300,7 +305,7 @@ export default class StudentSignUpForm extends React.Component {
                 </div>
                 <div className="form-row">
                     <div className="form-group col-md-6" align="left">
-                        <label htmlFor="inputCity" >City:</label>
+                        <label htmlFor="inputCity">City:</label>
                         <input type="text" className="form-control" id="city-field"/>
                     </div>
                     <div className="form-group col-md-4" align="left">
@@ -392,9 +397,11 @@ export default class StudentSignUpForm extends React.Component {
                 <div className="form-group col-md-6" id="time" align="left">
                     <label htmlFor="classStandings">Time Status: </label>
                     <br/>
-                    <label className="radio-inline"><input type="radio" name="classStandingField" value="Full Time" id="fullTime"/>
+                    <label className="radio-inline"><input type="radio" name="classStandingField" value="Full Time"
+                                                           id="fullTime"/>
                         Full Time</label>
-                    <label className="radio-inline"><input type="radio" name="classStandingField" value="Part Time" id="partTime"/>
+                    <label className="radio-inline"><input type="radio" name="classStandingField" value="Part Time"
+                                                           id="partTime"/>
                         Part Time</label>
                 </div>
                 <div className="form-group col-md-8" align="left">
@@ -546,7 +553,7 @@ export default class StudentSignUpForm extends React.Component {
                             </fieldset>
                             <fieldset>
                                 <legend align="top"> Emergency Info</legend>
-                                <div className="checkbox" >
+                                <div className="checkbox">
                                     <label>
                                         <input type="checkbox"
                                                name="hasMobilityConcernField"
