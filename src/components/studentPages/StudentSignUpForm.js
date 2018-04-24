@@ -548,15 +548,21 @@ export default class StudentSignUpForm extends React.Component {
                                 <legend align="top"> Emergency Info</legend>
                                 <div className="checkbox" >
                                     <label>
-
-                                        <input type="checkbox" name="hasMobilityConcernField" id="mobilityCheckbox"/>
+                                        <input type="checkbox"
+                                               name="hasMobilityConcernField"
+                                               id="mobilityCheckbox"
+                                               value={this.state.mobility}
+                                        />
                                         Do you have a mobility concern that would require an emergency responder?
-
                                     </label>
                                 </div>
                                 <div className="checkbox">
                                     <label>
-                                        <input type="checkbox" name="reqEmsTransportField" id="emsCheckbox"/>
+                                        <input type="checkbox"
+                                               name="reqEmsTransportField"
+                                               id="emsCheckbox"
+                                               value={this.state.ems}
+                                        />
                                         Do you need an emergency responder for medical transport to a hospital to
                                         receive time sensitive medications for a current medical condition?
                                     </label>
@@ -566,7 +572,9 @@ export default class StudentSignUpForm extends React.Component {
                                 <div id="submit-Container">
                                     <div className="checkbox">
                                         <label>
-                                            <input type="checkbox" id=""/>
+                                            <input type="checkbox"
+                                                   id="termsCheckbox"
+                                                   value={this.state.terms}/>
                                             I accept the terms & conditions of becoming a Becoming a Registered Student,
                                             listed above.
                                         </label>
@@ -574,7 +582,7 @@ export default class StudentSignUpForm extends React.Component {
                                     <br/>
                                     <button type="submit"
                                             className={isDisabled ? "disabledCommonButton" : "commonButton"}
-                                        disabled={isDisabled}
+                                            disabled={isDisabled}
                                             onClick={this.registerStudent}>
                                         Register
                                     </button>

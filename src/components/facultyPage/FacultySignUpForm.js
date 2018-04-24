@@ -2,7 +2,41 @@ import React from 'react';
 import CoursesPage from "../coursesPage/CoursesPage";
 
 export default class FacultySignUpForm extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            username: '',
+            password: '',
+            confirm_password: '',
+            first_name: '',
+            last_name: '',
+            email: '',
+            phone: '',
+            ru_id: '',
+            canBeSubmitted: false,
+        }
+    };
+    validate(username, password, confirm_password, first_name, last_name, email, phone, ru_id) {
+        return {
+            username: username.length === 0,
+            password: password.length === 0,
+            confirm_password: confirm_password.length === 0,
+            first_name: first_name.length === 0,
+            last_name: last_name.length === 0,
+            email: email.length === 0,
+            phone: phone.length === 0,
+            ru_id: ru_id.length === 0
+        }
+    };
 
+    canBeSubmitted() {
+        console.log("enter can be submitted");
+        const errors = this.validate(this.state.username, this.state.password, this.state.confirm_password,
+            this.state.first_name, this.state.last_name, this.state.email, this.state.phone, this.state.ru_id);
+        const isDisabled = Object.keys(errors).some(x => errors[x]) && (this.state.password !== this.state.confirm_password !== '');
+        console.log(!isDisabled);
+        return !isDisabled;
+    };
     registerFaculty(e) {
         e.preventDefault();
         const firstName = document.getElementById("fName-field").value;
@@ -42,14 +76,45 @@ export default class FacultySignUpForm extends React.Component {
                 if (res.status === 200) res.text().then(function (text) {
                     if (text === "OK") {
                         alert(`User ${username} has been registered`);
+                        location.href = "/faculty"; //eslint-disable-line
                     } else {
                         alert("Something went wrong");
                     }
                 });
             })
     }
+    //region change handlers
+    handleFirstNameChange = (evt) => {
+        this.setState({first_name: evt.target.value});
+    };
+    handleLastNameChange = (evt) => {
+        this.setState({last_name: evt.target.value});
+    };
+    handleRuIdChange = (evt) => {
+        this.setState({ru_id: evt.target.value});
+    };
+    handleEmailChange = (evt) => {
+        this.setState({email: evt.target.value});
+    };
+    handlePhoneChange = (evt) => {
+        this.setState({phone: evt.target.value});
+    };
+    handleUsernameChange = (evt) => {
+        this.setState({username: evt.target.value});
+    };
+    handlePasswordChange = (evt) => {
+        this.setState({password: evt.target.value});
+    };
+    handleConfirmPasswordChange = (evt) => {
+        this.setState({confirm_password: evt.target.value});
+    };
+
+    //endregion
 
     informationInputSection() {
+        const errors = this.validate(this.state.username, this.state.password, this.state.confirm_password,
+            this.state.first_name, this.state.last_name, this.state.email, this.state.phone, this.state.ru_id);
+
         return (
             <div>
                 <div className="form-group col-md-12" >
@@ -57,27 +122,52 @@ export default class FacultySignUpForm extends React.Component {
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label htmlFor="name-field" id="labels">First Name:</label>
-                    <input type="text" name="fName" className="form-control" id="fName-field"
+                    <input type="text"
+                           name="fName"
+                           className={errors.first_name ? "error" : "form-control"}
+                           value={this.state.first_name}
+                           onChange={this.handleFirstNameChange}
+                           id="fName-field"
                            placeholder="Bob"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="name-field">Last Name:</label>
-                    <input type="text" name="lName" className="form-control" id="lName-field"
+                    <input type="text"
+                           name="lName"
+                           className={errors.last_name ? "error" : "form-control"}
+                           value={this.state.last_name}
+                           onChange={this.handleLastNameChange}
+                           id="lName-field"
                            placeholder="Ross"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="email-field">Email:</label>
-                    <input type="text" name="email" className="form-control" id="email-field"
+                    <input type="text"
+                           name="email"
+                           className={errors.email ? "error" : "form-control"}
+                           value={this.state.email}
+                           onChange={this.handleEmailChange}
+                           id="email-field"
                            placeholder="bross@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="student-id-field">Radford ID:</label>
-                    <input type="text" name="sid" className="form-control" id="radford-id-field"
+                    <input type="text"
+                           name="sid"
+                           className={errors.ru_id ? "error" : "form-control"}
+                           value={this.state.ru_id}
+                           onChange={this.handleRuIdChange}
+                           id="radford-id-field"
                            placeholder="000000000"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="cell-phone-field">Cell Phone:</label>
-                    <input type="text" name="cellPone" className="form-control" id="cell-phone-field"
+                    <input type="text"
+                           name="cellPone"
+                           className={errors.phone ? "error" : "form-control"}
+                           value={this.state.phone}
+                           onChange={this.handlePhoneChange}
+                           id="cell-phone-field"
                            placeholder="000-000-0000"/>
                 </div>
                 <div className="form-group col-md-12">
@@ -85,17 +175,32 @@ export default class FacultySignUpForm extends React.Component {
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="username">Username:</label>
-                    <input type="text" name="username" className="form-control" id="userName-field"
+                    <input type="text"
+                           name="username"
+                           className={errors.username ? "error" : "form-control"}
+                           value={this.state.username}
+                           onChange={this.handleUsernameChange}
+                           id="userName-field"
                            placeholder="bross@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="password">Password:</label>
-                    <input type="password" name="password" className="form-control" id="password-field"
+                    <input type="password"
+                           name="password"
+                           className={errors.password ? "error" : "form-control"}
+                           value={this.state.password}
+                           onChange={this.handlePasswordChange}
+                           id="password-field"
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="confirmPassword">Confirm Password:</label>
-                    <input type="password" name="password" className="form-control" id="confirm-password-field"
+                    <input type="password"
+                           name="password"
+                           className={errors.confirm_password ? "error" : "form-control"}
+                           value={this.state.confirm_password}
+                           onChange={this.handleConfirmPasswordChange}
+                           id="confirm-password-field"
                            placeholder=""/>
                 </div>
                 <div className="form-group col-md-12">
@@ -116,6 +221,7 @@ export default class FacultySignUpForm extends React.Component {
     }
 
     render() {
+        const isDisabled = !this.canBeSubmitted();
         return (
             <div>
                 <div className="container">
@@ -132,7 +238,8 @@ export default class FacultySignUpForm extends React.Component {
                                         <div id="submit-Container">
                                             <br/>
                                             <button type="submit"
-                                                    className="commonButton"
+                                                    className={isDisabled ? "disabledCommonButton" : "commonButton"}
+                                                    disabled={isDisabled}
                                                     onClick={this.registerFaculty}
                                             >Register
                                             </button>
