@@ -32,7 +32,7 @@ class AdminPage extends React.Component {
                         <StudentsList/>
                 </Tab>
                 <Tab label="View volunteers" className="default_tab">
-                        <h3>volunteers</h3>
+                        <h3>Volunteers</h3>
                         <NotetakersList/>
                 </Tab>
                 <Tab label="View Faculty" className="default_tab">
