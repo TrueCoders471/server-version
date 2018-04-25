@@ -80,7 +80,7 @@ export default class VolunteerSignUpForm extends React.Component {
                     if (res.status === 200) res.text().then(function (text) {
                         if (text === "OK") {
                             alert(`User ${username} has been registered`);
-                            location.href = "/volunteer"; //eslint-disable-line
+                            location.href = "/volunteerClasses"; //eslint-disable-line
                         } else {
                             alert("Something went wrong");
                         }

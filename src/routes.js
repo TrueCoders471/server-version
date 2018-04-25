@@ -12,23 +12,14 @@ import Volunteers from './components/adminPage/VolunteersList';
 import CasForms from './components/adminPage/CasForms';
 import StudentPage from './components/studentPages/StudentPage';
 import StudentClasses from './components/studentPages/StudentClassesPage';
-import StudentClass1 from './components/classPages/StudentClass1Page';
-import StudentClass2 from './components/classPages/StudentClass2Page';
-import StudentClass3 from './components/classPages/StudentClass3Page';
-import StudentClass4 from './components/classPages/StudentClass4Page';
-import StudentClass5 from './components/classPages/StudentClass5Page';
 import StudentNotes from './components/notesPages/StudentNotesPage';
 import AdminNotes from './components/notesPages/AdminNotesPage';
-import VolunteerPage from "./components/volunteerPages/VolunteerPage";
 import VolunteerClassesPage from "./components/volunteerPages/VolunteerClassesPage";
 import VolunteerUploadNotes from "./components/volunteerPages/VolunteerUploadNotes";
 import FacultyPage from "./components/facultyPage/FacultyPage";
 import FacultyStudentsPage from "./components/facultyPage/FacultyStudentsPage";
 import FacultyVolunteersPage from "./components/facultyPage/FacultyVolunteersPage";
 import FacultyClassesPage from "./components/facultyPage/FacultyClassesPage";
-import FacultyClass1Page from "./components/facultyPage/FacultyClass1Page";
-import FacultyClass2Page from "./components/facultyPage/FacultyClass2Page";
-import FacultyClass3Page from "./components/facultyPage/FacultyClass3Page";
 import pprs from "./components/volunteerPages/pprs";
 import proctoringRequestForm from "./components/volunteerPages/proctoringRequestForm";
 import RequestForAccommodationsForm from "./components/accomodations/RequestForAccommodationsForm";
@@ -64,14 +55,8 @@ export default (
         <Route path="/casForms" component={CasForms}/>
         <Route path="/student" component={StudentPage}/>
         <Route path="/studentClasses" component={StudentClasses}/>
-        <Route path="/studentClass1" component={StudentClass1}/>
-        <Route path="/studentClass2" component={StudentClass2}/>
-        <Route path="/studentClass3" component={StudentClass3}/>
-        <Route path="/studentClass4" component={StudentClass4}/>
-        <Route path="/studentClass5" component={StudentClass5}/>
         <Route path="/studentNotes" component={StudentNotes}/>
         <Route path="/adminNotes" component={AdminNotes}/>
-        <Route path="/volunteer" component={VolunteerPage}/>
         <Route path="/volunteerClasses" component={VolunteerClassesPage}/>
         <Route path="/adminClasses" component={AdminClassesPage}/>
         <Route path="/volunteerSignUpForm" component={volSignUpForm}/>
@@ -81,9 +66,6 @@ export default (
         <Route path="/faculty" component={FacultyPage}/>
         <Route path="/facultySignUpForm" component={FacultySignUpForm}/>
         <Route path="/facultyClasses" component={FacultyClassesPage}/>
-        <Route path="/facultyClass1" component={FacultyClass1Page}/>
-        <Route path="/facultyClass2" component={FacultyClass2Page}/>
-        <Route path="/facultyClass3" component={FacultyClass3Page}/>
         <Route path="/facultyVolunteers" component={FacultyVolunteersPage}/>
         <Route path="/facultyStudents" component={FacultyStudentsPage}/>
         <Route path="/requestForAccommodationsForm" component={RequestForAccommodationsForm}/>
