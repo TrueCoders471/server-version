@@ -1,8 +1,6 @@
 import React from 'react';
-import "./volunteerSignUpFormStyles.css"
 
-
-export default class VolunteerSignUpForm extends React.Component {
+export default class CreateVolunteer extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -42,14 +40,14 @@ export default class VolunteerSignUpForm extends React.Component {
 
     registerVolunteer(e) {
         e.preventDefault();
-        const firstName = document.getElementById("fName-field").value;
-        const lastName = document.getElementById("lName-field").value;
-        const email = document.getElementById("email-field").value;
-        const ruId = document.getElementById("student-id-field").value;
-        const phone = document.getElementById("cell-phone-field").value;
-        const username = document.getElementById("userName-field").value;
-        const password = document.getElementById("password-field").value;
-        const password2 = document.getElementById("confirm-password-field").value;
+        const firstName = document.getElementById("vol-fName-field").value;
+        const lastName = document.getElementById("vol-lName-field").value;
+        const email = document.getElementById("vol-email-field").value;
+        const ruId = document.getElementById("volunteer-id-field").value;
+        const phone = document.getElementById("volunteer-phone-field").value;
+        const username = document.getElementById("volunteer-userName-field").value;
+        const password = document.getElementById("vol-password-field").value;
+        const password2 = document.getElementById("vol-confirm-password-field").value;
 
         console.log(firstName);
         if (password !== password2) {
@@ -80,7 +78,7 @@ export default class VolunteerSignUpForm extends React.Component {
                     if (res.status === 200) res.text().then(function (text) {
                         if (text === "OK") {
                             alert(`User ${username} has been registered`);
-                            location.href = "/volunteerClasses"; //eslint-disable-line
+                            location.href = "/admin"; //eslint-disable-line
                         } else {
                             alert("Something went wrong");
                         }
@@ -126,7 +124,7 @@ export default class VolunteerSignUpForm extends React.Component {
 
         return (
             <div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="center">
                     <label className=".value" htmlFor="generalInformation"><h4>General Information:</h4></label>
                 </div>
                 <div className="form-group col-md-6" align="left">
@@ -135,7 +133,7 @@ export default class VolunteerSignUpForm extends React.Component {
                            name="fName"
                            className={errors.first_name ? "error" : "form-control"}
                            value={this.state.first_name}
-                           id="fName-field"
+                           id="vol-fName-field"
                            onChange={this.handleFirstNameChange}
                            placeholder="First Name"/>
                 </div>
@@ -145,7 +143,7 @@ export default class VolunteerSignUpForm extends React.Component {
                            name="lName"
                            className={errors.last_name ? "error" : "form-control"}
                            value={this.state.last_name}
-                           id="lName-field"
+                           id="vol-lName-field"
                            onChange={this.handleLastNameChange}
                            placeholder="Last Name"/>
                 </div>
@@ -155,40 +153,40 @@ export default class VolunteerSignUpForm extends React.Component {
                            name="email"
                            className={errors.email ? "error" : "form-control"}
                            value={this.state.email}
-                           id="email-field"
+                           id="vol-email-field"
                            onChange={this.handleEmailChange}
                            placeholder="email@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="student-id-field">Student ID:</label>
+                    <label className="value" htmlFor="volunteer-id-field">Student ID:</label>
                     <input type="text"
                            name="sid"
                            className={errors.ru_id ? "error" : "form-control"}
                            value={this.state.ru_id}
-                           id="student-id-field"
+                           id="volunteer-id-field"
                            onChange={this.handleRuIdChange}
                            placeholder="000000000"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="cell-phone-field">Cell Phone:</label>
+                    <label className="value" htmlFor="volunteer-phone-field">Cell Phone:</label>
                     <input type="text"
                            name="cellPone"
                            className={errors.phone ? "error" : "form-control"}
                            value={this.state.phone}
-                           id="cell-phone-field"
+                           id="volunteer-phone-field"
                            onChange={this.handlePhoneChange}
                            placeholder="000-000-0000"/>
                 </div>
-                <div className="form-group col-md-12">
+                <div className="form-group col-md-12" align="center">
                     <label className=".value" htmlFor="accountInformation"><h4>Account Information:</h4></label>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="username">Username:</label>
+                    <label className="value" htmlFor="volunteer-username">Username:</label>
                     <input type="text"
-                           name="username"
+                           name="volunteer-username"
                            className={errors.username ? "error" : "form-control"}
                            value={this.state.username}
-                           id="userName-field"
+                           id="volunteer-userName-field"
                            onChange={this.handleUsernameChange}
                            placeholder="Username"/>
                 </div>
@@ -201,55 +199,19 @@ export default class VolunteerSignUpForm extends React.Component {
                            name="password"
                            className={errors.password ? "error" : "form-control"}
                            value={this.state.password}
-                           id="password-field"
+                           id="vol-password-field"
                            onChange={this.handlePasswordChange}
                            placeholder="Password"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="confirmPassword">Confirm Password:</label>
                     <input type="password"
-                           name="password"
+                           name="confirm-password"
                            className={errors.confirm_password ? "error" : "form-control"}
                            value={this.state.confirm_password}
-                           id="confirm-password-field"
+                           id="vol-confirm-password-field"
                            onChange={this.handleConfirmPasswordChange}
                            placeholder="Confirm Password"/>
-                </div>
-                <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="volNoteTakerExpectations"><h4>Volunteer
-                        Expectations:</h4>
-                    </label>
-                </div>
-                <div className="form-group col-md-6" align="left">
-                    <ul>
-                        <li>Attend classes regularly</li>
-                        <li>Write legibly</li>
-                        <li>Complete mandatory volunteer Training Program provided by the Center for Accessibility
-                            Services
-                        </li>
-                        <li>Maintain confidentiality</li>
-                    </ul>
-                </div>
-                <div className="form-group col-md-6" align="left">
-                    <ul>
-                        <li>Be in good academic standing</li>
-                        <li>Take detailed notes</li>
-                        <li>Submit notes <b>at least</b> twice a week if possible</li>
-                    </ul>
-                </div>
-                <div className="form-group col-md-12">
-                    <label className=".value" htmlFor="volNoteTakerPerks"><h4>Volunteer Perks:</h4></label>
-                </div>
-                <div className="form-group col-md-6" align="left">
-                    <ul>
-                        <li>Early registration for next semester</li>
-                        <li>Community Service</li>
-                        <li>Résumé Builder</li>
-                    </ul>
-                </div>
-                <div className="form-group col-md-12">
-                    <p>By submitting this form you understand the responsibilities of a volunteer and if
-                        selected will uphold the above expectations.</p>
                 </div>
             </div>
         );
@@ -265,21 +227,11 @@ export default class VolunteerSignUpForm extends React.Component {
                         <div id="primary" className="col-md-8 col-md-offset-2">
                             <form role="form" method="POST" action="#">
                                 <fieldset>
-                                    <legend><h1 className="text-center"><b>Volunteer Sign-Up Form</b></h1>
-                                    </legend>
                                     {this.informationInputSection()}
                                 </fieldset>
                                 <div className="form-group">
                                     <div className="text-center">
                                         <div id="submit-Container">
-                                            <div className="checkbox">
-                                                <label>
-                                                    <input type="checkbox" id=""/>
-                                                    I accept the terms & conditions of becoming a volunteer for the
-                                                    CAS Department.
-                                                </label>
-                                            </div>
-                                            <br/>
                                             <button type="submit"
                                                     className={isDisabled ? "disabledCommonButton" : "commonButton"}
                                                     disabled={isDisabled}

@@ -8,6 +8,7 @@ import AdminClassesPage from "./AdminClassesPage";
 
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
+import AdminUserManagement from "./AdminUserManagement";
 
 
 
@@ -15,11 +16,6 @@ class AdminPage extends React.Component {
     logOut() {
         location.href = "/"; //eslint-disable-line
     }
-
-
-
-
-
 
     render() {
         return (
@@ -46,6 +42,9 @@ class AdminPage extends React.Component {
                 <Tab label="Classes" className="default_tab">
                     <h3>Classes</h3>
                     <AdminClassesPage/>
+                </Tab>
+                <Tab label="User Management" className="default_tab">
+                    <AdminUserManagement/>
                 </Tab>
             </Tabs>
         </MuiThemeProvider>

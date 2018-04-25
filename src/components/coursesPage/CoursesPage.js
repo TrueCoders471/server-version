@@ -52,8 +52,8 @@ class CoursesPage extends React.Component {
             ru_id: ruId,
             course: course,
         });
-        //window.fetch('http://localhost:7555/addCourse',
-            window.fetch('http://137.45.220.128:443/addCourse',
+        window.fetch('http://localhost:7555/addCourse',
+            //window.fetch('http://137.45.220.128:443/addCourse',
             {
                 method: 'POST',
                 headers: headers,

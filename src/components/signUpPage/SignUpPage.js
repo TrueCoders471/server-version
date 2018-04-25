@@ -29,10 +29,6 @@ class SignUpPage extends React.Component {
         // Based on selection navigate to appropriate page or display a alert because
         // of non-selected choice
         switch(selectedAcct){
-            //TODO: move this registration to admin - add another admin!
-            case "Administrator":
-                location.href = "/admin"; //eslint-disable-line
-                break;
             case "Faculty":
                 location.href = "/facultySignUpForm"; //eslint-disable-line
                 break;
@@ -69,7 +65,6 @@ class SignUpPage extends React.Component {
                                     <br/>
                                     <select id="acctTypeSelect" >
                                         <option>Select Account Type</option>
-                                        <option value="Administrator">Administrator</option>
                                         <option value="Faculty">Faculty</option>
                                         <option value="Student">Student</option>
                                         <option value="Volunteer">Volunteer</option>

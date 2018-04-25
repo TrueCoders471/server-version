@@ -19,12 +19,13 @@ const range = len => {
  * firstName, lastName, accountType, and studentID, email
  * @returns {{firstName: string, lastName: string, accountType: string, studentID: string, email: string}}
  */
-function newAdminStruct() {
+const newAdminStruct = (admin) => {
     return {
-        firstName: "Isaac",
-        lastName: "Hutchinson",
-        accountType: "Administrator",
-        studentID: "000000000"
+        firstName: admin.first_name,
+        lastName: admin.last_name,
+        accountType: admin.role,
+        studentID: admin.ru_id,
+        email: admin.email
     };
 };
 
@@ -100,21 +101,24 @@ const newSubjectStruct = (subject) => {
 };
 
 //Amount of data to make
-export function makeListOfAdmins(len = 1000) {
-    return range(len).map(d => {
-        return {
-            ...newAdminStruct(),
-            children: range(10).map(newAdminStruct)
-        };
-    });
+export async function makeListOfAdmins() {
+    return loadUsers("admin").then((admins) => {
+            const adminsTotal = admins.length;
+            var array = [adminsTotal];
+            for (var i = 0; i < adminsTotal; i++) {
+                array[i] = newAdminStruct(admins[i]);
+            }
+            return array;
+        }
+    )
 }
 
 export function loadUsers(role) {
     var headers = new Headers();
     const body = JSON.stringify({role: role});
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadUsers',
-    //return (window.fetch('http://localhost:7555/loadUsers',
+    //return (window.fetch('http://137.45.220.128:443/loadUsers',
+    return (window.fetch('http://localhost:7555/loadUsers',
             {
                 method: 'POST',
                 headers: headers,
@@ -136,8 +140,8 @@ export function loadDocuments(is_fillable) {
     const body = JSON.stringify({is_fillable: is_fillable});
     console.log(body);
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadDocuments',
-    //return (window.fetch('http://localhost:7555/loadDocuments',
+    //return (window.fetch('http://137.45.220.128:443/loadDocuments',
+    return (window.fetch('http://localhost:7555/loadDocuments',
             {
                 method: 'POST',
                 headers: headers,
@@ -160,8 +164,8 @@ export function loadNotes(courseNumber) {
     const body = JSON.stringify({course_number: courseNumber});
     console.log(body);
     headers.append("Content-Type", "application/json");
-    return (window.fetch('http://137.45.220.128:443/loadNotes',
-    //return (window.fetch('http://localhost:7555/loadNotes',
+    //return (window.fetch('http://137.45.220.128:443/loadNotes',
+    return (window.fetch('http://localhost:7555/loadNotes',
             {
                 method: 'POST',
                 headers: headers,
@@ -184,8 +188,8 @@ export function loadCourses(subject_name) {
     const body = JSON.stringify({subject_name: subject_name});
     console.log(body);
     headers.append("Context-Type", "application/json");
-    //return (window.fetch('http://localhost:7555/loadCourses',
-    return (window.fetch('http://137.45.220.128:443/loadCourses',
+    return (window.fetch('http://localhost:7555/loadCourses',
+            //return (window.fetch('http://137.45.220.128:443/loadCourses',
             {
                 method: 'POST',
                 headers: headers,
@@ -205,14 +209,14 @@ export function loadCourses(subject_name) {
 export function loadSubjects() {
     let headers = new Headers();
     headers.append("Context-Type", "application/json");
-    //return (window.fetch('http://localhost:7555/loadSubjects',
-    return (window.fetch('http://137.45.220.128:443/loadSubjects',
+    return (window.fetch('http://localhost:7555/loadSubjects',
+            //return (window.fetch('http://137.45.220.128:443/loadSubjects',
             {
                 method: 'POST',
                 headers: headers
             })
             .then((res) => {
-                return(
+                return (
                     res.text().then(function (result) {
                         console.log(JSON.parse(result));
                         return JSON.parse(result);

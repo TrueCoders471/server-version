@@ -66,8 +66,8 @@ export default class FacultySignUpForm extends React.Component {
 
         console.log(body);
         if (password === password2) {
-            //window.fetch('http://localhost:7555/registerFaculty',
-                window.fetch('http://137.45.220.128:443/registerFaculty',
+            window.fetch('http://localhost:7555/registerFaculty',
+                //window.fetch('http://137.45.220.128:443/registerFaculty',
                 {
                     method: 'POST',
                     headers: headers,
@@ -133,7 +133,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.first_name}
                            onChange={this.handleFirstNameChange}
                            id="fName-field"
-                           placeholder="Bob"/>
+                           placeholder="First Name"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="name-field">Last Name:</label>
@@ -143,7 +143,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.last_name}
                            onChange={this.handleLastNameChange}
                            id="lName-field"
-                           placeholder="Ross"/>
+                           placeholder="Last Name"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="email-field">Email:</label>
@@ -153,7 +153,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.email}
                            onChange={this.handleEmailChange}
                            id="email-field"
-                           placeholder="bross@radford.edu"/>
+                           placeholder="email@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="student-id-field">Radford ID:</label>
@@ -186,7 +186,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.username}
                            onChange={this.handleUsernameChange}
                            id="userName-field"
-                           placeholder="bross@radford.edu"/>
+                           placeholder="Username"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="password">Password:</label>
@@ -196,7 +196,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.password}
                            onChange={this.handlePasswordChange}
                            id="password-field"
-                           placeholder=""/>
+                           placeholder="Password"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
                     <label className="value" htmlFor="confirmPassword">Confirm Password:</label>
@@ -206,7 +206,7 @@ export default class FacultySignUpForm extends React.Component {
                            value={this.state.confirm_password}
                            onChange={this.handleConfirmPasswordChange}
                            id="confirm-password-field"
-                           placeholder=""/>
+                           placeholder="Confirm Password"/>
                 </div>
                 <div className="form-group col-md-12">
                     {/*<label className=".value" htmlFor="facultyCourses"><h4>Courses Taught This Semester:</h4></label>*/}
