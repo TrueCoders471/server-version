@@ -2,7 +2,7 @@ import React from 'react';
 import './adminPendingUserPageStyles.css';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { makeListOfAdmins} from "./Utils";
+import {makeListOfAdmins} from "./Utils";
 
 
 class AdminNoteTakerApprovePage extends React.Component {
@@ -10,14 +10,14 @@ class AdminNoteTakerApprovePage extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: makeListOfAdmins()
+            data: []
         };
+        makeListOfAdmins().then((admin) => this.setState({data: admin}));
     }
 
 
-
     render() {
-        const { data } = this.state;
+        const data = this.state.data;
         return (
             <div>
                 <div className="container">
@@ -59,7 +59,7 @@ class AdminNoteTakerApprovePage extends React.Component {
                 </div>
                 <div className="container" align="Center">
                     <div className="form-group col-md-12" align="Center">
-                        <br />
+                        <br/>
                         <p>To approve or deny a user look at the table above and copy the persons student ID
                             into the field.</p>
                     </div>
@@ -70,12 +70,12 @@ class AdminNoteTakerApprovePage extends React.Component {
                         <label>Student ID</label>
                         <input type="password" id="inputStudentID" className="form-control" required
                                placeholder="Student ID"/>
-                        <br />
+                        <br/>
                         <button type="button" className="commonButton">Approve</button>
                         <div className="divider"/>
                         <button type="button" className="commonButton">Deny</button>
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
                     </div>
                     <div className="form-group col-md-3">
                         {/*Supposed to be empty*/}

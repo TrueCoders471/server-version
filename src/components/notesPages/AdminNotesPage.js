@@ -26,7 +26,7 @@ class AdminNotesPage extends React.Component {
         console.log(file.name);
         console.log(file.lastModifiedDate.toDateString());
         //return (window.fetch('http://137.45.220.128:443/uploadNote', {
-                return (window.fetch('http://localhost:7555/uploadNote', {
+        return (window.fetch('http://localhost:7555/uploadNote', {
                 method: 'POST',
                 body: data,
             }).then((response) => {
@@ -50,45 +50,9 @@ class AdminNotesPage extends React.Component {
         console.log(notesData);
         return (
             <div>
-                {/*<button className="btn btn-lg btn-primary" type="submit" onClick={this.openClasses}>View All Classes</button>*/}
-                {/*<div>*/}
-                {/*<ul>*/}
-                {/*<h3> Week: Nov 12 - Nov 19</h3>*/}
-                {/*<ul className="list-group">*/}
-                {/*<li className="list-group-item justify-content-between">*/}
-                {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                {/*<b>Notes from the lecture</b>(11/13/2017)*/}
-                {/*</li>*/}
-                {/*</ul>*/}
-                {/*<h3> Week: Nov 5 - Nov 12</h3>*/}
-                {/*<ul className="list-group">*/}
-                {/*<li className="list-group-item justify-content-between">*/}
-                {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                {/*<b>Notes from the lecture</b> (11/8/2017)*/}
-                {/*</li>*/}
-                {/*<li className="list-group-item justify-content-between">*/}
-                {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                {/*<b>Notes from the lecture </b>(11/6/2017)*/}
-                {/*</li>*/}
-                {/*</ul>*/}
-                {/*<h3> Week: Oct 29 - Nov 5</h3>*/}
-                {/*<ul className="list-group">*/}
-                {/*<li className="list-group-item justify-content-between">*/}
-                {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                {/*<b>Notes from the lecture</b> (11/03/2017)*/}
-                {/*</li>*/}
-                {/*<li className="list-group-item justify-content-between">*/}
-                {/*<span className="glyphicon glyphicon-download" onClick={this.downloadForm}/>*/}
-                {/*<b>Notes from the lecture </b>(10/31/2017)*/}
-                {/*</li>*/}
-                {/*</ul>*/}
-                {/*</ul>*/}
-                {/*<button className="commonButton" type="submit" onClick={this.openClasses}>View all Classes*/}
-                {/*</button>*/}
-                {/*</div>*/}
                 <div className="container" align="center">
 
-                    <br />
+                    <br/>
                     <ReactTable
                         data={notesData}
                         columns={[
@@ -112,19 +76,20 @@ class AdminNotesPage extends React.Component {
 
                     <div align={"middle"}>
                         <div className="form-group col-md-12">
-                            <br />
-                            <br />
-                            <p>To download or delete a file please copy the file id from the table and input it into the field below and click download.</p>
+                            <br/>
+                            <br/>
+                            <p>To download or delete a file please copy the file id from the table and input it into the
+                                field below and click download.</p>
                             <label>File ID</label>
                             <input type="password" id="inputStudentID" className="form-control" required
                                    placeholder="File ID"/>
-                            <br />
+                            <br/>
                             <button type="button" className="commonButton">Download</button>
                             <div className="divider"/>
                             <button type="button" className="commonButton">Delete</button>
-                            <br />
-                            <br />
-                            <br />
+                            <br/>
+                            <br/>
+                            <br/>
 
                         </div>
                         <br/>
@@ -134,9 +99,9 @@ class AdminNotesPage extends React.Component {
                             <br/> {/* Break between the button and file uploader to have space */}
                             <button className={"commonButton"}>Upload Notes</button>
                         </form>
-                        <br />
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
 
                 </div>

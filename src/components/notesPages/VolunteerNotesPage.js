@@ -7,10 +7,30 @@ class VolunteerNotesPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            notes_data: []
+            notes_data: [],
+            course: '',
         };
         makeListOfNotes("ITEC120").then((notes) => this.setState({notes_data: notes}));
     }
+
+    validate(course) {
+        return {
+            course: course.length === 0,
+        }
+    }
+
+    handleCourseChange = (evt) => {
+        this.setState({course: evt.target.value});
+    };
+
+    canBeSubmitted() {
+        console.log("enter can be submitted");
+        const errors = this.validate(this.state.course);
+
+        const isDisabled = Object.keys(errors).some(x => errors[x]);
+        console.log(!isDisabled);
+        return !isDisabled;
+    };
 
     handleUploadFile(ev) {
         ev.preventDefault();
@@ -18,9 +38,10 @@ class VolunteerNotesPage extends React.Component {
         headers.append("Content-Type", "application/json");
         const data = new FormData();
         const file = document.getElementById("fileUpload").files[0];
+        const courseNumber = document.getElementById("courseNumber").value;
         data.append('file', file);
         data.append('title', file.name);
-        data.append('course_number', this.state.course);
+        data.append('course_number', courseNumber);
         data.append('date_submitted', file.lastModifiedDate.toDateString());
 
         console.log(file.name);
@@ -48,56 +69,54 @@ class VolunteerNotesPage extends React.Component {
     render() {
         const notesData = this.state.notes_data;
         console.log(notesData);
+        const errors = this.validate(this.state.course);
+        const isDisabled = !this.canBeSubmitted();
         return (
             <div>
                 <br/>
                 <div className="container">
-                <ReactTable
-                    data={notesData}
-                    columns={[
-                        {
-                            Header: "Course Number",
-                            accessor: "course_number"
-                        },
-                        {
-                            Header: "Notes Title",
-                            accessor: "title"
-                        },
-                        {
-                            Header: "Added on",
-                            accessor: "date_submitted"
-                        }
-                    ]}
-                    defaultPageSize={10}
-                    className="-striped -highlight"
-                />
-                    <div align={"middle"}>
-                        <div className="form-group col-md-12">
-                            <br />
-                            <br />
-                            <p>To download or delete a file please copy the file id from the table and input it into the field below and click download.</p>
-                            <label>File ID</label>
-                            <input type="password" id="inputStudentID" className="form-control" required
-                                   placeholder="File ID"/>
-                            <br />
-                            <button type="button" className="commonButton">Download</button>
-                            <div className="divider"/>
-                            <button type="button" className="commonButton">Delete</button>
-                            <br />
-                            <br />
-                            <br />
-
-                        </div>
+                    <ReactTable
+                        data={notesData}
+                        columns={[
+                            {
+                                Header: "Course Number",
+                                accessor: "course_number"
+                            },
+                            {
+                                Header: "Notes Title",
+                                accessor: "title"
+                            },
+                            {
+                                Header: "Added on",
+                                accessor: "date_submitted"
+                            }
+                        ]}
+                        defaultPageSize={10}
+                        className="-striped -highlight"
+                    />
+                    <br/>
+                    <div className="form-group col-md-12" align="middle">
+                        <h5>Enter Course name</h5>
                         <br/>
-                        <form onSubmit={this.handleUploadFile}>
-                            <h4>Choose a file to upload:</h4>
-                            <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
-                            <br/> {/* Break between the button and file uploader to have space */}
-                            <button className={"commonButton"}>Upload Notes</button>
-                        </form>
-                        <br />
-                        <br />
-                        <br />
+                        <div align={"middle"}>
+                            <input type="text"
+                                   id="courseNumber"
+                                   className={errors.course ? "error" : "form-control"}
+                                   value={this.state.course}
+                                   onChange={this.handleCourseChange}
+                                   placeholder="Course Number"/>
+                            <br/>
+                            <form onSubmit={this.handleUploadFile}>
+                                <h4>Choose a file to upload:</h4>
+                                <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
+                                <br/> {/* Break between the button and file uploader to have space */}
+                                <button
+                                    className={isDisabled ? "disabledCommonButton" : "commonButton"}
+                                    disabled={isDisabled}>Upload Notes
+                                </button>
+                            </form>
+                            <br/>
+                        </div>
                     </div>
 
                 </div>
