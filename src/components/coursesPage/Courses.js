@@ -6,6 +6,7 @@ class Courses extends React.Component {
         this.state = {
             subject: props.subject,
             courses: [],
+            course: props.course,
         };
     }
 

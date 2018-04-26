@@ -121,6 +121,7 @@ export default class FacultySignUpForm extends React.Component {
         const errors = this.validate(this.state.username, this.state.password, this.state.confirm_password,
             this.state.first_name, this.state.last_name, this.state.email, this.state.phone, this.state.ru_id);
 
+        const ru_id = this.state.ru_id;
         return (
             <div>
                 <div className="form-group col-md-12">
@@ -210,17 +211,8 @@ export default class FacultySignUpForm extends React.Component {
                            placeholder="Confirm Password"/>
                 </div>
                 <div className="form-group col-md-12">
-                    {/*<label className=".value" htmlFor="facultyCourses"><h4>Courses Taught This Semester:</h4></label>*/}
-                    <CoursesPage ru_id={this.state.ru_id}/>
+                    <CoursesPage ru_id={ru_id}/>
                     <br/>
-                    {/*<div>*/}
-                    {/*<button type="submit"*/}
-                    {/*className="commonButton"*/}
-                    {/*onClick={this.addCourse}*/}
-                    {/*>Add course*/}
-                    {/*</button>*/}
-                    {/*<br/>*/}
-                    {/*</div>*/}
                 </div>
             </div>
         );

@@ -14,6 +14,7 @@ class CoursesPage extends React.Component {
             subjects: [],
             subject: '',
             ru_id: props.ru_id,
+            course: props.course,
         };
 
         this.change = this.change.bind(this);
@@ -43,13 +44,14 @@ class CoursesPage extends React.Component {
 
     addCourse(e) {
         e.preventDefault();
-        alert("add course cliked");
-        const ruId = this.state.ru_id;
-        const course = "wolrd";
+        const ru_id = this.state.ru_id;
+        console.log(ru_id);
+        const course = Courses.course;
+        console.log(course);
         var headers = new Headers();
         headers.append("Content-Type", "application/json");
         const body = JSON.stringify({
-            ru_id: ruId,
+            ru_id: ru_id,
             course: course,
         });
         window.fetch('http://localhost:7555/addCourse',
@@ -91,7 +93,7 @@ class CoursesPage extends React.Component {
                     <div>
                         <button type="submit"
                                 className="commonButton"
-                                onClick={this.addCourse}
+                                onClick={this.addCourse.bind(this)}
                         >Add course
                         </button>
                         <br/>
