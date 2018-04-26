@@ -43,8 +43,10 @@ export default class VolunteersList extends React.Component {
                         defaultPageSize={10}
                         className="-striped -highlight"
                     />
+                </div>
                     <br />
-                    <div className="form-group col-md-12" align="middle" >
+                    <br/>
+                    <div className="Center" >
                         <input type="text"
                                className="form-control"
                                value={this.state.username}
@@ -57,9 +59,7 @@ export default class VolunteersList extends React.Component {
                         >Delete User
                         </button>
                     </div>
-                </div>
                 <br/>
-
             </div>
         );
     }
