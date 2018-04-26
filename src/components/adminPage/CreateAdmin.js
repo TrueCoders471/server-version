@@ -1,4 +1,5 @@
 import React from 'react';
+import AdminList from "./AdminList";
 
 export default class CreateAdmin extends React.Component {
     constructor() {
@@ -124,6 +125,9 @@ export default class CreateAdmin extends React.Component {
 
         return (
             <div>
+                <div className="form-group col-md-12" align="center">
+                    <AdminList/>
+                </div>
                 <div className="form-group col-md-12" align="center">
                     <label className=".value" htmlFor="generalInformation"><h4>General Information:</h4></label>
                 </div>

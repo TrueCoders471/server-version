@@ -57,7 +57,7 @@ export default (
         <Route path="/studentClasses" component={StudentClasses}/>
         <Route path="/studentNotes" component={StudentNotes}/>
         <Route path="/adminNotes" component={AdminNotes}/>
-        <Route path="/volunteerClasses" component={VolunteerClassesPage}/>
+        <Route path="/volunteer" component={VolunteerClassesPage}/>
         <Route path="/adminClasses" component={AdminClassesPage}/>
         <Route path="/volunteerSignUpForm" component={volSignUpForm}/>
         <Route path="/pprs" component={pprs}/>

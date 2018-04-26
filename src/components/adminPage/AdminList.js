@@ -41,7 +41,7 @@ class AdminList extends React.Component {
                                 accessor: "studentID"
                             }
                         ]}
-                        defaultPageSize={10}
+                        defaultPageSize={5}
                         className="-striped -highlight"
                     />
                 </div>

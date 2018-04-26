@@ -1,10 +1,7 @@
 import React from 'react';
 import {Tab, Tabs} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
-import StudentsList from "./StudentsList";
-import FacultyList from "./FacultyList";
 import CreateVolunteer from "./CreateVolunteer";
-import AdminList from "./AdminList";
 import CreateStudent from "./CreateStudent";
 import CreateFaculty from "./CreateFaculty";
 import CreateAdmin from "./CreateAdmin";
@@ -14,7 +11,6 @@ export default class AdminUserManagement extends React.Component {
     render() {
         return (
             <div>
-                <div>Admin Management Here</div>
                 <MuiThemeProvider>
                     <Tabs>
                         <Tab label="Create Admin Account" className="default_tab">

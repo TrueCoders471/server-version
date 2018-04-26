@@ -1,7 +1,7 @@
 import React from "react";
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {MuiThemeProvider} from "material-ui/styles/index";
-import NotetakerNotesPage from "../notesPages/NotetakerNotesPage";
+import NotetakerNotesPage from "../notesPages/VolunteerNotesPage";
 
 import NotetakersList from "../adminPage/VolunteersList";
 
