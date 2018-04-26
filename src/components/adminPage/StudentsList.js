@@ -57,7 +57,7 @@ class StudentsList extends React.Component {
                     <br/>
                     <button type="submit"
                             className="commonButton"
-                            onSubmit={this.disableUser}
+                            onClick={this.disableUser.bind(this)}
                     >Delete User
                     </button>
                 </div>
@@ -80,16 +80,13 @@ class StudentsList extends React.Component {
                     method: 'POST',
                     headers: headers,
                     body: body
-                })
-                .then((res) => {
-                        return (
-                            res.text().then(function (result) {
-                                console.log(result);
-                                //return JSON.parse(result);
-                            })
-                        )
-                    }
-                )
+                }).then((res) => {
+                if (res.status === 200) res.text().then(function (text) {
+                    //location.href = "/" + text; //eslint-disable-line
+                    alert(text);
+                });
+                else alert('Disabling failed')
+            })
         )
     }
 }
