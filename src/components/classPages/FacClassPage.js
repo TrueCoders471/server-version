@@ -5,7 +5,7 @@ import NotetakerNotesPage from "../notesPages/VolunteerNotesPage";
 
 import NotetakersList from "../adminPage/VolunteersList";
 
-class volFacClassPage extends React.Component {
+class FacClassPage extends React.Component {
 
 
     render(){
@@ -22,7 +22,7 @@ class volFacClassPage extends React.Component {
                             <h3>Volunteers</h3>
                             <NotetakersList/>
                         </Tab>
-                        <Tab label="My Classes" className="default_tab" href="/volunteer"/>
+                        <Tab label="My Classes" className="default_tab" href="/faculty"/>
                     </Tabs>
                 </MuiThemeProvider>
             </div>
@@ -31,4 +31,4 @@ class volFacClassPage extends React.Component {
 }
 
 
-export default volFacClassPage;
+export default FacClassPage;

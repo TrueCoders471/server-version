@@ -33,6 +33,7 @@ import testPage from "./components/adminPage/testPage";
 import nonAdminClassPage from "./components/classPages/studentClassPage";
 import adminClassPage from "./components/classPages/adminClassPage";
 import volFacClassPage from "./components/classPages/volFacClassPage";
+import FacClassPage from "./components/classPages/FacClassPage";
 import AdminClassesPage from "./components/adminPage/AdminClassesPage";
 import CoursesPage from "./components/coursesPage/CoursesPage";
 import FacultySignUpForm from "./components/facultyPage/FacultySignUpForm";
@@ -74,6 +75,7 @@ export default (
         <Route path="/studentClassPage" component={nonAdminClassPage}/>
         <Route path="/adminClassPage" component={adminClassPage}/>
         <Route path="/volFacClassPage" component={volFacClassPage}/>
+        <Route path="/facClassPage" component={FacClassPage}/>
         <Route path="/courses" component={CoursesPage}/>
     </Route>
 );

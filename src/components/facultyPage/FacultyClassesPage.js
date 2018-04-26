@@ -3,7 +3,7 @@ import React from 'react';
 export default class FacultyClassesPage extends React.Component {
 
     openClass() {
-        location.href = '/volFacClassPage'; //eslint-disable-line
+        location.href = '/facClassPage'; //eslint-disable-line
     }
 
     courses = ["ITEC 120", "ITEC 380", "ART 100", "CORE 102"];
