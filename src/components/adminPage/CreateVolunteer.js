@@ -159,7 +159,7 @@ export default class CreateVolunteer extends React.Component {
                            placeholder="email@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="volunteer-id-field">Student ID:</label>
+                    <label className="value" htmlFor="volunteer-id-field">Radford ID:</label>
                     <input type="text"
                            name="sid"
                            className={errors.ru_id ? "error" : "form-control"}

@@ -81,7 +81,7 @@ export default class VolunteerSignUpForm extends React.Component {
                     if (res.status === 200) res.text().then(function (text) {
                         if (text === "OK") {
                             alert(`User ${username} has been registered`);
-                            location.href = "/volunteerClasses"; //eslint-disable-line
+                            location.href = "/volunteer"; //eslint-disable-line
                         } else {
                             alert("Something went wrong");
                         }
@@ -161,7 +161,7 @@ export default class VolunteerSignUpForm extends React.Component {
                            placeholder="email@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="student-id-field">Student ID:</label>
+                    <label className="value" htmlFor="student-id-field">Radford ID:</label>
                     <input type="text"
                            name="sid"
                            className={errors.ru_id ? "error" : "form-control"}
