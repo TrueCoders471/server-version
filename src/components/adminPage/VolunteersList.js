@@ -73,8 +73,8 @@ export default class VolunteersList extends React.Component {
         const username = this.state.username;
         const body = JSON.stringify({username: username});
         headers.append("Content-Type", "application/json");
-        //return (window.fetch('http://137.45.220.128:443/disableUser',
-        return (window.fetch('http://localhost:7555/disableUser',
+        return (window.fetch('http://137.45.220.128:443/disableUser',
+        //return (window.fetch('http://localhost:7555/disableUser',
                 {
                     method: 'POST',
                     headers: headers,

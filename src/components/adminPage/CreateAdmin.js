@@ -69,8 +69,8 @@ export default class CreateAdmin extends React.Component {
         });
         console.log(body);
         if (password === password2) {
-            window.fetch('http://localhost:7555/registerAdmin',
-                //window.fetch('http://137.45.220.128:443/registerAdmin',
+            //window.fetch('http://localhost:7555/registerAdmin',
+                window.fetch('http://137.45.220.128:443/registerAdmin',
                 {
                     method: 'POST',
                     headers: headers,
