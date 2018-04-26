@@ -96,8 +96,8 @@ class VolunteerNotesPage extends React.Component {
                     />
                     <br/>
                     <div className="form-group col-md-12" align="middle">
+                        <h4>Upload More Notes</h4>
                         <h5>Enter Course Number for the notes</h5>
-                        <br/>
                         <div align={"middle"}>
                             <input type="text"
                                    id="courseNumber"
@@ -105,7 +105,7 @@ class VolunteerNotesPage extends React.Component {
                                    value={this.state.course}
                                    onChange={this.handleCourseChange}
                                    placeholder="Course Number"/>
-                            <br/>
+                            
                             <form onSubmit={this.handleUploadFile}>
                                 <h4>Choose a file to upload:</h4>
                                 <input className="fileUpload" type="file" id="fileUpload" name="fileUpload"/>
