@@ -61,7 +61,8 @@ export default class CreateFaculty extends React.Component {
             email: email,
             phone: phone,
             ru_id: ruId,
-            role: 'faculty'
+            role: 'faculty',
+            is_disabled: 0,
         });
 
         console.log(body);
@@ -211,18 +212,6 @@ export default class CreateFaculty extends React.Component {
                            id="fac-confirm-password-field"
                            placeholder="Confirm Password"/>
                 </div>
-                {/*<div className="form-group col-md-12" align="center">*/}
-                    {/*<CoursesPage ru_id={this.state.ru_id}/>*/}
-                    {/*<br/>*/}
-                    {/*/!*<div>*!/*/}
-                    {/*/!*<button type="submit"*!/*/}
-                    {/*/!*className="commonButton"*!/*/}
-                    {/*/!*onClick={this.addCourse}*!/*/}
-                    {/*/!*>Add course*!/*/}
-                    {/*/!*</button>*!/*/}
-                    {/*/!*<br/>*!/*/}
-                    {/*/!*</div>*!/*/}
-                {/*</div>*/}
             </div>
         );
     }

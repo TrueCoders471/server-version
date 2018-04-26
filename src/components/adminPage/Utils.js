@@ -135,6 +135,28 @@ export function loadUsers(role) {
     )
 }
 
+export function disableUser(username){
+    var headers = new Headers();
+    const body = JSON.stringify({username: username});
+    headers.append("Content-Type", "application/json");
+    //return (window.fetch('http://137.45.220.128:443/disableUser',
+    return (window.fetch('http://localhost:7555/disableUser',
+            {
+                method: 'POST',
+                headers: headers,
+                body: body
+            })
+            .then((res) => {
+                    return (
+                        res.text().then(function (result) {
+                            console.log(result);
+                            return JSON.parse(result);
+                        })
+                    )
+                }
+            )
+    )
+}
 export function loadDocuments(is_fillable) {
     var headers = new Headers();
     const body = JSON.stringify({is_fillable: is_fillable});
@@ -309,3 +331,4 @@ export async function makeListOfSubjects() {
         return array;
     })
 }
+

@@ -64,7 +64,8 @@ export default class CreateAdmin extends React.Component {
             email: email,
             phone: phone,
             ru_id: ruId,
-            role: 'admin'
+            role: 'admin',
+            is_disabled: 0,
         });
         console.log(body);
         if (password === password2) {

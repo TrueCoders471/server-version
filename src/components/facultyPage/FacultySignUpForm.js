@@ -61,7 +61,8 @@ export default class FacultySignUpForm extends React.Component {
             email: email,
             phone: phone,
             ru_id: ruId,
-            role: 'faculty'
+            role: 'faculty',
+            is_disabled: 0,
         });
 
         console.log(body);

@@ -63,7 +63,8 @@ export default class CreateVolunteer extends React.Component {
             email: email,
             phone: phone,
             ru_id: ruId,
-            role: 'volunteer'
+            role: 'volunteer',
+            is_disabled: 0,
         });
         console.log(body);
         if (password === password2) {

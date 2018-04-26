@@ -101,7 +101,8 @@ export default class StudentSignUpForm extends React.Component {
             standing: standing,
             time: time,
             major: major,
-            graduation: graduation
+            graduation: graduation,
+            is_disabled: 0,
         });
 
         console.log(bodyBasic);
