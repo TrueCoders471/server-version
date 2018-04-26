@@ -43,21 +43,22 @@ export default class VolunteersList extends React.Component {
                         defaultPageSize={10}
                         className="-striped -highlight"
                     />
+                    <div className="form-group col-md-12" align="middle" >
+                        <input type="text"
+                               className="form-control"
+                               value={this.state.username}
+                               onChange={this.handleUsernameChange}
+                               placeholder="Username to delete"/>
+                        <br/>
+                        <button type="submit"
+                                className="commonButton"
+                                onSubmit={this.disableUser}
+                        >Delete User
+                        </button>
+                    </div>
                 </div>
                 <br/>
-                <div className="form-group col-md-12" align="middle">
-                    <input type="text"
-                           className="form-control"
-                           value={this.state.username}
-                           onChange={this.handleUsernameChange}
-                           placeholder="Username to delete"/>
-                    <br/>
-                    <button type="submit"
-                            className="commonButton"
-                            onSubmit={this.disableUser}
-                    >Delete User
-                    </button>
-                </div>
+
             </div>
         );
     }

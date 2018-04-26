@@ -9,6 +9,7 @@ import StudentSignupForm from "./components/studentPages/StudentSignUpForm";
 import AdminPage from './components/adminPage/AdminPage';
 import RegisteredStudents from './components/adminPage/StudentsList';
 import Volunteers from './components/adminPage/VolunteersList';
+import VolunteersVol from './components/adminPage/VolunteersListVol';
 import CasForms from './components/adminPage/CasForms';
 import StudentPage from './components/studentPages/StudentPage';
 import StudentClasses from './components/studentPages/StudentClassesPage';
@@ -53,6 +54,7 @@ export default (
         <Route path="/adminPendingUser" component={adminPendingUserPage}/>
         <Route path="/studentsList" component={RegisteredStudents}/>
         <Route path="/volunteersList" component={Volunteers}/>
+        <Route path="/volunteersListVol" component={VolunteersVol}/>
         <Route path="/casForms" component={CasForms}/>
         <Route path="/student" component={StudentPage}/>
         <Route path="/studentClasses" component={StudentClasses}/>
