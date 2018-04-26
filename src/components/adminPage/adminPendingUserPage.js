@@ -46,7 +46,7 @@ class AdminNoteTakerApprovePage extends React.Component {
                                         accessor: "accountType"
                                     },
                                     {
-                                        Header: "Student ID",
+                                        Header: "Radford ID",
                                         accessor: "studentID"
                                     }
 
@@ -67,9 +67,9 @@ class AdminNoteTakerApprovePage extends React.Component {
                         {/*Supposed to be empty*/}
                     </div>
                     <div className="form-group col-md-6" align="Center">
-                        <label>Student ID</label>
+                        <label>Radford ID</label>
                         <input type="password" id="inputStudentID" className="form-control" required
-                               placeholder="Student ID"/>
+                               placeholder="Radford ID"/>
                         <br/>
                         <button type="button" className="commonButton">Approve</button>
                         <div className="divider"/>

@@ -163,7 +163,7 @@ export default class CreateAdmin extends React.Component {
                            placeholder="email@radford.edu"/>
                 </div>
                 <div className="form-group col-md-6" align="left">
-                    <label className="value" htmlFor="admin-id-field">Student ID:</label>
+                    <label className="value" htmlFor="admin-id-field">Radford ID:</label>
                     <input type="text"
                            name="sid"
                            className={errors.ru_id ? "error" : "form-control"}
