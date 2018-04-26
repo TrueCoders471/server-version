@@ -2,7 +2,7 @@ import React from 'react';
 import './adminPendingUserPageStyles.css';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import {makeListOfAdmins} from "./Utils";
+import {makeListOfNoteTakers} from "./Utils";
 
 
 class AdminNoteTakerApprovePage extends React.Component {
@@ -12,7 +12,7 @@ class AdminNoteTakerApprovePage extends React.Component {
         this.state = {
             data: []
         };
-        makeListOfAdmins().then((admin) => this.setState({data: admin}));
+        makeListOfNoteTakers().then((volunteer) => this.setState({data: volunteer}));
     }
 
 
