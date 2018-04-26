@@ -16,6 +16,7 @@ import StudentClasses from './components/studentPages/StudentClassesPage';
 import StudentNotes from './components/notesPages/StudentNotesPage';
 import AdminNotes from './components/notesPages/AdminNotesPage';
 import VolunteerClassesPage from "./components/volunteerPages/VolunteerClassesPage";
+import VolunteerPage from "./components/volunteerPages/VolunteerPage";
 import VolunteerUploadNotes from "./components/volunteerPages/VolunteerUploadNotes";
 import FacultyPage from "./components/facultyPage/FacultyPage";
 import FacultyStudentsPage from "./components/facultyPage/FacultyStudentsPage";
@@ -60,7 +61,8 @@ export default (
         <Route path="/studentClasses" component={StudentClasses}/>
         <Route path="/studentNotes" component={StudentNotes}/>
         <Route path="/adminNotes" component={AdminNotes}/>
-        <Route path="/volunteer" component={VolunteerClassesPage}/>
+        <Route path="/volunteer" component={VolunteerPage}/>
+        <Route path="/volunteerClasses" component={VolunteerClassesPage}/>
         <Route path="/adminClasses" component={AdminClassesPage}/>
         <Route path="/volunteerSignUpForm" component={volSignUpForm}/>
         <Route path="/pprs" component={pprs}/>
