@@ -43,6 +43,7 @@ export default class VolunteersList extends React.Component {
                         defaultPageSize={10}
                         className="-striped -highlight"
                     />
+                    <br />
                     <div className="form-group col-md-12" align="middle" >
                         <input type="text"
                                className="form-control"
