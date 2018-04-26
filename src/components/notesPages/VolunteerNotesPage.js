@@ -96,7 +96,7 @@ class VolunteerNotesPage extends React.Component {
                     />
                     <br/>
                     <div className="form-group col-md-12" align="middle">
-                        <h5>Enter Course name</h5>
+                        <h5>Enter Course Number for the notes</h5>
                         <br/>
                         <div align={"middle"}>
                             <input type="text"
