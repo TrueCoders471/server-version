@@ -26,6 +26,7 @@ class adminClassPage extends React.Component {
                             <h3>Pending Volunteers</h3>
                             <AdminNoteTakerApprovePage/>
                         </Tab>
+                        <Tab label="Admin Panel" className="default_tab" href="/admin"/>
                     </Tabs>
                 </MuiThemeProvider>
             </div>

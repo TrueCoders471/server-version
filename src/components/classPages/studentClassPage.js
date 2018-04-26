@@ -23,8 +23,7 @@ class studentClassPage extends React.Component {
                           <h3>Volunteers</h3>
                           <NotetakersList/>
                       </Tab>
-                      <Tab
-                          label="My Classes" className="default_tab" href="/studentClasses"/>
+                      <Tab label="My Classes" className="default_tab" href="/studentClasses"/>
 
                   </Tabs>
               </MuiThemeProvider>
